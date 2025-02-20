@@ -1,0 +1,268 @@
+%La clase del documento le indica al LaTeX cómo formatear el contenido,
+% que es lo que realmente se indica a continuación, basándose en su
+% significado (semántica); las cosas no se representan basándose en un
+% sentido estético (aunque también se considera), sino en el papel que
+% desempeñan en el escrito
+\documentclass[twoside,twocolumn,spanish]{article}
+
+%Estos dos paquetes son necesarios para escribir cómodamente los
+% los documentos en Español, sin necesidad de utilizar secuencias
+% de escape como {\'\i} para poner una "í".
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+
+%Para incluir figuras se necesitarán las macros definidas en este paquete
+\usepackage{graphicx}
+
+%El paquete Babel hace que LaTeX seleccione algunos textos preprogramados
+% en el idioma pasado como opción al documentclass (en este caso, spanish)
+%Por ejemplo, la fecha, o los nombres de las figuras o tablas
+%(a las tablas las llama cuadros...)
+\usepackage{babel}
+
+%\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+%\usepackage{textcomp}
+
+%Este paquete permite incluir y resaltar URLs
+\usepackage{url}
+
+%Este paquete, cuando se usa pdflatex, formatea el documento añadiendo
+% enlaces internos entre las referencias y los objetos referenciados
+% (por ejemplos, figuras, tablas, referencias de la bibliografía).
+\usepackage[unicode=true, pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+
+%Este paquete es muy útil, porque permite incluir código escrito
+% en varios lenguajes de programación con el formato adecuado con
+% sólo indicar el archivo fuente.
+\usepackage{listings}
+
+%Este paquete puede ser útil si se quieren incluir algunos símbolos
+% especiales en las ecuaciones
+%\usepackage{amssymb}
+
+%Esta definición permite introducir la dirección de los autores
+% y mostrarla convenientemente
+\newcommand{\address}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+
+%Inicio del documento (hasta que se cierre con \end{document}
+\begin{document}
+
+\title{Una plantilla \LaTeX{} para la elaboración de una memoria de trabajo científico}
+
+
+\author{El equipo docente de Física Computacional I}
+
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%
+\begin{abstract}
+%%%%%%%%%%%%%%%%%
+Esta plantilla proporciona el formato y la filosofía de un documento
+científico, que se utilizará de punto de partida para cualquier trabajo
+de la asignatura Física Computacional I.
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+La memoria de un trabajo científico consiste en el planteamiento de
+un problema (de modo que quien lo lea sepa lo que está hecho y qué
+se está resolviendo, esto es, el objetivo del trabajo), la explicación
+de los pasos dados para resolverlo (de modo que quien lo lea lo pueda
+reproducir por sí mismo), la exposición de los resultados obtenidos,
+la discusión crítica de los mismos (que es demostrar por qué los
+resultados son los que son, cuán fiables son, y el significado que
+tienen para la solución buscada del problema), y unas conclusiones
+que aclaren hasta dónde se ha llegado en la solución del problema
+inicialmente planteado \cite{May2006}. 
+
+
+El objetivo de esta plantilla es servir de punto de partida (tanto
+en estructura como en estilo) para la elaboración de memorias de trabajos
+para la asignatura de Física Computacional I.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Material y Métodos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{\label{sub:metodo}Método usado}
+
+El método empleado se debe explicar con suficiente detalle. Si es
+necesario, se puede utilizar una lista numerada de pasos. Por ejemplo,
+esta plantilla se escribió en siete pasos:
+\begin{enumerate}
+\item Esquema de la memoria.
+\item Primera escritura. Orden: objetivo, metodología, resultados, discusión,
+conclusiones, introducción.
+\item Búsqueda bibliográfica y de información sobre el material.
+\item Segunda escritura. Completando las referencias bibliográficas y los
+datos del material empleado (referencias a fabricantes, direcciones
+de Internet del software, etc.).
+\item Revisiones sucesivas (ortografía, etc.).
+\item Resumen/Reducción a dos páginas.
+\item Formateado del documento con el estilo elegido: \LaTeX{} article
+\cite{Lamport1994}.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+%%%%%%%%%%%%%%%%%%%%%
+
+
+Los resultados deben referirse a lo que se obtiene siguiendo la metodología:
+ni se juzgan, ni se dan opiniones, aunque sí se pueden anotar condiciones
+particulares.
+
+Por ejemplo, siguiendo la metodología del apartado \ref{sub:metodo},
+se ha llegado al resultado de la figura \ref{fig:resultado}. El tiempo
+empleado en escribir la plantilla se muestra en la tabla \ref{tab:tiempos}
+según los pasos indicados en la metodología
+%Nota al pie:
+\footnote{El tiempo invertido en la primera escritura (paso 2) es sólo estimativo,
+ya que se desarrolló paralelamente a otras actividades a lo largo
+de varios días.
+}.
+
+%Figura
+\begin{figure}[tbh]
+\begin{centering}
+\includegraphics[width=0.8\columnwidth]{plantilla_memoria_0_fig}
+\end{centering}
+\caption{\label{fig:resultado}Miniatura de la primera página de la plantilla
+de memoria.}
+\end{figure}
+
+
+%Tabla
+\begin{table}[tbh]
+\caption{\label{tab:tiempos}Tiempo empleado en cada paso.}
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Paso & Tiempo & Paso & Tiempo\\
+\hline
+\hline 
+1 & 5 min & 5 & 16 min\\
+\hline 
+2 & (3 h) & 6 & 45 min\\
+\hline 
+3 & 30 min & 7 & 8 min\\
+\hline 
+4 & 7 min &  & \\
+\hline
+\end{tabular}
+\end{centering}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\section{Discusión}
+%%%%%%%%%%%%%%%%%%%%
+
+Las cuatro partes de la memoria son importantes: la introducción para
+plantear el problema, la metodología para explicar el plan de trabajo
+desarrollado, los resultados para mostrar lo obtenido con la metodología
+y la discusión para analizar la relación entre las tres partes anteriores
+y con el objetivo del trabajo.
+
+Los tiempos empleados para llegar al resultado obtenido son pequeños,
+comparados con los habituales siguiendo otras metodologías que favorecen
+la redundancia de la información (véase, por ejemplo \cite{IUED2010}).
+Al incluir una referencia, ya no se trata de una opinión: se supone
+que quien lo ha escrito ha avalado dicha afirmación (basándose, puede
+ser, en su experiencia).
+
+Además, como resultado también se ha obtenido un documento fácilmente
+reutilizable, en \LaTeX{} que, por ejemplo, puede ser incluido en
+un capítulo de un libro sin más que cambiar la clase de documento
+\cite{Lamport1994}. Esto no estaba dentro de los objetivos, ni la
+metodología se indicó para ello, pero es algo nuevo que hay que destacar.
+
+No sólo se deben discutir los logros, sino también las limitaciones.
+Por ejemplo, la limitación de este método de escribir trabajos es
+que requiere un tiempo muy grande para completar los detalles de la
+bibliografía y la instrumentación. Se propone recopilar esta información
+de los trabajos sucesivos y reutilizarla en los futuros, para ahorrar
+tiempo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusiones}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+Esta plantilla ilustra cómo escribir y formatear un documento científico.
+La metodología expuesta acorta tiempos (a largo plazo) y facilita
+la revisión y exposición crítica del trabajo heho.
+
+A pesar de que el resultado ha sido satisfactorio, el método requiere
+inicialmente mucho tiempo para recopilar la información. Esto será
+el objetivo de futuros trabajos.
+
+%%%%%%%%%%
+\appendix
+%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+\section{Apéndice}
+%%%%%%%%%%%%%%%%%%%
+
+En un apéndice se recoge la información que puede ser necesaria para
+entender la memoria y que, por lo específica, puede ser difícil de
+encontrar en otro lugar. También se pueden incluir en un apéndice
+los cálculos muy largos que desviarían la atención de la exposición
+en el cuerpo de la memoria. Por ejemplo, ecuaciones en línea, $y=ax+b$,
+desplegadas
+%
+\[
+e^{i\pi}+1=0
+\]
+%
+numeradas
+%
+\begin{equation}\label{eq:interconversion}
+E=mc^2
+\end{equation}
+%
+o en varias líneas
+%
+\begin{eqnarray}\label{eq:schrodinger}
+i\hbar\frac{\partial}{\partial t}\Psi(x,t) & = & H\Psi(x,t)\nonumber \\
+ & = & -\frac{\hbar^{2}}{2m}\frac{\partial^{2}}{\partial x^{2}}\Psi(x,t)+U(x)\Psi(x,t)\nonumber \\
+ & = & -\frac{\hbar^{2}}{2m}\frac{\partial^{2}}{\partial x^{2}}\Psi(x,t)+\frac{1}{2}kx^{2}\Psi(x,t)
+\end{eqnarray}
+%
+o listados de programa como
+%
+\lstinputlisting[language=C]{helloworld0.c}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibitem{May2006}Robert A. May. How to write and publish a scientific
+paper. Cambridge University Press. Cambridge, 2006.
+
+\bibitem{Lamport1994}Leslie Lamport. \LaTeX{}: A document preparation
+system. Addison-Wesley Professional, 1994.
+
+\bibitem{IUED2010} (varios) Orientaciones para la elaboración de
+la guía de estudio de las asignaturas de grado. Vicerrectorado de
+Calidad e Innovación Docente. IUED, UNED, 2010 \url{http://portal.uned.es/pls/portal/url/ITEM/617BA828590DE452E040660A337007B1}
+
+\end{thebibliography}
+
+\end{document}
+
