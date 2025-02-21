@@ -1,0 +1,19 @@
+\ProvidesPackage{teI}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[latin9]{inputenc}
+\RequirePackage{graphicx}
+\RequirePackage{csvsimple}
+\RequirePackage[spanish]{babel}
+\RequirePackage{url}
+\usepackage[unicode=true, pdfusetitle,
+    bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+    breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=false]
+{hyperref}
+\RequirePackage{listings}
+
+\newcommand{\address}[1]{
+    \par {\raggedright #1
+    \vspace{1.4em}
+    \noindent\par}
+}
+
