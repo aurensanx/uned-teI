@@ -1,3 +1,95 @@
-\section{Discusión}
+\section{Cuestiones}\label{sec:discusion}
 
-\subsection{\label{sub:Discusión}Cuestiones}
+\subsection{Expresiones de la constante elástica $k$ y energía potencial $U$}
+
+Para obtener la expresión de $k$ partimos de la Ley de Hooke:
+
+\begin{equation}
+    \label{eq:1}
+    F = - k \, \Delta x
+\end{equation}
+
+El signo menos solos nos indica que $F$ es una fuerza recuperadora que se opone al movimiento, así que podemos
+obviarlo para nuestros cálculos.
+
+Necesitamos dos definiciones adicionales. El esfuerzo $\sigma$ es la fuerza por unidad de área:
+
+\begin{equation}
+    \label{eq:2}
+    \sigma = \frac{F}{A},
+\end{equation}
+
+y la deformación $\epsilon$ es el alargamiento entre la longitud inicial del sistema:
+
+\begin{equation}
+    \label{eq:3}
+    \epsilon = \frac{\Delta x}{L}
+\end{equation}
+
+Para materiales elásticos, el módulo de Young o de elasticidad $E$ es la relación entre el esfuerzo $\sigma$ y la deformación $\epsilon$:
+
+\begin{equation}
+    \label{eq:4}
+    E = \frac{\sigma}{\epsilon}
+\end{equation}
+
+Sustituyendo las expresiones (\ref{eq:2}), (\ref{eq:3}) y (\ref{eq:4}) en (\ref{eq:1}), obtenemos:
+
+\begin{equation}
+    \label{eq:5}
+    k = \frac{F}{\Delta x} = \frac{A \, \sigma}{L \, \epsilon} = \frac{A \, E}{L}
+\end{equation}
+
+Por otro lado, para obtener la expresión de la energía potencial $U$, utilizamos la ley de la conservación de la energía.
+
+El cambio de la energía potencial del sistema entre la posición de equilibrio y $\Delta x$ es igual al trabajo $W$ necesario realizado sobre
+el sistema para alargarlo hasta la posición $\Delta x$. La fuerza requerida cambia con la distancia,
+de manera que se calcula con la integral:
+
+\begin{equation}
+    \label{eq:6}
+    W = \int_{0}^{\Delta x} k \,  x \,  d x = \frac{1}{2} \, k \, \Delta x^2
+\end{equation}
+
+\subsection{Cálculo de $k$}
+
+La fuerza que se ejerce sobre el resorte es igual a $m \, g$. En la posición de equilibro, esta fuerza se iguala a la fuerza que ejerce
+el resorte en el sentido contrario, que es igual a $k \, \Delta x$. Por tanto, tenemos:
+
+\begin{equation}
+    \label{eq:7}
+    k = \frac{m \, g}{\Delta x} = \frac{80 \, \text{kg} \cdot 9.81 \, \text{m/s$^2$}}{4 \times 10^{-3} \, \text{m}} = 196.2 \, \text{kN/m}
+\end{equation}
+
+//TODO ¿cuántas cifras significativas?
+
+\subsection{Módulo de elasticidad $E$}
+
+Utilizando la expresión obtenida en (\ref{eq:5}), despejamos $E$:
+
+\begin{equation*}
+    E = \frac{k\,L}{A} = \frac{196.2 \, \text{kN/m} \cdot 0.11 \text{m}}{\pi \, (1.25 \times 10^{-2} \text{m})^2} = 4.3966 \times 10^{7} \, \text{N/m$^2$}
+\end{equation*}
+
+//TODO ¿cuántas cifras significativas?
+
+\subsection{Energía del sistema}
+
+Si a partir del momento en el que una fuerza externa varía la energía potencial del muelle ya no existen fuerzas externas al sistema masa-muelle, la energía total
+del sistema se conservará.
+
+En ese caso, la energía se transformará periódicamente entre energía potencial, en un extremo del movimiento, a energía cinética, en la posición natural del muelle.
+La energía total será una combinación de ambas en cualquier otro punto.
+
+Si consideramos que existen fuerzas de rozamiento, por ejemplo, con el aire, o cualquier otro tipo de fuerza disipadora de energía, se puede considerar
+que el sistema masa-muelle no está aislado y en ese caso la energía total del sistema no se conservará, sino que irá disminuyendo con el tiempo.
+
+\subsection{Módulo de Young experimental}
+
+// TODO valores experimentales
+
+El módulo de Young de los muelles no es el mismo módulo de Young del material del que está hecho el muelle.
+
+La capacidad de un muelle para deformarse ante una fuerza y volver a su posición original cuando cesa esta fuerza depende otros factores además del
+material del que está hecho, y es distinto a la capacidad que tendría una varilla recta del material.
+

@@ -20,12 +20,11 @@ Los datos de la elongación del muelle 1 para distintas masas $m$ se puede ver en
     \end{centering}
 \end{table}
 
-
-Tabla de toma de tiempos
-
+Las 3 mediciones para las $n = 19$ oscilaciones se pueden ver en la tabla~\ref{tab:1-t1}.
 
 \begin{table}[tbh]
-    \caption{\label{tab:1-t1}Muelle 1 - Tiempo.}
+    \caption{Muelle 1 - Tiempo.}
+    \label{tab:1-t1}
     \begin{centering}
         \begin{tabular}{|P{25px}|P{25px}P{25px}P{25px}|P{28px}P{28px}|}
             \hline
@@ -38,17 +37,18 @@ Tabla de toma de tiempos
     \end{centering}
 \end{table}
 
-Tabla de cálculo del periodo
+Teniendo el cuenta el margen de error, la tabla~\ref{tab:1-t2} muestra el periodo calculado.
 
 \begin{table}[tbh]
-    \caption{\label{tab:1-t2}Muelle 1 - Periodo.}
+    \caption{Muelle 1 - Periodo.}
+    \label{tab:1-t2}
     \begin{centering}
-        \begin{tabular}{|P{40px}|P{40px}|P{50px}|P{50px}|}
+        \begin{tabular}{|P{48px}|P{36px}|P{48px}|P{48px}|}
             \hline
-            $m$(g)    & $t$(s)    & $T = t / n$(s) & $T^2$(s)                              \\
+            $m+m_0$(g) & $t$(s)    & $T = t / n$(s) & $T^2$(s)                              \\
             \hline
             \csvreader[late after line= \\]{./files/data/1-t2.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii & \csvcoliii     & \csvcoliv}% specify your columns here
+            {\csvcoli  & \csvcolii & \csvcoliii     & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -56,9 +56,16 @@ Tabla de cálculo del periodo
 
 \subsection{\label{sub:results}Análisis}\label{subsec:label{sub:results}analisis}
 
-\subsubsection{Deformación}
+\subsubsection{Método estático}
 
-Representamos la deformación $y-y_0$ frente a la masa $m$ en la figura~\ref{fig:r1} y ajustamos los puntos a una recta de ecuación $y = mx + b$.
+Representamos la deformación $y-y_0$ frente a la masa $m$ en la figura~\ref{fig:r1} y ajustamos los puntos a una recta de ecuación $y = mx + b$,
+donde $m = 0.424 \pm XXX $ y $b = -0.001$. La constante elástica del muelle es:
+
+\begin{equation*}
+    \frac{g}{k} = 0.424 \Rightarrow k = 23.14\,\text{N} / \text{m}
+\end{equation*}
+
+El valor $b$ creo debería ser 0 y creo que es el margen de error.
 
 \begin{figure}[tbh]
     \begin{center}
@@ -68,4 +75,29 @@ Representamos la deformación $y-y_0$ frente a la masa $m$ en la figura~\ref{fig:
     \label{fig:r1}
 \end{figure}
 
+\subsubsection{Método dinámico}
 
+En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$.
+
+
+\begin{figure}[tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/fig2}
+    \end{center}
+    \caption{Deformación frente a masa.}
+    \label{fig:r2}
+\end{figure}
+
+De estos datos obtenemos:
+
+\begin{equation*}
+    \frac{4\pi^2}{k} = 1.560 \Rightarrow k = 25.31\,\text{N} / \text{m}
+\end{equation*}
+
+\subsubsection{Comparación de los métodos}
+
+Error relativo del $9.4\%$.
+
+¿Diferencias entre ambos métodos desde un punto de vista experimental?
+
+\subsubsection{Masa efectiva}

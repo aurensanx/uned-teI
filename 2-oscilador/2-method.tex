@@ -10,8 +10,7 @@ A la suma de estas 3 masas, la del muelle, del portamasas y la masa inicial para
 Con el sistema en equilibrio, medimos la longitud del muelle, y asignamos el valor a la variable $y_0$.
 
 Ya estamos preparados para añadir distintas masas $m$ al portamasas y anotar las distintas longitudes $y$. La figura~\ref{fig:compression}
-muestra las dos situaciones que hemos mencionado.\\
-
+muestra las dos situaciones que hemos mencionado.
 
 \begin{figure}
     \begin{tikzpicture}[black!75]
@@ -37,15 +36,15 @@ muestra las dos situaciones que hemos mencionado.\\
         \end{scope}
 
 
-        \draw[dashed,gray] (0,-3.3) -- ++(-1.5,0)coordinate(c22);
-        \draw[dashed,gray] (4, -3.8) -- ++(-1.5,0) coordinate(c12);
-        \draw[latex-latex] (2.5, -3.8)-- (2.5,0)node[midway,left]{\small $y$};
+        \draw[dashed,gray] (-0.5,-3.3) -- ++(-0.75,0)coordinate(c22);
+        \draw[dashed,gray] (3.5, -3.8) -- ++(-0.75,0) coordinate(c12);
+        \draw[latex-latex] (2.75, -3.8)-- (2.75,0)node[midway,left]{\small $y$};
 %
         \draw[dashed,gray] (0,0) -- ++(-1.5,0) coordinate(c23);
-        \draw[latex-latex] (-1.5,0)-- ++(0,-3.3)node[midway,left]{\small $y_0$};
-
+        \draw[latex-latex] (-1.25,0)-- ++(0,-3.3)node[midway,left]{\small $y_0$};
     \end{tikzpicture}
-
     \caption{Situación inicial del sistema masa-muelle y situación de medición para la masa $m$.}
     \label{fig:compression}
 \end{figure}
+
+// TODO movimiento oscilatorio armónico
