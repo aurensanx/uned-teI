@@ -1,35 +1,21 @@
 \section{Introducción}
 
+El sistema masa-muelle es un caso sencillo que nos permite estudiar la fuerza elástica y también el movimiento oscilatorio armónico.
 
-\begin{tikzpicture}[black!75]
+En primer lugar, utilizaremos la ley de Hooke para determinar la constante elástica de distintos muelles mediante el llamado método estático.
 
-    % Supporting structure
-    \fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
-    \draw[thick] (-1.5,0) -- ++(3,0);
+Para ello, utilizaremos la relación:
 
-    % Spring + Arrows
-    \draw[] (0,0) -- ++(0,-0.25);
-    \draw[decoration={aspect=0.3, segment length=1.2mm, amplitude=2mm,coil},decorate] (0,-0.25) -- ++(0,-2.25) node[midway,right=0.25cm,black]{$k$};
-    \draw[] (0,-2.5) -- ++(0,-0.3) node[coordinate](c1){};
+\begin{equation}
+    k (y - y_0) = mg
+\end{equation}
 
-    \begin{scope}[xshift=4cm]
-        % Supporting structure
-        \fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
-        \draw[thick] (-1.5,0) -- ++(3,0);
+En esta expresión, $y_0$ es una longitud de referencia, que corresponde a la longitud del muelle cuando está en posición de equilibrio y
+sometido al peso de una masa $m_0$.
+La longitud $y$
+es la longitud del muelle cuando a la masa $m_0$ se ha añadido una masa $m$.
 
-        % Spring + Arrows
-        \draw[] (0,0) -- ++(0,-0.25);
-        \draw[decoration={aspect=0.3, segment length=1.4mm, amplitude=2mm,coil},decorate] (0,-0.25) -- ++(0,-2.75) node[midway,right=0.25cm,black]{$k$};
-        \draw[] (0,-3) -- ++(0,-0.3)node[coordinate](c2){} node[draw,fill=yellow!60,minimum width=1cm,minimum height=0.5cm,anchor=north,label=east:$m$](M){};
-    \end{scope}
+Mediante mediciones de las longitudes $y$ para distintas masas $m$ podemos determinar la constante
+elástica $k$ de cada muelle.
 
 
-    \draw[dashed,gray] (c1) -- ++(-1.5,0)coordinate(c22);
-    \draw[dashed,gray] (4, -3.8) -- ++(-1.5,0) coordinate(c12);
-    \draw[latex-latex] (2.5, -3.8)-- (2.5,0)node[midway,left]{\small $y$};
-%
-    \draw[dashed,gray] (0,0) -- ++(-1.5,0) coordinate(c23);
-    \draw[latex-latex] (c23)-- (c23|-c1)node[midway,left]{\small $y_0$};
-
-
-\end{tikzpicture}

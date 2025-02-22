@@ -1,5 +1,51 @@
 \section{Dispositivo experimental}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{\label{sub:metodo}Método usado}
 
+Para comprobar la ley de Hooke y determinar la constante elástica de los muelles, pesamos por separado el muelle y el portamasas.
+Colocamos el muelle en el soporte y colgamos de él el portamasas. En este punto, añadimos una masa suficiente al portamasas
+para que el muelle quede tenso.
+
+A la suma de estas 3 masas, la del muelle, del portamasas y la masa inicial para tensar el muelle, la denominamos $m_0$.
+
+Con el sistema en equilibrio, medimos la longitud del muelle, y asignamos el valor a la variable $y_0$.
+
+Ya estamos preparados para añadir distintas masas $m$ al portamasas y anotar las distintas longitudes $y$. La figura \ref{fig:compression}
+muestra las dos situaciones que hemos mencionado.\\
+
+
+\begin{figure}
+    \begin{tikzpicture}[black!75]
+
+        % Supporting structure
+        \fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
+        \draw[thick] (-1.5,0) -- ++(3,0);
+
+        % Spring + Arrows
+        \draw[] (0,0) -- ++(0,-0.25);
+        \draw[decoration={aspect=0.3, segment length=1.2mm, amplitude=2mm,coil},decorate] (0,-0.25) -- ++(0,-2.25) node[midway,right=0.25cm,black]{$k$};
+        \draw[] (0,-2.5) -- ++(0,-0.3) node[coordinate](c1){} node[draw,fill=grey!30,minimum width=1cm,minimum height=0.5cm,anchor=north,label=east:$m_0$](M){};;
+
+        \begin{scope}[xshift=4cm]
+            % Supporting structure
+            \fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
+            \draw[thick] (-1.5,0) -- ++(3,0);
+
+            % Spring + Arrows
+            \draw[] (0,0) -- ++(0,-0.25);
+            \draw[decoration={aspect=0.3, segment length=1.4mm, amplitude=2mm,coil},decorate] (0,-0.25) -- ++(0,-2.75) node[midway,right=0.25cm,black]{$k$};
+            \draw[] (0,-3) -- ++(0,-0.3)node[coordinate](c2){} node[draw,fill=grey!30,minimum width=1cm,minimum height=0.5cm,anchor=north,label=east:$m + m_0$](M){};
+        \end{scope}
+
+
+        \draw[dashed,gray] (0,-3.3) -- ++(-1.5,0)coordinate(c22);
+        \draw[dashed,gray] (4, -3.8) -- ++(-1.5,0) coordinate(c12);
+        \draw[latex-latex] (2.5, -3.8)-- (2.5,0)node[midway,left]{\small $y$};
+%
+        \draw[dashed,gray] (0,0) -- ++(-1.5,0) coordinate(c23);
+        \draw[latex-latex] (-1.5,0)-- ++(0,-3.3)node[midway,left]{\small $y_0$};
+
+    \end{tikzpicture}
+
+    \caption{Situación inicial del sistema masa-muelle y situación de medición para la masa $m$.}
+    \label{fig:compression}
+\end{figure}
