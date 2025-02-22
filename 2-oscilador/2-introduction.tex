@@ -1,22 +1,35 @@
 \section{Introducción}
-%%%%%%%%%%%%%%%%%%%%%%%
-
-La memoria de un trabajo científico consiste en el planteamiento de
-un problema (de modo que quien lo lea sepa lo que está hecho y qué
-se está resolviendo, esto es, el objetivo del trabajo), la explicación
-de los pasos dados para resolverlo (de modo que quien lo lea lo pueda
-reproducir por sí mismo), la exposición de los resultados obtenidos,
-la discusión crítica de los mismos (que es demostrar por qué los
-resultados son los que son, cuán fiables son, y el significado que
-tienen para la solución buscada del problema), y unas conclusiones
-que aclaren hasta dónde se ha llegado en la solución del problema
-inicialmente planteado \cite{May2006}.
 
 
-El objetivo de esta plantilla es servir de punto de partida (tanto
-en estructura como en estilo) para la elaboración de memorias de trabajos
-para la asignatura de Física Computacional I.
+\begin{tikzpicture}[black!75]
+
+    % Supporting structure
+    \fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
+    \draw[thick] (-1.5,0) -- ++(3,0);
+
+    % Spring + Arrows
+    \draw[] (0,0) -- ++(0,-0.25);
+    \draw[decoration={aspect=0.3, segment length=1.2mm, amplitude=2mm,coil},decorate] (0,-0.25) -- ++(0,-2.25) node[midway,right=0.25cm,black]{$k$};
+    \draw[] (0,-2.5) -- ++(0,-0.3) node[coordinate](c1){};
+
+    \begin{scope}[xshift=4cm]
+        % Supporting structure
+        \fill [pattern = north west lines] (-1.5,0) rectangle ++(3,.2);
+        \draw[thick] (-1.5,0) -- ++(3,0);
+
+        % Spring + Arrows
+        \draw[] (0,0) -- ++(0,-0.25);
+        \draw[decoration={aspect=0.3, segment length=1.4mm, amplitude=2mm,coil},decorate] (0,-0.25) -- ++(0,-2.75) node[midway,right=0.25cm,black]{$k$};
+        \draw[] (0,-3) -- ++(0,-0.3)node[coordinate](c2){} node[draw,fill=yellow!60,minimum width=1cm,minimum height=0.5cm,anchor=north,label=east:$m$](M){};
+    \end{scope}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \draw[dashed,gray] (c1) -- ++(-1.5,0)coordinate(c22);
+    \draw[dashed,gray] (4, -3.8) -- ++(-1.5,0) coordinate(c12);
+    \draw[latex-latex] (2.5, -3.8)-- (2.5,0)node[midway,left]{\small $y$};
+%
+    \draw[dashed,gray] (0,0) -- ++(-1.5,0) coordinate(c23);
+    \draw[latex-latex] (c23)-- (c23|-c1)node[midway,left]{\small $y_0$};
 
+
+\end{tikzpicture}

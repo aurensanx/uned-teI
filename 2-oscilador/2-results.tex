@@ -1,41 +1,69 @@
 \section{Resultados}
-%%%%%%%%%%%%%%%%%%%%%
 
-Los resultados deben referirse a lo que se obtiene siguiendo la metodología:
-ni se juzgan, ni se dan opiniones, aunque sí se pueden anotar condiciones
-particulares.
+\subsection{\label{sub:data}Datos}
+
+Tabla de alargamiento
 
 %Tabla
 \begin{table}[tbh]
-    \caption{\label{tab:tiempos}Tiempo empleado en cada paso.}
+    \caption{\label{tab:y}Muelle 1 - Alargamiento.}
     \begin{centering}
-        \begin{tabular}{|c|c|c|c|}
+        \begin{tabular}{|P{37px}|P{53px}|P{37px}|P{53px}|}
             \hline
-            Paso      & Tiempo    & Paso       & Tiempo                                \\
+            $m$(g)    & $m + m_0$(g) & $y$(mm)    & $y - y_0$ (mm)                        \\
             \hline
-            \csvreader[late after line= \\]{./files/data.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii & \csvcoliii & \csvcoliv}% specify your columns here
+            \csvreader[late after line= \\]{./files/data/1-y.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii    & \csvcoliii & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
 
-Por ejemplo, siguiendo la metodología del apartado \ref{sub:metodo},
-se ha llegado al resultado de la figura \ref{fig:resultado}. El tiempo
-empleado en escribir la plantilla se muestra en la tabla \ref{tab:tiempos}
-según los pasos indicados en la metodología
-%Nota al pie:
-\footnote{El tiempo invertido en la primera escritura (paso 2) es sólo estimativo,
-    ya que se desarrolló paralelamente a otras actividades a lo largo
-    de varios días.
-}.
+Tabla de toma de tiempos
+
+
+\begin{table}[tbh]
+    \caption{\label{tab:t1}Muelle 1 - Tiempo.}
+    \begin{centering}
+        \begin{tabular}{|P{25px}|P{25px}P{25px}P{25px}|P{28px}P{28px}|}
+            \hline
+            $m$(g)    & $t_1$(s)  & $t_2$(s)   & $t_3$(s)  & $\langle t \rangle$(s) & $s$(s)                                \\
+            \hline
+            \csvreader[late after line= \\]{./files/data/1-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv               & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+Tabla de cálculo del periodo
+
+\begin{table}[tbh]
+    \caption{\label{tab:t2}Muelle 1 - Periodo.}
+    \begin{centering}
+        \begin{tabular}{|P{40px}|P{40px}|P{50px}|P{50px}|}
+            \hline
+            $m$(g)    & $t$(s)    & $T = t / n$(s) & $T^2$(s)                              \\
+            \hline
+            \csvreader[late after line= \\]{./files/data/1-t2.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii & \csvcoliii     & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+asdfasdf
 
 %Figura
 \begin{figure}[tbh]
     \begin{centering}
-        \includegraphics[width=0.8\columnwidth]{files/muelles}
+        \includegraphics[width=0.8\columnwidth]{files/images/muelles}
     \end{centering}
     \caption{\label{fig:resultado}Miniatura de la primera página de la plantilla
     de memoria.}
 \end{figure}
+
+\subsection{\label{sub:results}Análisis}
+
+Represente la deformación frente a
 

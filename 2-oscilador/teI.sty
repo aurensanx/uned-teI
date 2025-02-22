@@ -10,10 +10,17 @@
     breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=false]
 {hyperref}
 \RequirePackage{listings}
+\RequirePackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\RequirePackage{array, booktabs}
+\RequirePackage[table, svgnames, dvipsnames]{xcolor}
 
 \newcommand{\address}[1]{
     \par {\raggedright #1
     \vspace{1.4em}
     \noindent\par}
 }
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
 
