@@ -2,12 +2,11 @@
 
 El sistema masa-muelle es un caso sencillo que nos permite estudiar la fuerza elástica y también el movimiento oscilatorio armónico.
 
-En primer lugar, utilizaremos la ley de Hooke para determinar la constante elástica de distintos muelles mediante el llamado método estático.
+En primer lugar, utilizaremos la ley de Hooke para determinar la constante elástica de distintos muelles.
 
 Para ello, utilizaremos la relación:
-
 \begin{equation}
-    k (y - y_0) = mg
+    k \, (y - y_0) = m \,g
 \end{equation}
 
 En esta expresión, $y_0$ es una longitud de referencia, que corresponde a la longitud del muelle cuando está en posición de equilibrio y
@@ -17,5 +16,25 @@ es la longitud del muelle cuando a la masa $m_0$ se ha añadido una masa $m$.
 
 Mediante mediciones de las longitudes $y$ para distintas masas $m$ podemos determinar la constante
 elástica $k$ de cada muelle.
+Este es el llamado método estático de obtención de la constante elástica.
 
 
+En segundo lugar, desplazando el sistema masa-muelle de su posición de equilibrio, podemos generar un movimiento oscilatorio armónico,
+a partir del cual se puede calcular de nuevo la constante elástica del muelle.
+Este es el método dinámico.
+
+La justificación teórica es la siguiente. La ecuación de movimiento del sistema una vez se ha desplazado de la posición de equilibrio es:
+\begin{equation}
+    \label{eq:1.1}
+    m \, \frac{d^2y}{dt^2} + k \, y = 0
+\end{equation}
+La ecuación \ref{eq:1.1} describe un movimiento oscilatorio, con periodo de oscilación:
+\begin{equation}
+    T = 2 \pi \sqrt {\frac{M}{k}}
+\end{equation}
+Conocida la masa $M$ y midiendo el periodo de las oscilaciones, se obtiene la constante elástica $k$.
+
+En este movimiento, la masa $M$ está compuesta por la masa $m$ que se cuelga del muelle y la masa efectiva del propio muelle, $m_{ef}$.
+
+La masa efectiva $m_{ef}$ del muelle es una fracción de su masa total, ya que en el movimiento oscilatorio no se mueve el muelle por completo, sino solo
+una parte.

@@ -1,16 +1,22 @@
 \section{Dispositivo experimental}
 
 
-Para comprobar la ley de Hooke y determinar la constante elástica de los muelles, pesamos por separado el muelle y el portamasas.
-Colocamos el muelle en el soporte y colgamos de él el portamasas. En este punto, añadimos una masa suficiente al portamasas
-para que el muelle quede tenso.
+En primer lugar, para determinar la constante elástica de un muelle por el método estático, pesamos por separado
+en una balanza el muelle y un portamasas que nos servirá para añadir más adelante distintas masas.
 
-A la suma de estas 3 masas, la del muelle, del portamasas y la masa inicial para tensar el muelle, la denominamos $m_0$.
+La balanza tiene una precisión de 1\,g.
 
-Con el sistema en equilibrio, medimos la longitud del muelle, y asignamos el valor a la variable $y_0$.
+A continuación, colocamos el muelle en el soporte, colgamos de él el portamasas y añadimos una masa suficiente para que el muelle quede tenso.
 
-Ya estamos preparados para añadir distintas masas $m$ al portamasas y anotar las distintas longitudes $y$. La figura~\ref{fig:compression}
-muestra las dos situaciones que hemos mencionado.
+La suma de estas 3 masas (muelle, portamasas y masa inicial para tensar el muelle), será $m_0$.
+
+Con el sistema en equilibrio, medimos con una regla la longitud del muelle, desde el gancho superior del soporte hasta la
+superficie inferior del portamasas. Este valor será $y_0$.
+
+La precisión de la regla usada es 1\,mm.
+
+En este punto, ya estamos preparados para añadir distintas masas $m$ al portamasas y anotar las distintas longitudes $y$. En la figura~\ref{fig:compression}
+se muestra un esquema de la situación inicial, y tras añadir una masa $m$ al sistema.
 
 \begin{figure}
     \begin{tikzpicture}[black!75]
@@ -47,4 +53,12 @@ muestra las dos situaciones que hemos mencionado.
     \label{fig:compression}
 \end{figure}
 
-// TODO movimiento oscilatorio armónico
+Para tomar las mediciones del periodo del movimiento oscilatorio, se retira la regla, se desplaza el muelle hacia abajo ejerciendo una ligera fuerza, y a
+continuación se suelta.
+
+Se dejan pasar unas oscilaciones hasta que el movimiento se estabilice y se cuenta con un cronómetro el tiempo que tardan en completarse $n$ oscilaciones.
+
+De este modo, al dividir el tiempo total $t$ por $n$ oscilaciones para calcular el periodo $T$, se minimiza el error debido al tiempo de reacción
+para operar el cronómetro, y también el error debido a la subjetividad a la hora de reconocer el punto de inicio de una oscilación.
+
+La precisión del cronómetro usado es de $0.01$\,s.
