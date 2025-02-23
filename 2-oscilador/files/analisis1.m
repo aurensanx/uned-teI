@@ -1,5 +1,6 @@
 clear;
 clc;
+close all;
 
 t = readtable('data/1-y.csv');
 x = t.m / 1000;
@@ -15,7 +16,7 @@ set(lab2,'Interpreter','latex', 'FontSize', 20);
 P = polyfit(x,y,1);
 yfit = P(1)*x+P(2);
 hold on;
-h = plot(x,yfit,'r--.', 'Color', 'Black');
+h = plot(x,yfit,'r--', 'Color', 'Black');
 
 gravstr = sprintf('$y = %.3f x %.3f$ ',P(1), P(2));
 l = legend(gravstr, 'Location','north');

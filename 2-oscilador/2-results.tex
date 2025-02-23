@@ -4,6 +4,8 @@
 
 Los datos de la elongación del muelle 1 para distintas masas $m$ se muestran en la tabla~\ref{tab:1-y}.
 
+El portamasas tiene un peso de 10\,g y se añade una masa inicial de 50\,g para tensar el muelle, por lo que $m_0 = 60$\,g.
+
 El error absoluto asociado a las mediciones de las masas es $\pm 0.5$\,g.
 
 El error absoluto asociado a las mediciones de las longitudes es $\pm 0.5$\,mm.
@@ -64,7 +66,7 @@ periodo $T$ y su cuadrado $T^2$, con propagación lineal de errores.
             \hline
             $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
             \hline
-            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t2.csv}{}% use head of csv as column names
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t2(1).csv}{}% use head of csv as column names
             {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
@@ -90,15 +92,13 @@ donde $m = 0.424 $ y $b = -0.001$.
 \end{figure}
 
 La desviación estándar obtenida en la regresión lineal es $0.003$, por lo que tenemos:
-
 \begin{equation*}
-    \frac{g}{k} = (0.424 \pm 0.003)\, \text{m/kg}
+    \frac{g}{k_e} = (0.424 \pm 0.003)\, \text{m/kg}
 \end{equation*}
 
-Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la constante elástica:
-
+Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la constante elástica calculada por el método estático:
 \begin{equation*}
-    k = (23.1 \pm 0.2)\,\text{N} / \text{m}
+    k_e = (23.1 \pm 0.2)\,\text{N} / \text{m}
 \end{equation*}
 
 El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, ya que si no se cuelga ninguna masa del muelle
@@ -108,7 +108,6 @@ no hay elongación, debería aproximarse al origen de coordenadas, como así sucede
 
 En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$.
 
-
 \begin{figure}[tbh]
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/fig2}
@@ -117,16 +116,28 @@ En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$.
     \label{fig:r2}
 \end{figure}
 
-De estos datos obtenemos:
-
+De la pendiente de la recta obtenemos:
 \begin{equation*}
-    \frac{4\pi^2}{k} = 1.560 \Rightarrow k = 25.31\,\text{N} / \text{m}
+    \frac{4\pi^2}{k_d} = (1.56 \pm 0.06)\,\text{s$^2$/kg}
+\end{equation*}
+
+Por lo que el valor de la constante elástica calculada por el método dinámico es:
+\begin{equation*}
+    k_d = (25.3 \pm 0.9 )\,\text{N/m}
 \end{equation*}
 
 \subsubsection{Comparación de los métodos}
 
-Error relativo del $9.4\%$.
+El error relativo suponiendo que el resultado correcto sea el estático es:
+\begin{equation*}
+    \epsilon_r = \frac{\abs{ k_d - k_e }}{k_e} \cdot 100 = 9.5\%
+\end{equation*}
 
-¿Diferencias entre ambos métodos desde un punto de vista experimental?
+//TODO ¿Diferencias entre ambos métodos desde un punto de vista experimental?
 
 \subsubsection{Masa efectiva}
+
+La coordenada en el origen de la recta es $0.024 \pm 0.014$.
+
+El valor $\alpha$ es la fracción de la masa del muelle que se mueve en el movimiento oscilatorio.
+Se espera que su valor se encuentre entre 0 y 1.
