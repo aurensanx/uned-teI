@@ -1,3 +1,5 @@
+clear;
+clc;
 
 t = readtable('data/1-t2.csv');
 x = t.m / 1000;
@@ -5,8 +7,8 @@ y = t.T_2;
 
 scatter(x, y, 50, "filled", "black");
 set(gca,'fontsize', 14);
-lab1 = ylabel('$T^2$ (s)'); 
-lab2 = xlabel('$m + m_0$ (kg)');
+lab1 = ylabel('$T^2$\,(s)'); 
+lab2 = xlabel('$m + m_0$\,(kg)');
 set(lab1,'Interpreter','latex', 'FontSize', 20);
 set(lab2,'Interpreter','latex', 'FontSize', 20);
 

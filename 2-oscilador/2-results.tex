@@ -2,7 +2,14 @@
 
 \subsection{\label{sub:data}Datos}\label{subsec:label{sub:data}datos}
 
-Los datos de la elongación del muelle 1 para distintas masas $m$ se puede ver en la tabla~\ref{tab:1-y}.
+Los datos de la elongación del muelle 1 para distintas masas $m$ se muestran en la tabla~\ref{tab:1-y}.
+
+El error absoluto asociado a las mediciones de las masas es $\pm 0.5$\,g.
+
+El error absoluto asociado a las mediciones de las longitudes es $\pm 0.5$\,mm.
+
+Estos errores se omiten de las tablas por claridad.
+
 
 %Tabla
 \begin{table}[tbh]
@@ -11,44 +18,54 @@ Los datos de la elongación del muelle 1 para distintas masas $m$ se puede ver en
     \begin{centering}
         \begin{tabular}{|P{37px}|P{53px}|P{37px}|P{53px}|}
             \hline
-            $m$(g)    & $m + m_0$(g) & $y$(mm)    & $y - y_0$ (mm)                        \\
+            $m$\,(g)  & $m + m_0$\,(g) & $y$\,(mm)  & $y - y_0$\,(mm)                       \\
             \hline
             \csvreader[late after line= \\]{./files/data/1-y.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii    & \csvcoliii & \csvcoliv}% specify your columns here
+            {\csvcoli & \csvcolii      & \csvcoliii & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
 
-Las 3 mediciones para las $n = 19$ oscilaciones se pueden ver en la tabla~\ref{tab:1-t1}.
+
+Las 3 mediciones para $n = 19$ oscilaciones se recogen en la tabla~\ref{tab:1-t1}.
 
 \begin{table}[tbh]
     \caption{Muelle 1 - Tiempo.}
     \label{tab:1-t1}
     \begin{centering}
-        \begin{tabular}{|P{25px}|P{25px}P{25px}P{25px}|P{28px}P{28px}|}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
             \hline
-            $m$(g)    & $t_1$(s)  & $t_2$(s)   & $t_3$(s)  & $\langle t \rangle$(s) & $s$(s)                                \\
+            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
             \hline
-            \csvreader[late after line= \\]{./files/data/1-t1.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv               & \csvcolvi}% specify your columns here
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
 
-Teniendo el cuenta el margen de error, la tabla~\ref{tab:1-t2} muestra el periodo calculado.
+En esta misma tabla, se han añadido dos columnas adicionales. La columna $\langle t \rangle$ muestra la media de las 3 medidas
+anteriores, o valor esperado de $t$, y la columna $D_m$ es la dispersión de los datos, calculada como:
+\begin{equation}
+    D_m = \frac{x_{\text{máx}} - x_{\text{mín}}}{2}
+\end{equation}
+La precisión del cronómetro era $0,01$\,s, un valor mucho menor que la dispersión $D_m$. Estos valores nos
+sugieren que el error absoluto de las medidas de $t$ sería como máximo de $\pm 0.2$\,s.
+
+La tabla~\ref{tab:1-t2} muestra de nuevo los valores de $t$ redondeados al número de cifras significativas adecuado. Además, se añaden los valores del
+periodo $T$ y su cuadrado $T^2$, con propagación lineal de errores.
 
 \begin{table}[tbh]
     \caption{Muelle 1 - Periodo.}
     \label{tab:1-t2}
     \begin{centering}
-        \begin{tabular}{|P{48px}|P{36px}|P{48px}|P{48px}|}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
             \hline
-            $m+m_0$(g) & $t$(s)    & $T = t / n$(s) & $T^2$(s)                              \\
+            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
             \hline
-            \csvreader[late after line= \\]{./files/data/1-t2.csv}{}% use head of csv as column names
-            {\csvcoli  & \csvcolii & \csvcoliii     & \csvcoliv}% specify your columns here
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t2.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -58,14 +75,11 @@ Teniendo el cuenta el margen de error, la tabla~\ref{tab:1-t2} muestra el period
 
 \subsubsection{Método estático}
 
-Representamos la deformación $y-y_0$ frente a la masa $m$ en la figura~\ref{fig:r1} y ajustamos los puntos a una recta de ecuación $y = mx + b$,
-donde $m = 0.424 \pm XXX $ y $b = -0.001$. La constante elástica del muelle es:
-
-\begin{equation*}
-    \frac{g}{k} = 0.424 \Rightarrow k = 23.14\,\text{N} / \text{m}
-\end{equation*}
-
-El valor $b$ creo debería ser 0 y creo que es el margen de error.
+Representamos la deformación $y-y_0$ frente a la masa $m$ en la figura~\ref{fig:r1}
+y ajustamos los puntos a una recta de ecuación $y = m\,x + b$,
+donde $m = 0.424 $ y $b = -0.001$.
+\footnote{En las figuras se emplea la notación inglesa, siendo el punto el separador de decimales.
+}.
 
 \begin{figure}[tbh]
     \begin{center}
@@ -74,6 +88,21 @@ El valor $b$ creo debería ser 0 y creo que es el margen de error.
     \caption{Deformación frente a masa.}
     \label{fig:r1}
 \end{figure}
+
+La desviación estándar obtenida en la regresión lineal es $0.003$, por lo que tenemos:
+
+\begin{equation*}
+    \frac{g}{k} = (0.424 \pm 0.003)\, \text{m/kg}
+\end{equation*}
+
+Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la constante elástica:
+
+\begin{equation*}
+    k = (23.1 \pm 0.2)\,\text{N} / \text{m}
+\end{equation*}
+
+El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, ya que si no se cuelga ninguna masa del muelle
+no hay elongación, debería aproximarse al origen de coordenadas, como así sucede.
 
 \subsubsection{Método dinámico}
 
@@ -84,7 +113,7 @@ En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$.
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/fig2}
     \end{center}
-    \caption{Deformación frente a masa.}
+    \caption{Periodo al cuadrado frente a masa total.}
     \label{fig:r2}
 \end{figure}
 
