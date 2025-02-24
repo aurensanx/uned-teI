@@ -2,9 +2,9 @@
 
 \subsection{\label{sub:data}Datos}\label{subsec:label{sub:data}datos}
 
-Los datos de la elongación del muelle 1 para distintas masas $m$ se muestran en la tabla~\ref{tab:1-y}.
+El portamasas tiene una masa de 10\,g y se añade una masa inicial de 50\,g para tensar el muelle, por lo que $m_0 = 60$\,g.
 
-El portamasas tiene un peso de 10\,g y se añade una masa inicial de 50\,g para tensar el muelle, por lo que $m_0 = 60$\,g.
+El muelle 1 tiene una masa de $m_s = 23$\,g.
 
 El error absoluto asociado a las mediciones de las masas es $\pm 0.5$\,g.
 
@@ -12,6 +12,7 @@ El error absoluto asociado a las mediciones de las longitudes es $\pm 0.5$\,mm.
 
 Estos errores se omiten de las tablas por claridad.
 
+Los datos de la elongación del muelle 1 para distintas masas $m$ se muestran en la tabla~\ref{tab:1-y}.
 
 %Tabla
 \begin{table}[tbh]
@@ -52,11 +53,11 @@ anteriores, o valor esperado de $t$, y la columna $D_m$ es la dispersión de los 
 \begin{equation}
     D_m = \frac{x_{\text{máx}} - x_{\text{mín}}}{2}
 \end{equation}
-La precisión del cronómetro era $0,01$\,s, un valor mucho menor que la dispersión $D_m$. Estos valores nos
-sugieren que el error absoluto de las medidas de $t$ sería como máximo de $\pm 0.2$\,s.
+La precisión del cronómetro es $0,01$\,s, un valor mucho menor que la dispersión $D_m$. Estos valores nos
+sugieren que un valor adecuado del error absoluto de las medidas de $t$ es $0.2$\,s.
 
 La tabla~\ref{tab:1-t2} muestra de nuevo los valores de $t$ redondeados al número de cifras significativas adecuado. Además, se añaden los valores del
-periodo $T$ y su cuadrado $T^2$, con propagación lineal de errores.
+periodo $T$ y su cuadrado $T^2$, con sus errores asociados calculados mediante propagación lineal.
 
 \begin{table}[tbh]
     \caption{Muelle 1 - Periodo.}
@@ -80,7 +81,7 @@ periodo $T$ y su cuadrado $T^2$, con propagación lineal de errores.
 Representamos la deformación $y-y_0$ frente a la masa $m$ en la figura~\ref{fig:r1}
 y ajustamos los puntos a una recta de ecuación $y = m\,x + b$,
 donde $m = 0.424 $ y $b = -0.001$.
-\footnote{En las figuras se emplea la notación inglesa, siendo el punto el separador de decimales.
+\footnote{En las figuras se emplea la notación anglosajona, donde se utiliza el punto como separador de decimales.
 }.
 
 \begin{figure}[tbh]
@@ -101,8 +102,8 @@ Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la cons
     k_e = (23.1 \pm 0.2)\,\text{N} / \text{m}
 \end{equation*}
 
-El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, ya que si no se cuelga ninguna masa del muelle
-no hay elongación, debería aproximarse al origen de coordenadas, como así sucede.
+El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, debido a que si no se cuelga ninguna masa del muelle
+no hay elongación, $b$ debería ser nulo dentro del margen de error, como así sucede.
 
 \subsubsection{Método dinámico}
 
@@ -116,7 +117,7 @@ En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$.
     \label{fig:r2}
 \end{figure}
 
-De la pendiente de la recta obtenemos:
+Del valor de la pendiente, obtenemos la relación:
 \begin{equation*}
     \frac{4\pi^2}{k_d} = (1.56 \pm 0.06)\,\text{s$^2$/kg}
 \end{equation*}
@@ -137,7 +138,9 @@ El error relativo suponiendo que el resultado correcto sea el estático es:
 
 \subsubsection{Masa efectiva}
 
-La coordenada en el origen de la recta es $0.024 \pm 0.014$.
+La coordenada de la recta en el origen es $b = 0.060 \pm 0.013$.
+
+Esta medida nos da un valor de $\alpha = -0.94$.
 
 El valor $\alpha$ es la fracción de la masa del muelle que se mueve en el movimiento oscilatorio.
-Se espera que su valor se encuentre entre 0 y 1.
+Su valor se debería encontrar entre 0 y 1.
