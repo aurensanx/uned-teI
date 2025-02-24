@@ -2,9 +2,8 @@
 
 \subsection{\label{sub:data}Datos}\label{subsec:label{sub:data}datos}
 
-El portamasas tiene una masa de 10\,g y se añade una masa inicial de 50\,g para tensar el muelle, por lo que $m_0 = 60$\,g.
-
-El muelle 1 tiene una masa de $m_s = 23$\,g.
+El portamasas tiene una masa de 10\,g.
+Para cada muelle se añade una masa inicial distinta para tensar el muelle: 50\,g para el muelle 1 y 19\,g para los muelles 2 y 3.
 
 El error absoluto asociado a las mediciones de las masas es $\pm 0.5$\,g.
 
@@ -12,7 +11,7 @@ El error absoluto asociado a las mediciones de las longitudes es $\pm 0.5$\,mm.
 
 Estos errores se omiten de las tablas por claridad.
 
-Los datos de la elongación del muelle 1 para distintas masas $m$ se muestran en la tabla~\ref{tab:1-y}.
+Las tablas~\ref{tab:1-y},~\ref{tab:2-y} y~\ref{tab:3-y} muestran la elongación de los 3 muelles para distintas masas $m$.
 
 %Tabla
 \begin{table}[tbh]
@@ -30,54 +29,6 @@ Los datos de la elongación del muelle 1 para distintas masas $m$ se muestran en 
     \end{centering}
 \end{table}
 
-
-Las 3 mediciones para $n = 19$ oscilaciones se recogen en la tabla~\ref{tab:1-t1}.
-
-\begin{table}[tbh]
-    \caption{Muelle 1 - Tiempo.}
-    \label{tab:1-t1}
-    \begin{centering}
-        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
-            \hline
-            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
-            \hline
-            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t1.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
-            \hline
-        \end{tabular}
-    \end{centering}
-\end{table}
-
-En esta misma tabla, se han añadido dos columnas adicionales. La columna $\langle t \rangle$ muestra la media de las 3 medidas
-anteriores, o valor esperado de $t$, y la columna $D_m$ es la dispersión de los datos, calculada como:
-\begin{equation}
-    D_m = \frac{x_{\text{máx}} - x_{\text{mín}}}{2}
-\end{equation}
-La precisión del cronómetro es $0,01$\,s, un valor mucho menor que la dispersión $D_m$. Estos valores nos
-sugieren que un valor adecuado del error absoluto de las medidas de $t$ es $0.2$\,s.
-
-La tabla~\ref{tab:1-t2} muestra de nuevo los valores de $t$ redondeados al número de cifras significativas adecuado. Además, se añaden los valores del
-periodo $T$ y su cuadrado $T^2$, con sus errores asociados calculados mediante propagación lineal.
-
-\begin{table}[tbh]
-    \caption{Muelle 1 - Periodo.}
-    \label{tab:1-t2}
-    \begin{centering}
-        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
-            \hline
-            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
-            \hline
-            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t2(1).csv}{}% use head of csv as column names
-            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
-            \hline
-        \end{tabular}
-    \end{centering}
-\end{table}
-
-En las tablas \ref{tab:2-y}, \ref{tab:2-t1}, \ref{tab:2-t2}, \ref{tab:3-y}, \ref{tab:3-t1} y \ref{tab:3-t2}
-se muestran los datos del segundo y tercer muelle, obtenidos de manera similar
-a la ya explicada.
-
 \begin{table}[!tbh]
     \caption{Muelle 2 - Elongación.}
     \label{tab:2-y}
@@ -88,37 +39,6 @@ a la ya explicada.
             \hline
             \csvreader[late after line= \\]{./files/data/2-y.csv}{}% use head of csv as column names
             {\csvcoli & \csvcolii      & \csvcoliii & \csvcoliv}% specify your columns here
-            \hline
-        \end{tabular}
-    \end{centering}
-\end{table}
-
-
-\begin{table}[!tbh]
-    \caption{Muelle 2 - Tiempo.}
-    \label{tab:2-t1}
-    \begin{centering}
-        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
-            \hline
-            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
-            \hline
-            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t1.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
-            \hline
-        \end{tabular}
-    \end{centering}
-\end{table}
-
-\begin{table}[!tbh]
-    \caption{Muelle 2 - Periodo.}
-    \label{tab:2-t2}
-    \begin{centering}
-        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
-            \hline
-            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
-            \hline
-            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t2(1).csv}{}% use head of csv as column names
-            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -139,6 +59,39 @@ a la ya explicada.
     \end{centering}
 \end{table}
 
+
+Los datos recogidos para el tiempo que tarda el sistema en completar $n = 19$ oscilaciones se recogen en las tablas~\ref{tab:1-t1},~\ref{tab:2-t1} y~\ref{tab:3-t1}.
+
+\begin{table}[tbh]
+    \caption{Muelle 1 - Tiempo.}
+    \label{tab:1-t1}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[!tbh]
+    \caption{Muelle 2 - Tiempo.}
+    \label{tab:2-t1}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
 \begin{table}[!tbh]
     \caption{Muelle 3 - Tiempo.}
     \label{tab:3-t1}
@@ -153,6 +106,53 @@ a la ya explicada.
         \end{tabular}
     \end{centering}
 \end{table}
+
+En estas tablas se han añadido dos columnas adicionales.
+La columna $\langle t \rangle$ muestra la media de las 3 medidas
+del tiempo $t$, o valor esperado de $t$, y la columna $D_m$ es la dispersión de los datos, calculada como:
+\begin{equation}
+    D_m = \frac{x_{\text{máx}} - x_{\text{mín}}}{2}
+\end{equation}
+La precisión del cronómetro es $0,01$\,s, un valor menor que la dispersión $D_m$, por lo
+que no será una fuente de error en la toma de datos.
+Los valores de $D_m$ nos sugieren que un valor adecuado del error absoluto de las medidas de $t$ es $0.2$\,s.
+
+Las tablas~\ref{tab:1-t2},~\ref{tab:2-t2} y~\ref{tab:3-t2}
+muestra de nuevo los valores de $t$ redondeados al número de cifras significativas adecuado.
+Además, se añaden los valores del periodo $T$ y su cuadrado $T^2$, con sus errores asociados calculados mediante propagación lineal.
+
+\begin{table}[tbh]
+    \caption{Muelle 1 - Periodo.}
+    \label{tab:1-t2}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t2(1).csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[!tbh]
+    \caption{Muelle 2 - Periodo.}
+    \label{tab:2-t2}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t2(1).csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+
+
 
 \begin{table}[!tbh]
     \caption{Muelle 3 - Periodo.}
@@ -193,9 +193,10 @@ La desviación estándar obtenida en la regresión lineal es $0.003$, por lo que te
 \end{equation*}
 
 Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la constante elástica calculada por el método estático:
-\begin{equation*}
+\begin{equation}
+    \label{eq:k11}
     k_{1e} = (23.13 \pm 0.18)\,\text{N} / \text{m}
-\end{equation*}
+\end{equation}
 
 El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, debido a que si no se cuelga ninguna masa del muelle
 no hay elongación, $b$ debería ser nulo dentro del margen de error.
@@ -214,9 +215,10 @@ Para el muelle 2 tenemos:
     \frac{g}{k_{2e}} = (1.210 \pm 0.002)\, \text{m/kg}
 \end{equation*}
 
-\begin{equation*}
+\begin{equation}
+    \label{eq:k21}
     k_{2e} = (8.11 \pm 0.04)\,\text{N} / \text{m}
-\end{equation*}
+\end{equation}
 
 Para el muelle 3:
 
@@ -232,13 +234,12 @@ Para el muelle 3:
     \frac{g}{k_{3e}} = (1.287 \pm 0.007)\, \text{m/kg}
 \end{equation*}
 
-\begin{equation*}
+\begin{equation}
+    \label{eq:k31}
     k_{3e} = (7.62 \pm 0.06)\,\text{N} / \text{m}
-\end{equation*}
+\end{equation}
 
 \subsubsection{Método dinámico}
-
-En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$ para el muelle 1.
 
 \begin{figure}[!tbh]
     \begin{center}
@@ -248,17 +249,17 @@ En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$ para el muelle 1.
     \label{fig:r2}
 \end{figure}
 
-Del valor de la pendiente, obtenemos la relación:
+Del valor de la pendiente de la recta de la figura~\ref{fig:r2} obtenemos la relación:
+
 \begin{equation*}
     \frac{4\pi^2}{k_{1d}} = (1.56 \pm 0.06)\,\text{s$^2$/kg}
 \end{equation*}
 
 Por lo que el valor de la constante elástica calculada por el método dinámico es:
-\begin{equation*}
+\begin{equation}
+    \label{eq:k12}
     k_{1d} = (25.3 \pm 1.0 )\,\text{N/m}
-\end{equation*}
-
-De acuerdo a la figura \ref{fig:2-r2}, el muelle 2:
+\end{equation}
 
 \begin{figure}[!tbh]
     \begin{center}
@@ -268,15 +269,16 @@ De acuerdo a la figura \ref{fig:2-r2}, el muelle 2:
     \label{fig:2-r2}
 \end{figure}
 
+De la figura~\ref{fig:2-r2}, para el muelle 2 obtenemos:
+
 \begin{equation*}
     \frac{4\pi^2}{k_{2d}} = (4.83 \pm 0.03)\,\text{s$^2$/kg}
 \end{equation*}
 
-\begin{equation*}
+\begin{equation}
+    \label{eq:k22}
     k_{2d} = (8.17 \pm 0.05 )\,\text{N/m}
-\end{equation*}
-
-Según la figura \ref{fig:3-r2}, el muelle 3:
+\end{equation}
 
 \begin{figure}[!tbh]
     \begin{center}
@@ -286,17 +288,21 @@ Según la figura \ref{fig:3-r2}, el muelle 3:
     \label{fig:3-r2}
 \end{figure}
 
+De la figura~\ref{fig:3-r2}, para el muelle 3 obtenemos:
+
 \begin{equation*}
     \frac{4\pi^2}{k_{3d}} = (5.24 \pm 0.09)\,\text{s$^2$/kg}
 \end{equation*}
 
-\begin{equation*}
+\begin{equation}
+    \label{eq:k32}
     k_{3d} = (7.53 \pm 0.13 )\,\text{N/m}
-\end{equation*}
+\end{equation}
 
 \subsubsection{Comparación de los métodos}\label{subsubsec:comparison}
 
-El error relativo suponiendo que el resultado correcto sea el estático es:
+El error relativo suponiendo que el resultado correcto sea el estático se calcula sustituyendo en la
+siguiente expresión los resultados de~\ref{eq:k11} y~\ref{eq:k12}:
 \begin{equation*}
     \epsilon_{r1} = \frac{\abs{ k_{1d} - k_{1e} }}{k_{1e}} \cdot 100 = 9.4\%
 \end{equation*}
@@ -310,17 +316,16 @@ En el caso del método dinámico, se asume que el movimiento de la masa-muelle es 
 armónico simple, pero esto es correcto solo para oscilaciones pequeñas.
 Si las oscilaciones son grandes, el periodo depende de la amplitud de la oscilación.
 
-Si consideramos que el resultado correcto es el estático, el error relativo de $9.5\%$
+Si consideramos que el resultado correcto es el estático, el error relativo de $9.4\%$
 sugiere que las condiciones en el método dinámico no se cumplían completamente.
 
-Para el muelle 2 tenemos:
+Para el muelle 2, sustituyendo~\ref{eq:k21} y~\ref{eq:k22}:
 
 \begin{equation*}
     \epsilon_{r2} = \frac{\abs{ k_{2d} - k_{2e} }}{k_{2e}} \cdot 100 = 0.8\%
 \end{equation*}
 
-
-Para el muelle 3:
+Para el muelle 3, sustituyendo~\ref{eq:k31} y~\ref{eq:k32}:
 
 \begin{equation*}
     \epsilon_{r3} = \frac{\abs{ k_{3d} - k_{3e} }}{k_{3e}} \cdot 100 = 1.2\%
@@ -338,9 +343,10 @@ Su valor se debería encontrar entre 0 y 1.
 Una posible razón por la que el valor de $\alpha$ no se encuentra en el rango teórico esperado es
 que el movimiento de la masa-muelle no es armónico simple puro, como se ha mencionado en la sección \ref{subsubsec:comparison}.
 
-Otra fuente de error en el cálculo de $\alpha$ es que en la gráfica \ref{fig:r2} se representa $T^2$ frente a $m + m_0$, pero
-por rigor el eje de abscisas debería ser $m + m_0 + \alpha\, m_s$. El valor de $\alpha$ no lo conocemos a priori.
+Otra fuente de error en el cálculo de $\alpha$ es que en la gráfica~\ref{fig:r2} se representa $T^2$ frente a $m + m_0$, pero
+por rigor el eje de abscisas debería ser $m + m_0 + \alpha\, m_s$.
+Pero no podemos representar esa masa porque el valor de $\alpha$ no lo conocemos a priori.
 
-Para el muelle 2, tenemos $b = (-0.104 \pm 0.007)$\,s$^2$, por lo que $\alpha_2 = -2.66 \pm 0.08$.
+Para el muelle 2, tenemos $b = (-0.104 \pm 0.007)$\,s$^2$, con $\alpha_2 = -2.66 \pm 0.08$.
 
-Para el muelle 3, tenemos $b = (0.180 \pm 0.006)$\,s$^2$, por lo que $\alpha_3 = 0.38 \pm 0.12$.
+Para el muelle 3, tenemos $b = (0.180 \pm 0.006)$\,s$^2$, con $\alpha_3 = 0.38 \pm 0.12$.
