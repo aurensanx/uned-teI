@@ -103,7 +103,7 @@ Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la cons
 \end{equation*}
 
 El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, debido a que si no se cuelga ninguna masa del muelle
-no hay elongación, $b$ debería ser nulo dentro del margen de error, como así sucede.
+no hay elongación, $b$ debería ser nulo dentro del margen de error.
 
 \subsubsection{Método dinámico}
 
@@ -127,20 +127,36 @@ Por lo que el valor de la constante elástica calculada por el método dinámico es
     k_d = (25.3 \pm 0.9 )\,\text{N/m}
 \end{equation*}
 
-\subsubsection{Comparación de los métodos}
+\subsubsection{Comparación de los métodos}\label{subsubsec:comparison}
 
 El error relativo suponiendo que el resultado correcto sea el estático es:
 \begin{equation*}
     \epsilon_r = \frac{\abs{ k_d - k_e }}{k_e} \cdot 100 = 9.5\%
 \end{equation*}
 
-//TODO ¿Diferencias entre ambos métodos desde un punto de vista experimental?
+Ambos métodos son válidos bajo unas determinadas condiciones experimentales.
 
-\subsubsection{Masa efectiva}
+En el caso del método estático, la ley de Hooke debe ser aplicable; es decir,
+la deformación debe ser pequeña para que la relación entre fuerza y alargamiento sea lineal.
 
-La coordenada de la recta en el origen es $b = 0.060 \pm 0.013$.
+En el caso del método dinámico, se asume que el movimiento de la masa-muelle es un movimiento
+armónico simple, pero esto es correcto solo para oscilaciones pequeñas.
+Si las oscilaciones son grandes, el periodo depende de la amplitud de la oscilación.
 
-Esta medida nos da un valor de $\alpha = -0.94$.
+Si consideramos que el resultado correcto es el estático, el error relativo de $9.5\%$
+sugiere que las condiciones en el método dinámico no se cumplían completamente.
 
-El valor $\alpha$ es la fracción de la masa del muelle que se mueve en el movimiento oscilatorio.
+\subsubsection{Coeficiente \alpha}
+
+La coordenada de la recta en el origen es $b = (0.060 \pm 0.013)$\,s$^2$.
+
+Esta medida nos da un valor de $\alpha = -0.9 \pm 0.4$.
+
+El valor $\alpha$ es una medida adimensional que representa la fracción de la masa del muelle que se mueve en el movimiento oscilatorio.
 Su valor se debería encontrar entre 0 y 1.
+
+Una posible razón por la que el valor de $\alpha$ no se encuentra en el rango teórico esperado es
+que el movimiento de la masa-muelle no es armónico simple puro, como se ha mencionado en la sección \ref{subsubsec:comparison}.
+
+Otra fuente de error en el cálculo de $\alpha$ es que en la gráfica \ref{fig:r2} se representa $T^2$ frente a $m + m_0$, pero
+por rigor el eje de abscisas debería ser $m + m_0 + \alpha\, m_s$. El valor de $\alpha$ no lo conocemos a priori.

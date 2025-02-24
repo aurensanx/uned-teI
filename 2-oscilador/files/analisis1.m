@@ -22,7 +22,7 @@ gravstr = sprintf('$y = %.3f x %.3f$ ',P(1), P(2));
 l = legend(gravstr, 'Location','north');
 set(l,'Interpreter','latex', 'FontSize', 20);
 
+% obtener medida de la bondad del ajuste
 mdl = fitlm(x,y)
 
-%fig1 = gca;
-%exportgraphics(fig1,'images/fig1.eps','Resolution',300);
+

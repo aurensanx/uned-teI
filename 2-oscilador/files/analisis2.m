@@ -3,7 +3,7 @@ clc;
 close all;
 
 t = readtable('data/1-t2.csv');
-x = t.m / 1000
+x = (t.m + 0) / 1000
 y = t.T_2
 
 scatter(x, y, 50, "filled", "black");
