@@ -74,6 +74,101 @@ periodo $T$ y su cuadrado $T^2$, con sus errores asociados calculados mediante p
     \end{centering}
 \end{table}
 
+En las tablas \ref{tab:2-y}, \ref{tab:2-t1}, \ref{tab:2-t2}, \ref{tab:3-y}, \ref{tab:3-t1} y \ref{tab:3-t2}
+se muestran los datos del segundo y tercer muelle, obtenidos de manera similar
+a la ya explicada.
+
+\begin{table}[!tbh]
+    \caption{Muelle 2 - Elongación.}
+    \label{tab:2-y}
+    \begin{centering}
+        \begin{tabular}{|P{37px}|P{53px}|P{37px}|P{53px}|}
+            \hline
+            $m$\,(g)  & $m + m_0$\,(g) & $y$\,(mm)  & $y - y_0$\,(mm)                       \\
+            \hline
+            \csvreader[late after line= \\]{./files/data/2-y.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii      & \csvcoliii & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+
+\begin{table}[!tbh]
+    \caption{Muelle 2 - Tiempo.}
+    \label{tab:2-t1}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[!tbh]
+    \caption{Muelle 2 - Periodo.}
+    \label{tab:2-t2}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t2(1).csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[!tbh]
+    \caption{Muelle 3 - Elongación.}
+    \label{tab:3-y}
+    \begin{centering}
+        \begin{tabular}{|P{37px}|P{53px}|P{37px}|P{53px}|}
+            \hline
+            $m$\,(g)  & $m + m_0$\,(g) & $y$\,(mm)  & $y - y_0$\,(mm)                       \\
+            \hline
+            \csvreader[late after line= \\]{./files/data/3-y.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii      & \csvcoliii & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[!tbh]
+    \caption{Muelle 3 - Tiempo.}
+    \label{tab:3-t1}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $m$\,(g)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/3-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[!tbh]
+    \caption{Muelle 3 - Periodo.}
+    \label{tab:3-t2}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $t$\,(s)   & $T = t / n$\,(s) & $T^2$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/3-t2(1).csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii       & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
 \subsection{\label{sub:results}Análisis}\label{subsec:label{sub:results}analisis}
 
 \subsubsection{Método estático}
