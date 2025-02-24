@@ -183,50 +183,122 @@ donde $m = 0.424 $ y $b = -0.001$.
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/fig1}
     \end{center}
-    \caption{Deformación frente a masa.}
+    \caption{Muelle 1 - Deformación frente a masa.}
     \label{fig:r1}
 \end{figure}
 
 La desviación estándar obtenida en la regresión lineal es $0.003$, por lo que tenemos:
 \begin{equation*}
-    \frac{g}{k_e} = (0.424 \pm 0.003)\, \text{m/kg}
+    \frac{g}{k_{1e}} = (0.424 \pm 0.003)\, \text{m/kg}
 \end{equation*}
 
 Usando el valor de $g = (9.81 \pm 0.03)$\,m/s$^2$, obtenemos el valor de la constante elástica calculada por el método estático:
 \begin{equation*}
-    k_e = (23.1 \pm 0.2)\,\text{N} / \text{m}
+    k_{1e} = (23.13 \pm 0.18)\,\text{N} / \text{m}
 \end{equation*}
 
 El valor $b$ representa el corte de la recta con el eje de abscisas. En nuestro caso, debido a que si no se cuelga ninguna masa del muelle
 no hay elongación, $b$ debería ser nulo dentro del margen de error.
 
-\subsubsection{Método dinámico}
-
-En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$.
+Para el muelle 2 tenemos:
 
 \begin{figure}[tbh]
     \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/fig3}
+    \end{center}
+    \caption{Muelle 2 - Deformación frente a masa.}
+    \label{fig:2-r1}
+\end{figure}
+
+\begin{equation*}
+    \frac{g}{k_{2e}} = (1.210 \pm 0.002)\, \text{m/kg}
+\end{equation*}
+
+\begin{equation*}
+    k_{2e} = (8.11 \pm 0.04)\,\text{N} / \text{m}
+\end{equation*}
+
+Para el muelle 3:
+
+\begin{figure}[tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/fig4}
+    \end{center}
+    \caption{Muelle 3 - Deformación frente a masa.}
+    \label{fig:3-r1}
+\end{figure}
+
+\begin{equation*}
+    \frac{g}{k_{3e}} = (1.287 \pm 0.007)\, \text{m/kg}
+\end{equation*}
+
+\begin{equation*}
+    k_{3e} = (7.62 \pm 0.06)\,\text{N} / \text{m}
+\end{equation*}
+
+\subsubsection{Método dinámico}
+
+En la figura~\ref{fig:r2} se representa $T^2$ frente a $m+m_0$ para el muelle 1.
+
+\begin{figure}[!tbh]
+    \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/fig2}
     \end{center}
-    \caption{Periodo al cuadrado frente a masa total.}
+    \caption{Muelle 1 - Periodo al cuadrado frente a masa total.}
     \label{fig:r2}
 \end{figure}
 
 Del valor de la pendiente, obtenemos la relación:
 \begin{equation*}
-    \frac{4\pi^2}{k_d} = (1.56 \pm 0.06)\,\text{s$^2$/kg}
+    \frac{4\pi^2}{k_{1d}} = (1.56 \pm 0.06)\,\text{s$^2$/kg}
 \end{equation*}
 
 Por lo que el valor de la constante elástica calculada por el método dinámico es:
 \begin{equation*}
-    k_d = (25.3 \pm 0.9 )\,\text{N/m}
+    k_{1d} = (25.3 \pm 1.0 )\,\text{N/m}
+\end{equation*}
+
+De acuerdo a la figura \ref{fig:2-r2}, el muelle 2:
+
+\begin{figure}[!tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/fig5}
+    \end{center}
+    \caption{Muelle 2 - Periodo al cuadrado frente a masa total.}
+    \label{fig:2-r2}
+\end{figure}
+
+\begin{equation*}
+    \frac{4\pi^2}{k_{2d}} = (4.83 \pm 0.03)\,\text{s$^2$/kg}
+\end{equation*}
+
+\begin{equation*}
+    k_{2d} = (8.17 \pm 0.05 )\,\text{N/m}
+\end{equation*}
+
+Según la figura \ref{fig:3-r2}, el muelle 3:
+
+\begin{figure}[!tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/fig6}
+    \end{center}
+    \caption{Muelle 3 - Periodo al cuadrado frente a masa total.}
+    \label{fig:3-r2}
+\end{figure}
+
+\begin{equation*}
+    \frac{4\pi^2}{k_{3d}} = (5.24 \pm 0.09)\,\text{s$^2$/kg}
+\end{equation*}
+
+\begin{equation*}
+    k_{3d} = (7.53 \pm 0.13 )\,\text{N/m}
 \end{equation*}
 
 \subsubsection{Comparación de los métodos}\label{subsubsec:comparison}
 
 El error relativo suponiendo que el resultado correcto sea el estático es:
 \begin{equation*}
-    \epsilon_r = \frac{\abs{ k_d - k_e }}{k_e} \cdot 100 = 9.5\%
+    \epsilon_{r1} = \frac{\abs{ k_{1d} - k_{1e} }}{k_{1e}} \cdot 100 = 9.4\%
 \end{equation*}
 
 Ambos métodos son válidos bajo unas determinadas condiciones experimentales.
@@ -241,11 +313,24 @@ Si las oscilaciones son grandes, el periodo depende de la amplitud de la oscilac
 Si consideramos que el resultado correcto es el estático, el error relativo de $9.5\%$
 sugiere que las condiciones en el método dinámico no se cumplían completamente.
 
+Para el muelle 2 tenemos:
+
+\begin{equation*}
+    \epsilon_{r2} = \frac{\abs{ k_{2d} - k_{2e} }}{k_{2e}} \cdot 100 = 0.8\%
+\end{equation*}
+
+
+Para el muelle 2:
+
+\begin{equation*}
+    \epsilon_{r3} = \frac{\abs{ k_{3d} - k_{3e} }}{k_{3e}} \cdot 100 = 1.2\%
+\end{equation*}
+
 \subsubsection{Coeficiente \alpha}
 
-La coordenada de la recta en el origen es $b = (0.060 \pm 0.013)$\,s$^2$.
+Para el muelle 1, la coordenada de la recta en el origen es $b = (0.060 \pm 0.013)$\,s$^2$.
 
-Esta medida nos da un valor de $\alpha = -0.9 \pm 0.4$.
+Esta medida nos da un valor de $\alpha_1 = -0.9 \pm 0.4$.
 
 El valor $\alpha$ es una medida adimensional que representa la fracción de la masa del muelle que se mueve en el movimiento oscilatorio.
 Su valor se debería encontrar entre 0 y 1.
@@ -255,3 +340,7 @@ que el movimiento de la masa-muelle no es armónico simple puro, como se ha menci
 
 Otra fuente de error en el cálculo de $\alpha$ es que en la gráfica \ref{fig:r2} se representa $T^2$ frente a $m + m_0$, pero
 por rigor el eje de abscisas debería ser $m + m_0 + \alpha\, m_s$. El valor de $\alpha$ no lo conocemos a priori.
+
+Para el muelle 2, tenemos $b = (-0.104 \pm 0.007)$\,s$^2$, por lo que $\alpha_2 = -2.66 \pm 0.08$.
+
+Para el muelle 3, tenemos $b = (0.180 \pm 0.006)$\,s$^2$, por lo que $\alpha_3 = 0.38 \pm 0.12$.

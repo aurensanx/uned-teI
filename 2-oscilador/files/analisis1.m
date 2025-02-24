@@ -2,7 +2,7 @@ clear;
 clc;
 close all;
 
-t = readtable('data/1-y.csv');
+t = readtable('data/3-y.csv');
 x = t.m / 1000;
 y = t.y_y0 / 1000;
 
