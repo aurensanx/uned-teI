@@ -1,0 +1,18 @@
+\section{Resultados}\label{sec:resultados}
+
+\subsection{\label{sub:data}Datos}\label{subsec:label{sub:data}datos}
+
+\begin{table}[tbh]
+    \caption{Masa 1 - Tiempo.}
+    \label{tab:1-t1-20}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $l$\,(mm) & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                            \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv  & \csvcolv                 & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
