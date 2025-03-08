@@ -1,6 +1,10 @@
 \section{Dispositivo experimental}
 
+El experimento comienza atando una masa $m$ a un extremo de un hilo inextensible (sedal de caña de pescar).
+El otro extremo del hilo se ata al soporte.
+De esta manera, se consigue un hilo de longitud $l$.
 
+Con un transportador graduado medimos el ángulo $\theta$ respecto a la vertical (ver figura~\ref{fig:pendulum}) y soltamos la masa $m$.
 
 \usetikzlibrary{calc,patterns,angles,quotes}
 
@@ -20,9 +24,12 @@
 
             \node[below=24pt, right=-2pt] at (o)   {$\theta$}
 
-
         \end{tikzpicture}
         \caption{Diagrama del péndulo simple}
         \label{fig:pendulum}
     \end{center}
 \end{figure}
+
+Contamos el tiempo que tardan en completarse $n$ oscilaciones para minimizar el error en el cálculo del periodo.
+
+Repetimos esta medida para 8 longitudes distintas, aproximadamente equiespaciadas, para dos ángulos, 20\textdegree \:y 45\textdegree, y para dos masas.
