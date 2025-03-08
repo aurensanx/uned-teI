@@ -1,2 +1,28 @@
 \section{Dispositivo experimental}
 
+
+
+\usetikzlibrary{calc,patterns,angles,quotes}
+
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{tikzpicture}[black!75]
+
+            % Supporting structure
+            \fill [pattern = north west lines] (0,0) rectangle ++(3,.2);
+            \draw[thick] (0,0) -- ++(3,0);
+
+            \draw[dashed,gray] (1.5,0)coordinate(o) -- ++(0,-3)coordinate(b);
+            \draw (o) -- ++(290:3cm)coordinate(m) node[right=6pt] {$m$};
+            \node[circle,draw,fill=grey!30] at (m);
+
+            \pic [draw, ->, "$\theta$", angle eccentricity=1.5] {angle = b--o--m};
+
+            \node[below=24pt, right=-2pt] at (o)   {$\theta$}
+
+
+        \end{tikzpicture}
+        \caption{Diagrama del péndulo simple}
+        \label{fig:pendulum}
+    \end{center}
+\end{figure}
