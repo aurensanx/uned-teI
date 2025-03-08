@@ -2,9 +2,20 @@
 
 \subsection{\label{sub:data}Datos}\label{subsec:label{sub:data}datos}
 
+En esta sección, las tablas~\ref{tab:1-t1-20},~\ref{tab:1-t1-45},~\ref{tab:2-t1-20} y~\ref{tab:2-t1-45} muestran
+las mediciones del tiempo tomadas para las longitudes, ángulos y masas especificadas.
+
+Se contaron 20 oscilaciones para la masa 1 y 10 oscilaciones para la masa 2.
+
+En cada tabla, se muestra la media de los 3 valores, o valor esperado de $t$, $\langle t \rangle$.
+También la dispersión de los datos  $D_m$, calculada como:
+\begin{equation}
+    D_m = \frac{x_{\text{máx}} - x_{\text{mín}}}{2}
+\end{equation}
+
 \begin{table}[tbh]
-    \caption{Masa 1 - Tiempo.}
-    \label{tab:1-t1}
+    \caption{Masa 1 - $20 \text{\textdegree}$ - Tiempo.}
+    \label{tab:1-t1-20}
     \begin{centering}
         \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
             \hline
@@ -16,6 +27,53 @@
         \end{tabular}
     \end{centering}
 \end{table}
+
+\begin{table}[tbh]
+    \caption{Masa 1 - $45 \text{\textdegree}$ - Tiempo.}
+    \label{tab:1-t1-45}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $l$\,(mm)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t1-45.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii & \csvcoliv  & \csvcolv   & \csvcolvi                & \csvcolvii}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[tbh]
+    \caption{Masa 2 - $20 \text{\textdegree}$ - Tiempo.}
+    \label{tab:2-t1-20}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $l$\,(mm)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t1-20.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii & \csvcoliv  & \csvcolv   & \csvcolvi                & \csvcolvii}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[tbh]
+    \caption{Masa 2 - $45 \text{\textdegree}$ - Tiempo.}
+    \label{tab:2-t1-45}
+    \begin{centering}
+        \begin{tabular}{|P{27px}|P{26px}P{26px}P{26px}|P{26px}P{26px}|}
+            \hline
+            $l$\,(mm)  & $t_1$\,(s) & $t_2$\,(s) & $t_3$\,(s) & $\langle t \rangle$\,(s) & $D_m$\,(s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t1-45.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcoliii & \csvcoliv  & \csvcolv   & \csvcolvi                & \csvcolvii}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\subsection{\label{sub:results}Análisis}\label{subsec:label{sub:results}analisis}
 
 \begin{table}[tbh]
     \caption{Masa 1 - Periodo.}
@@ -78,5 +136,9 @@ De ahí:
 \end{figure}
 
 Se agrupan en una línea de pendiente 2.
+
+Observamos que los tiempos para amplitudes grandes son mayores que para amplitudes pequeñas.
+
+También observamos que los tiempos medidos para las dos masas coinciden.
 
 
