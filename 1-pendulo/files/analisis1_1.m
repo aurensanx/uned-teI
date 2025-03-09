@@ -2,7 +2,7 @@ clear;
 clc;
 close all;
 
-t = readtable('data/2-t2-45.csv');
+t = readtable('data/2-t2-20.csv')
 x = sqrt(t.l / 1000);
 y = t.T ;
 
@@ -18,7 +18,7 @@ yfit = P(1)*x+P(2);
 hold on;
 h = plot(x,yfit,'r--', 'Color', 'Black');
 
-gravstr = sprintf('$y = %.3f x %.3f$ ',P(1), P(2));
+gravstr = sprintf('$y = %.2f x %.2f$ ',P(1), P(2));
 l = legend(gravstr, 'Location','north');
 set(l,'Interpreter','latex', 'FontSize', 20);
 

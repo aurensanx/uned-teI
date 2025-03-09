@@ -18,7 +18,7 @@ yfit = P(1)*x+P(2);
 hold on;
 h = plot(x,yfit,'r--', 'Color', 'Black');
 
-gravstr = sprintf('$y = %.4f x + %.4f$ ',P(1), P(2));
+gravstr = sprintf('$y = %.3f x + %.3f$ ',P(1), P(2));
 l = legend(gravstr, 'Location','north');
 set(l,'Interpreter','latex', 'FontSize', 20);
 
