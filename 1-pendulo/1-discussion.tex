@@ -1,2 +1,63 @@
 \section{Cuestiones}\label{sec:discusion}
 
+Las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-t4-45} muestran los valores individuales de $g$ calculados para cada medida.
+
+\begin{table}[h!]
+    \caption{Masa 1 - $20 \text{\textdegree}$ - $g$.}
+    \label{tab:1-t4-20}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t-20_es.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[h!]
+    \caption{Masa 1 - $45 \text{\textdegree}$ - $g$.}
+    \label{tab:1-t4-45}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t-45_es.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[h!]
+    \caption{Masa 2 - $20 \text{\textdegree}$ - $g$.}
+    \label{tab:2-t4-20}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t-20_es.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[h!]
+    \caption{Masa 2 - $45 \text{\textdegree}$ - $g$.}
+    \label{tab:2-t4-45}
+    \begin{centering}
+        \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
+            \hline
+            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t-45_es.csv}{}% use head of csv as column names
+            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
