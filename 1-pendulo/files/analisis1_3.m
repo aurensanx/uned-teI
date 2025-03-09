@@ -2,8 +2,8 @@ clear;
 clc;
 close all;
 
-t = readtable('data/2-t2-45.csv');
-y = t.l / 1000;
+t = readtable('data/2-t-45.csv')
+y = t.l_real_ / 1000;
 x = t.T ;
 
 scatter(x, y, 50, "filled", "black");
