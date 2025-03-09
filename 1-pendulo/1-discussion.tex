@@ -1,6 +1,17 @@
 \section{Cuestiones}\label{sec:discusion}
 
+\subsection{}
+
 Las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-t4-45} muestran los valores individuales de $g$ calculados para cada medida.
+
+El error absoluto de $g$ se calcula con el método de propagación lineal de errores mediante la expresión:
+
+\begin{equation}
+    \epsilon_g = 4\pi^2 \biggl( \frac{\epsilon_l}{T^2} + \frac{2 l}{T^3}\, \epsilon_T \biggr)
+\end{equation}
+
+siendo el error absoluto de la longitud $\epsilon_l = 0.0005\,$m (se omite en las tablas),
+y el error del periodo $\epsilon_T = 0.01\,$s para 20 oscilaciones y $\epsilon_T = 0.02\,$s para 10.
 
 \begin{table}[h!]
     \caption{Masa 1 - $20 \text{\textdegree}$ - $g$.}
@@ -8,10 +19,10 @@ Las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-
     \begin{centering}
         \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
             \hline
-            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            $l$\,(mm)  & $T$\,(s)   & $g$\,(m/s)                             \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t-20_es.csv}{}% use head of csv as column names
-            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            {\csvcolii & \csvcolxii & \csvcolxiv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -23,10 +34,10 @@ Las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-
     \begin{centering}
         \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
             \hline
-            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            $l$\,(mm)  & $T$\,(s)   & $g$\,(m/s)                             \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/1-t-45_es.csv}{}% use head of csv as column names
-            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            {\csvcolii & \csvcolxii & \csvcolxiv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -38,10 +49,10 @@ Las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-
     \begin{centering}
         \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
             \hline
-            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            $l$\,(mm)  & $T$\,(s)   & $g$\,(m/s)                             \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t-20_es.csv}{}% use head of csv as column names
-            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            {\csvcolii & \csvcolxii & \csvcolxiv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -53,11 +64,30 @@ Las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-
     \begin{centering}
         \begin{tabular}{|P{56px}|P{67px}|P{67px}|}
             \hline
-            $l$\,(mm)  & $T$\,(s)    & $g$\,(m/s)                             \\
+            $l$\,(mm)  & $T$\,(s)   & $g$\,(m/s)                             \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2-t-45_es.csv}{}% use head of csv as column names
-            {\csvcolii & \csvcolviii & \csvcolxiv}% specify your columns here
+            {\csvcolii & \csvcolxii & \csvcolxiv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
+
+\FloatBarrier
+
+Los valores de $g$ calculados a partir de la pendiente se recogen en las tablas~\ref{tab:g} y~\ref{tab:g2} ya mencionadas.
+
+Observamos que los datos de $g$ para cada medición tienen una dispersión y errores absolutos apreciables, mayores que los calculados a partir de la pendiente.
+
+Fijándonos solo en los valores de $g$ calculados a partir de la pendiente,
+para el movimiento con $\theta = 20\text{\textdegree}\,$, los valores calculados son muy cercanos al valor real de $g$, estando en todos los casos
+dentro del margen de error o muy cerca de él.
+
+Sin embargo, para el ángulo $\theta = 45\text{\textdegree}\,$, el mayor periodo del movimiento hace que se obtenga un valor $g$ menor del esperado.
+
+\subsection{}
+
+El error absoluto de $l$ es el mismo en todas las mediciones.
+Para valores altos de $l$, el error relativo cometido en la medición es menor.
+Esto se traduce, según se puede observar en las tablas~\ref{tab:1-t4-20},~\ref{tab:1-t4-45},~\ref{tab:2-t4-20} y~\ref{tab:2-t4-45},
+en un descenso de la incertidumbre de $g$ a medida que aumenta $l$.
