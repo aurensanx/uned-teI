@@ -79,6 +79,8 @@ También la dispersión de los datos  $D_m$, calculada como:
 
 \subsection{\label{sub:results}Análisis}\label{subsec:label{sub:results}analisis}
 
+\subsubsection{Cálculo de $T$}
+
 Fijándonos en los valores obtenidos de la dispersión $D_m$, un valor razonable del error absoluto en la medición de los tiempos es $\pm 0.2\,s$.
 
 Las tablas~\ref{tab:1-t3-20},~\ref{tab:1-t3-45},~\ref{tab:2-t3-20} y~\ref{tab:2-t3-45} muestran el periodo calculado a partir de los datos anteriores.
@@ -145,13 +147,15 @@ Las tablas~\ref{tab:1-t3-20},~\ref{tab:1-t3-45},~\ref{tab:2-t3-20} y~\ref{tab:2-
 
 \FloatBarrier
 
-Observamos que el periodo $T$ es ligeramente mayor para el ángulo de 45\textdegree\;que para el de 25\textdegree.
+
+Observamos que el periodo $T$ es ligeramente mayor para el ángulo de 45\textdegree\;que para el de 20\textdegree.
 
 Observamos también que el periodo $T$ es el mismo para ambas masas. $T$ es independiente de $m$ porque en un campo gravitatorio
 todos los cuerpos adquieren la misma aceleración.
 
+\subsubsection{$T$ frente a $\sqrt{l}$}
 
-A continuación, las figuras~\ref{fig:1-20-1},~\ref{fig:1-45-1},~\ref{fig:2-20-1} y~\ref{fig:2-45-1} muestran las gráficas del periodo $T$
+Las figuras~\ref{fig:1-20-1},~\ref{fig:1-45-1},~\ref{fig:2-20-1} y~\ref{fig:2-45-1} muestran las gráficas del periodo $T$
 frente a la raíz cuadrada de la longitud $\sqrt{l}$.
 
 \begin{figure}[h!]
@@ -211,7 +215,12 @@ La tabla~\ref{tab:g} muestra los valores calculados de $g$.
     \end{centering}
 \end{table}
 
+Observamos que la pendiente de la recta $T$ frente a $\sqrt {l}$ es mayor para ángulos grandes, y esto a su vez resulta en un valor de
+$g$ más pequeño.
+
 \FloatBarrier
+
+\subsubsection{$l$ frente a $T^2$}
 
 De modo similar, las figuras~\ref{fig:1-20-2},~\ref{fig:1-45-2},~\ref{fig:2-20-2} y~\ref{fig:2-45-2} muestran la representación
 de la longitud $l$ frente al periodo al cuadrado $T^2$.
@@ -272,12 +281,11 @@ calculamos de nuevo $g$.
 
 \FloatBarrier
 
-Observamos que la pendiente de la recta $T$ frente a $\sqrt {l}$ es mayor para ángulos grandes, y esto a su vez resulta en un valor de
-$g$ más pequeño.
+Tanto en esta sección como en la anterior, los resultados para ambas masas son similares, como era de esperar.
 
-A su vez, los resultados para ambas masas son similares, como era de esperar.
+\subsubsection{$l$ frente a $T$}
 
-Representamos por último la longitud $l$ frente al periodo $T$ en escala log-log en las
+Por último, representamos la longitud $l$ frente al periodo $T$ en escala log-log en las
 gráficas~\ref{fig:1-20-3},~\ref{fig:1-45-3},~\ref{fig:2-20-3} y~\ref{fig:2-45-3}.
 
 \begin{figure}[h!]
@@ -312,13 +320,22 @@ gráficas~\ref{fig:1-20-3},~\ref{fig:1-45-3},~\ref{fig:2-20-3} y~\ref{fig:2-45-3}
     \label{fig:2-45-3}
 \end{figure}
 
-
 \FloatBarrier
 
-Se agrupan en una línea de pendiente 2.
+Los puntos ($T_i$, $l_i$) en escala logarítmica se distribuyen en una recta.
 
-Observamos que los tiempos para amplitudes grandes son mayores que para amplitudes pequeñas.
+Una función del tipo $Y = \alpha \, X^q$ en una representación doblemente logarítmica aparece
+como una línea recta de pendiente igual a $q$, ya que tomando logaritmos:
+\begin{equation*}
+    \log_{10} Y = \log_{10} \alpha + q\,\log_{10} X
+\end{equation*}
 
-También observamos que los tiempos medidos para las dos masas coinciden.
+Por tanto, podemos deducir la ecuación~\ref{eq:1} a partir de los valores de la pendiente y la intersección
+de las gráficas~\ref{fig:1-20-3},~\ref{fig:1-45-3},~\ref{fig:2-20-3} y~\ref{fig:2-45-3}.
+
+Concretamente: $q = 2$, $\alpha = 9.81 / 4\pi^2$ y $\log_{10} \alpha = -0.605$.
+
+
+
 
 
