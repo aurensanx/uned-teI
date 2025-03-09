@@ -2,7 +2,7 @@ clear;
 clc;
 close all;
 
-t = readtable('data/2-t-45.csv')
+t = readtable('data/1-t-20.csv')
 x = sqrt(t.l_real_ / 1000);
 y = t.T ;
 
