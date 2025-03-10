@@ -33,7 +33,7 @@ Para materiales elásticos, el módulo de Young o de elasticidad $E$ es la relació
     E = \frac{\sigma}{\epsilon}
 \end{equation}
 
-Sustituyendo las expresiones \ref{eq:2}, \ref{eq:3} y \ref{eq:4} en \ref{eq:1}, obtenemos:
+Sustituyendo las expresiones~\ref{eq:2},~\ref{eq:3} y~\ref{eq:4} en~\ref{eq:1}, obtenemos:
 
 \begin{equation}
     \label{eq:5}
@@ -81,6 +81,26 @@ Si consideramos que existen fuerzas de rozamiento, por ejemplo, con el aire, o c
 que el sistema masa-muelle no está aislado y en ese caso la energía total del sistema no se conserva, sino que disminuye con el tiempo.
 
 \subsection{Módulo de Young experimental}
+
+Utilizando la ecuación~\ref{eq:5}, obtenemos el módulo de elasticidad o módulo de Young.
+
+El error en las medidas de la longitud $L$ y diámetro $d$ de los muelles es $\pm\;0.005\,$mm.
+
+\begin{table}[tbh]
+    \caption{Módulo de Young.}
+    \label{tab:E}
+    \begin{centering}
+        \begin{tabular}{|P{58px}|P{35px}|P{35px}|P{50px}|}
+            \hline
+            $k$\,(N/m)  & $L$\,(mm) & $d$\,(mm) & $E$\,(N/m$^2$)                         \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/E.csv}{}% use head of csv as column names
+            {\csvcolvii & \csvcoliv & \csvcolv  & \csvcolxii}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
 
 El módulo de Young de los muelles no es el mismo módulo de Young de su material.
 
