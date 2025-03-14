@@ -1,1 +1,46 @@
 \section{Resultados}\label{sec:resultados}
+
+\subsection{\label{sub:data}Datos}\label{subsec:label{sub:data}datos}
+
+\subsubsection{Primera parte}
+
+$P_v$ es el peso en el aire del cilindro hueco más el cilindro macizo.
+
+$P_{a}$ es el peso aparente con el cilindro macizo sumergido.
+
+$P_{a} + P_{agua}$ es el peso aparente con el cilindro macizo sumergido más el peso del volumen de agua desplazado.
+
+\begin{table}[h!]
+    \caption{Cilindro 1}
+    \label{tab:c-1}
+    \begin{centering}
+        \begin{tabular}{|l|P{38px}|P{38px}|P{63px}|}
+            \hline
+            Líquido   & $P_v\,$(N) & $P_a\,$(N) & $P_{a} + P_{agua}\,$(N)               \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/c-1.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\begin{table}[h!]
+    \caption{Cilindro 2}
+    \label{tab:c-2}
+    \begin{centering}
+        \begin{tabular}{|l|P{38px}|P{38px}|P{63px}|}
+            \hline
+            Líquido   & $P_v\,$(N) & $P_a\,$(N) & $P_{a} + P_{agua}\,$(N)               \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/c-2.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\subsubsection{Segunda parte}
+
+\subsection{\label{sub:results}Análisis}\label{subsec:label{sub:results}analisis}
+
