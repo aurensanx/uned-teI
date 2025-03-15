@@ -7,14 +7,13 @@
 $P_v$ es el peso en el aire del cilindro hueco más el cilindro macizo.
 
 $P_{a}$ es el peso aparente con el cilindro macizo sumergido.
-
 $P_{a} + P_{agua}$ es el peso aparente con el cilindro macizo sumergido más el peso del volumen de agua desplazado.
 
 \begin{table}[h!]
     \caption{Cilindro 1}
     \label{tab:c-1}
     \begin{centering}
-        \begin{tabular}{|l|P{38px}|P{38px}|P{63px}|}
+        \begin{tabular}{|P{40px}|P{38px}|P{38px}|P{63px}|}
             \hline
             Líquido   & $P_v\,$(N) & $P_a\,$(N) & $P_{a} + P_{agua}\,$(N)               \\
             \hline
@@ -29,7 +28,7 @@ $P_{a} + P_{agua}$ es el peso aparente con el cilindro macizo sumergido más el p
     \caption{Cilindro 2}
     \label{tab:c-2}
     \begin{centering}
-        \begin{tabular}{|l|P{38px}|P{38px}|P{63px}|}
+        \begin{tabular}{|P{40px}|P{38px}|P{38px}|P{63px}|}
             \hline
             Líquido   & $P_v\,$(N) & $P_a\,$(N) & $P_{a} + P_{agua}\,$(N)               \\
             \hline
@@ -42,5 +41,84 @@ $P_{a} + P_{agua}$ es el peso aparente con el cilindro macizo sumergido más el p
 
 \subsubsection{Segunda parte}
 
+\begin{table}[h!]
+    \caption{Pesos reales y aparentes en función del número de masas}
+    \label{tab:2}
+    \begin{centering}
+        \begin{tabular}{|P{20px}|P{41px}|P{41px}|P{77px}|}
+            \hline
+            $n$       & $P_{vac}\,$(N) & $P_{agua}\,$(N) & $(P_{vac} + P_{agua})\,$(N)           \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/2_es.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii      & \csvcoliii      & \csvcoliv}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/p_vac}
+    \end{center}
+    \caption{Peso en aire $P_{vac}$ frente al número de pesas}
+    \label{fig:p_vac}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/p_agua}
+    \end{center}
+    \caption{Peso aparente $P_{agua}$ frente al número de pesas}
+    \label{fig:p_agua}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/densidad}
+    \end{center}
+    \caption{$P_{vac}/(P_{vac} - P_{agua})$ frente al número de pesas}
+    \label{fig:densidad}
+\end{figure}
+
 \subsection{\label{sub:results}Análisis}\label{subsec:label{sub:results}analisis}
+
+\subsubsection{}
+
+Los valores de la pendiente $a$ y la ordenada en el origen $b$ de la recta de la gráfica~\ref{fig:p_vac} con sus errores asociados son:
+\begin{align*}
+    a & = (0.0980 \pm 0.0012)\,\text{(N)}\\
+    b & = (0.102 \pm 0.003)\,\text{(N)}\\
+\end{align*}
+
+La masa de las pesas es conocida, $m = 10\,$g.
+
+\begin{equation}
+    \label{eq:1}
+    a = \rho_s \, V_s \, g
+\end{equation}
+
+Como $m = \rho_s\, V_s$, despejamos $g$ en la ecuación~\ref{eq:1}:
+\begin{equation*}
+    g = (9.80 \pm 0.12)\,\text{N/m$^2$}
+\end{equation*}
+
+Utilizamos este valor de $g$ para estimar la masa del suspensor.
+
+\begin{equation}
+    \label{eq:2}
+    b = m_{susp} \, g
+\end{equation}
+
+\begin{equation*}
+    m_{susp} = (10.41 \pm 0.13)\,\text{g}
+\end{equation*}
+
+\subsubsection{}
+
+\subsubsection{}
+
+\subsubsection{}
+
 
