@@ -4,9 +4,9 @@ close all;
 
 t = readtable('data/2.csv')
 x = t.n;
-%y = t.P_v;
+%y = t.P_{vac};
 %y = t.P_a;
-y = t.P_v ./ (t.P_v - t.P_a);
+y = t.P_{vac} ./ (t.P_{vac} - t.P_a);
 
 scatter(x, y, 50, "filled", "black");
 set(gca,'fontsize', 14);
