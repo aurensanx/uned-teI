@@ -4,6 +4,13 @@ Soporte vertical, dinamómetro, cilindros, recipiente para líquidos, masas.
 
 3 líquidos: agua destilada, vino y glicerina.
 
+\colorlet{mydarkblue}{blue!50!black}
+\colorlet{watercol}{blue!80!cyan!10!white}
+\colorlet{darkwatercol}{blue!80!cyan!20!white}
+\tikzstyle{water}=[draw=mydarkblue,top color=watercol!90,bottom color=watercol!90!black,shading angle=5]
+\tikzstyle{vertical water}=[water,
+top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=watercol!80,shading angle=90]
+
 \begin{figure}[tbh]
     \begin{center}
         \begin{tikzpicture}[black!75]
@@ -62,22 +69,27 @@ Soporte vertical, dinamómetro, cilindros, recipiente para líquidos, masas.
             \draw [](ftl) arc (180:360:0.2 and 0.06666);
             \draw [](ftr) arc (-0.2:180:0.2 and 0.06666);
 
-%            %cylinder
-%            \draw [thick](-1.5,-1.65) -- (-1.5,1.65);
-%            \draw [thick](+1.5,-1.65) -- (+1.5,1.65);
-%            \draw [thick](-1.5,-1.65) arc (180:360:1.5 and 0.5);          % <--
-%            \draw[thick,dashed] (1.5,-1.65) arc (-1.65:180:1.5 and 0.5);  % <--
-%            \draw [thick](-1.5,+1.65) arc (180:360:1.5 and 0.5);          % <--
-%            \draw [thick](+1.5,+1.65) arc (-1.5:180:1.5 and 0.5);         % <--
-%            \draw[thick,gray,dashed](0,-1.65) --(+1.5,-1.65);
-%%hollow
-%            \draw [thick](-1,-1.65) -- (-1,1.65);
-%            \draw [thick](+1,-1.65) -- (+1,1.65);
-%            \draw [thick](-1,-1.65) arc (180:360:1 and 0.25);
-%            \draw[thick,dashed] (1,-1.65) arc (-1.65:180:1 and 0.25);
-%            \draw [thick](-1,+1.65) arc (180:360:1 and 0.25);
-%            \draw [thick](+1,+1.65) arc (-1:180:1 and 0.25);
-%            \draw[thick,gray,dashed](0,-1.65) --(+1,-1.65);
+
+            \def\Rx{0.45}      % tank horizontal radius
+            \def\Ry{0.15}      % tank vertical radius
+            \def\L{1.5-\Rx}      % tank vertical radius
+            \def\R{1.5+\Rx}      % tank vertical radius
+            \def\H{1.2}       % height tank
+            \def\h{0.84*\H}   % height water
+            \def\y{-5.4}   % vertical position piece
+
+
+            % WATER
+            \draw[vertical water]
+            (\L,\y+\h) -- (\L,\y) arc (180:360:{\Rx} and {\Ry}) -- (\R,\y+\h);
+            \draw[water, very thin]
+            (\L+\Rx,\y+\h) ellipse ({\Rx} and {\Ry});
+
+            % CONTAINER
+            \draw[]
+            (\L,\y+\H) -- (\L,\y) arc (180:360:{\Rx} and {\Ry}) -- (\R,\y+\H);
+            \draw[]
+            (\L+\Rx,\y+\H) ellipse ({\Rx} and {\Ry});
 
 
         \end{tikzpicture}

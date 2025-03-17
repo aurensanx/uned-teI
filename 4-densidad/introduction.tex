@@ -1,2 +1,36 @@
 \section{Introducción}
 
+El principio de Arquímedes afirma que un cuerpo sumergido en un líquido experimenta una fuerza vertical de empuje igual al peso del volumen del líquido desalojado.
+
+Si se sumerge un sólido de volumen $V$ dentro de un líquido, su peso aparente será:
+\begin{equation}
+    \label{eq:p_ap}
+    P_{ap} = P - E = (\rho_s - \rho_l) \, V \, g
+\end{equation}
+
+Para determinar la densidad del sólido, se puede pesar el sólido en el aire y posteriormente sumergido en el líquido, y utilizar la relación:
+\begin{equation}
+    \label{eq:d_s}
+    \frac{\rho_s}{\rho_l} = \frac{P}{E} = \frac{P}{P - P_{ap}}
+\end{equation}
+
+Si se vuelve a pesar el sólido sumergido en otro líquido, obtenemos un peso aparente $P'_{ap}$ y podemos determinar la densidad del nuevo líquido
+sin conocer la densidad del sólido:
+\begin{equation}
+    \label{eq:d_l}
+    \frac{\rho'_l}{\rho_l} = \frac{P - P'_{ap}}{P - P_{ap}}
+\end{equation}
+
+Adicionalmente, podemos medir con mayor precisión la densidad de un sólido utilizando un suspensor de masas y añadiendo sucesivamente pesas de masa $m$.
+En ese caso, el peso del sistema en el aire y sumergido en agua será:
+\begin{equation}
+    \label{eq:masas_aire}
+    P = n \, \rho_s \, V_s \, g + \rho_{susp} \, V_{susp} \, g
+\end{equation}
+\begin{equation}
+    \label{eq:masas_agua}
+    P_{ap} = n \, (\rho_s -\rho_l) \, V_s \, g + (\rho_{susp} - \rho_l) \, V_{susp} \, g
+\end{equation}
+
+Se pueden obtener los valores buscados de las densidades $\rho_s$ y $\rho_{susp}$ representando las rectas~\ref{eq:masas_aire} y~\ref{eq:masas_agua}
+frente al número de masas $n$.
