@@ -175,9 +175,30 @@ Si siguiésemos añadiendo pesas, la curva tendería asintóticamente a una recta ho
 
 \subsubsection{}
 
-\begin{align*}
-    \rho_{vin} & = (6500 \pm 900)\,\text{kg/m$^3$} \\
-    \rho_{susp} &= (4600 \pm 900)\,\text{kg/m$^3$}
-\end{align*}
+Utilizando los valores $P_{vac}$ y $P_{ap}$ de las tablas~\ref{tab:c-1} y~\ref{tab:c-2}, podemos calcular las densidades de
+la glicerina y el vino.
+
+\begin{table}[h!]
+    \caption{Densidades de la glicerina y el vino}
+    \label{tab:densidades}
+    \begin{centering}
+        \begin{tabular}{|P{51px}|P{70px}|P{70px}|}
+            \hline
+            Cilindro  & $\rho_{glic}\,$(g/cm$^3$) & $\rho_{vin}\,$(g/cm$^3$)               \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/densidades.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii                 & \csvcoliii}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+Vemos en la tabla~\ref{tab:densidades} que el error asociado a las densidades es bastante grande, mayor que el $10 \%$.
+
+La precisión del dinamómetro era $\pm 0.01\,$N, y la diferencia de las mediciones entre los líquidos siempre está dentro del margen
+de error.
+
+Esto, junto con el hecho de que el valor $g_{glic}$ debería ser mayor que $1\,$g/cm$^3$, nos sugiere que para obtener valores
+de las densidades de los líquidos más ajustados a la realidad, deberíamos haber utilizado un dinamómetro con mayor precisión.
 
 
