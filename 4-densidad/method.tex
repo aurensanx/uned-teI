@@ -3,3 +3,85 @@
 Soporte vertical, dinamómetro, cilindros, recipiente para líquidos, masas.
 
 3 líquidos: agua destilada, vino y glicerina.
+
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{tikzpicture}[black!75]
+
+            % Supporting structure
+            \fill [pattern = north west lines] (0,0)coordinate(origin) rectangle ++(3,.2);
+            \draw[thick] (0,0) -- ++(3,0);
+
+            %argola
+            \draw[line ] (1.5,0) -- ++(0,-.2)coordinate(dynamo);
+
+            %espelho do dinamómetro
+            \draw[line] (1.6,-.3) arc (0:180:.1) -- ++(0,-1) arc (180:360:.1) -- cycle;
+
+            %gancho
+            \draw[line] (1.5,-1.4) -- ++(0,-.1) arc (90:360:.1);
+
+            \draw[line ] (1.5,-1.7) -- ++(0,-.2);
+
+            \coordinate (hbl) at (1.2,-2.7);
+            \coordinate (hbr) at (1.8,-2.7)
+            \coordinate (htl) at (1.2,-1.9);
+            \coordinate (htr) at (1.8,-1.9);
+            %cylinder
+            \draw [](hbl) -- ++(0,0.8);
+            \draw [](hbr) -- ++(0,0.8);
+            \draw [](hbl) arc (180:360:0.3 and 0.1);          % <--
+            \draw[dash pattern=on 2pt off 1pt] (hbr) arc (-0.3:180:0.3 and 0.1);  % <--
+            \draw [](htl) arc (180:360:0.3 and 0.1);          % <--
+            \draw [](htr) arc (-0.3:180:0.3 and 0.1);         % <--
+%hollow
+
+            \coordinate (fbl) at (1.3,-2.7);
+            \coordinate (fbr) at (1.7,-2.7)
+            \coordinate (ftl) at (1.3,-1.9);
+            \coordinate (ftr) at (1.7,-1.9);
+
+            \draw [](fbl) -- ++(0,0.8);
+            \draw [](fbr) -- ++(0,0.8);
+            \draw [](fbl) arc (180:360:0.2 and 0.06666);
+            \draw[dash pattern=on 2pt off 1pt] (fbr) arc (-1.65:180:0.2 and 0.06666);
+            \draw [](ftl) arc (180:360:0.2 and 0.06666);
+            \draw [](ftr) arc (-0.2:180:0.2 and 0.06666);
+
+            \draw[line] (1.5,-2.7) -- ++(0,-.3);
+
+            \coordinate (fbl) at (1.3,-3.8);
+            \coordinate (fbr) at (1.7,-3.8)
+            \coordinate (ftl) at (1.3,-3);
+            \coordinate (ftr) at (1.7,-3);
+
+            \draw [](fbl) -- ++(0,0.8);
+            \draw [](fbr) -- ++(0,0.8);
+            \draw [](fbl) arc (180:360:0.2 and 0.06666);
+            \draw[dash pattern=on 2pt off 1pt] (fbr) arc (-1.65:180:0.2 and 0.06666);
+            \draw [](ftl) arc (180:360:0.2 and 0.06666);
+            \draw [](ftr) arc (-0.2:180:0.2 and 0.06666);
+
+%            %cylinder
+%            \draw [thick](-1.5,-1.65) -- (-1.5,1.65);
+%            \draw [thick](+1.5,-1.65) -- (+1.5,1.65);
+%            \draw [thick](-1.5,-1.65) arc (180:360:1.5 and 0.5);          % <--
+%            \draw[thick,dashed] (1.5,-1.65) arc (-1.65:180:1.5 and 0.5);  % <--
+%            \draw [thick](-1.5,+1.65) arc (180:360:1.5 and 0.5);          % <--
+%            \draw [thick](+1.5,+1.65) arc (-1.5:180:1.5 and 0.5);         % <--
+%            \draw[thick,gray,dashed](0,-1.65) --(+1.5,-1.65);
+%%hollow
+%            \draw [thick](-1,-1.65) -- (-1,1.65);
+%            \draw [thick](+1,-1.65) -- (+1,1.65);
+%            \draw [thick](-1,-1.65) arc (180:360:1 and 0.25);
+%            \draw[thick,dashed] (1,-1.65) arc (-1.65:180:1 and 0.25);
+%            \draw [thick](-1,+1.65) arc (180:360:1 and 0.25);
+%            \draw [thick](+1,+1.65) arc (-1:180:1 and 0.25);
+%            \draw[thick,gray,dashed](0,-1.65) --(+1,-1.65);
+
+
+        \end{tikzpicture}
+        \caption{Diagrama del péndulo simple}
+        \label{fig:pendulum}
+    \end{center}
+\end{figure}
