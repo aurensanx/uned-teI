@@ -4,40 +4,49 @@
 
 \subsubsection{Primera parte}
 
-$P_v$ es el peso en el aire del cilindro hueco más el cilindro macizo.
+Para comprobar el principio de Arquímedes se toman 3 medidas.
 
-$P_{a}$ es el peso aparente con el cilindro macizo sumergido.
-$P_{a} + P_{agua}$ es el peso aparente con el cilindro macizo sumergido más el peso del volumen de agua desplazado.
+Primero, el sistema cilindro hueco + cilindro macizo en al aire ($P_v$).
+
+Posteriormente, el mismo sistema con el cilindro macizo sumergido en el líquido ($P_{ap}$).
+
+Por último, se vierte agua en el cilindro hueco y se toma la medida con el cilindro macizo todavía sumergido ($P_{ap} + P_{agua}$).
+
+Las tablas~\ref{tab:c-1} y~\ref{tab:c-2} muestran las medidas obtenidas.
 
 \begin{table}[h!]
-    \caption{Cilindro 1}
+    \caption{Cilindro macizo 1}
     \label{tab:c-1}
     \begin{centering}
-        \begin{tabular}{|P{40px}|P{38px}|P{38px}|P{63px}|}
+        \begin{tabular}{|P{40px}|P{37px}|P{37px}|P{65px}|}
             \hline
-            Líquido   & $P_v\,$(N) & $P_a\,$(N) & $P_{a} + P_{agua}\,$(N)               \\
+            Líquido   & $P_v\,$(N) & $P_{ap}\,$(N) & $P_{ap} + P_{agua}\,$(N)              \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/c-1.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv}% specify your columns here
+            {\csvcoli & \csvcolii  & \csvcoliii    & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
 
 \begin{table}[h!]
-    \caption{Cilindro 2}
+    \caption{Cilindro macizo 2}
     \label{tab:c-2}
     \begin{centering}
-        \begin{tabular}{|P{40px}|P{38px}|P{38px}|P{63px}|}
+        \begin{tabular}{|P{40px}|P{37px}|P{37px}|P{65px}|}
             \hline
-            Líquido   & $P_v\,$(N) & $P_a\,$(N) & $P_{a} + P_{agua}\,$(N)               \\
+            Líquido   & $P_v\,$(N) & $P_{ap}\,$(N) & $P_{ap} + P_{agua}\,$(N)              \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/c-2.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii  & \csvcoliii & \csvcoliv}% specify your columns here
+            {\csvcoli & \csvcolii  & \csvcoliii    & \csvcoliv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
+
+El principio de Arquímedes afirma que $P_v$ y $P_{ap} + P_{agua}$ deben ser iguales.
+
+La precisión del dinamómetro es $\pm 0.01\,$N, por lo que las medidas obtenidas se encuentran dentro del rango esperado.
 
 \subsubsection{Segunda parte}
 
