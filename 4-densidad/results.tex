@@ -10,7 +10,7 @@ Primero, el sistema cilindro hueco + cilindro macizo en al aire ($P_{vac}$).
 
 Posteriormente, el mismo sistema con el cilindro macizo sumergido en el líquido ($P_{ap}$).
 
-Por último, se vierte el mismo líquido en el cilindro hueco y se toma la medida con el cilindro macizo todavía sumergido ($P_{ap} + P_{agua}$).
+Por último, se vierte el mismo líquido en el cilindro hueco y se toma la medida con el cilindro macizo todavía sumergido ($P_{ap} + P_{l\acute{\imath}q}$).
 
 Las tablas~\ref{tab:c-1} y~\ref{tab:c-2} muestran las medidas obtenidas.
 
@@ -20,7 +20,7 @@ Las tablas~\ref{tab:c-1} y~\ref{tab:c-2} muestran las medidas obtenidas.
     \begin{centering}
         \begin{tabular}{|P{40px}|P{37px}|P{37px}|P{65px}|}
             \hline
-            Líquido   & $P_{vac}\,$(N) & $P_{ap}\,$(N) & $P_{ap} + P_{agua}\,$(N)              \\
+            Líquido   & $P_{vac}\,$(N) & $P_{ap}\,$(N) & $P_{ap} + P_{l\acute{\imath}q}\,$(N)  \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/c-1.csv}{}% use head of csv as column names
             {\csvcoli & \csvcolii      & \csvcoliii    & \csvcoliv}% specify your columns here
@@ -35,7 +35,7 @@ Las tablas~\ref{tab:c-1} y~\ref{tab:c-2} muestran las medidas obtenidas.
     \begin{centering}
         \begin{tabular}{|P{40px}|P{37px}|P{37px}|P{65px}|}
             \hline
-            Líquido   & $P_{vac}\,$(N) & $P_{ap}\,$(N) & $P_{ap} + P_{agua}\,$(N)              \\
+            Líquido   & $P_{vac}\,$(N) & $P_{ap}\,$(N) & $P_{ap} + P_{l\acute{\imath}q}\,$(N)  \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/c-2.csv}{}% use head of csv as column names
             {\csvcoli & \csvcolii      & \csvcoliii    & \csvcoliv}% specify your columns here
@@ -44,13 +44,13 @@ Las tablas~\ref{tab:c-1} y~\ref{tab:c-2} muestran las medidas obtenidas.
     \end{centering}
 \end{table}
 
-El principio de Arquímedes afirma que $P_{vac}$ y $P_{ap} + P_{agua}$ deben ser iguales.
+El principio de Arquímedes afirma que $P_{vac}$ y $P_{ap} + P_{l\acute{\imath}q}$ deben ser iguales.
 
 La precisión del dinamómetro es $\pm 0.01\,$N, por lo que las medidas obtenidas se encuentran dentro del rango esperado.
 
 \subsubsection{Segunda parte}
 
-En esta sección, se utiliza un soporte al que se van añadiendo pesas de masas $m$.
+En esta sección, se utiliza un soporte al que se van añadiendo pesas de masa $m$.
 La tabla~\ref{tab:2} muestra el peso en el vacío $P_{vac}$ y el peso aparente con el soporte sumergido en agua $P_{agua}$ conforme se
 va incrementando el número de pesas $n$.
 
@@ -89,6 +89,8 @@ Esto es equivalente a representar las ecuaciones~\ref{eq:masas_aire} y~\ref{eq:m
     \label{fig:p_agua}
 \end{figure}
 
+\FloatBarrier
+
 Por último, la figura~\ref{fig:densidad} muestra $P_{vac}/(P_{vac} - P_{agua})$ frente a $n$.
 Esta gráfica representa la ecuación~\ref{eq:d_s}.
 
@@ -114,7 +116,7 @@ Los valores de la pendiente $a$ y la ordenada en el origen $b$ de la recta de la
 
 La masa de las pesas es conocida, $m = 10\,$g.
 
-De la ecuación~\ref{eq:masas_aire} sabemos que:
+De la ecuación~\ref{eq:masas_aire}, sabemos que:
 \begin{equation*}
     a = \rho_s \, V_s \, g
 \end{equation*}
@@ -126,7 +128,7 @@ Como $m = \rho_s\, V_s$, despejamos $g$:
 
 A continuación, utilizamos el valor obtenido de $g$ para estimar la masa del suspensor.
 
-También de la ecuación~\ref{eq:masas_aire} sabemos que:
+También de la ecuación~\ref{eq:masas_aire}, sabemos que:
 
 \begin{equation*}
     b = m_{susp} \, g
@@ -167,7 +169,7 @@ Con todo ello, los valores de densidad de las pesas $\rho_s$ y del suspensor $\r
 
 \subsubsection{}
 
-En la figura~\ref{fig:densidad} se observa que la densidad del sistema suspensor + pesas, aunque de manera irregular, parece aumentar con el número de pesas.
+En la figura~\ref{fig:densidad}, se observa que la densidad del sistema suspensor + pesas, aunque de manera irregular, parece aumentar con el número de pesas.
 
 Hemos mostrado en la sección~\ref{subsubsec:densidad_agua} que el suspensor es de un material más ligero que las pesas.
 
