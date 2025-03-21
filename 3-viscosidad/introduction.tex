@@ -1,4 +1,31 @@
 \section{Introducción}
 
+\begin{equation}
+    \label{eq:newton}
+    m_b\,\frac{d^2 z}{dt^2} = - m_b\, g + m\,g - 6\,\pi\,\eta\,r\,\frac{dz}{dt}
+\end{equation}
+
+
+\begin{align}
+    \label{eq:solution}
+    z(t) &= z_0 + \beta \, (1 - e^{-\alpha t} -\alpha \,t) \\
+    v(t) &= - \alpha \, \beta \, (1 - e^{-\alpha t})
+\end{align}
+
+\begin{align*}
+    \alpha &= \frac{9}{2} \, \frac{\eta}{r^2\,\rho_b} \\
+    \beta &= \biggl(  1 - \frac{\rho}{\rho_b} \biggr)\, \frac{g}{\alpha^2}  \\
+\end{align*}
+
+\begin{equation}
+    \label{eq:velocity}
+    v = - \alpha \, \beta = - \frac{2}{9} \, \biggl(1 - \frac{\rho}{\rho_b} \biggr) \, g \, \frac{\rho_b}{\eta} \, r^2
+\end{equation}
+
+\begin{equation}
+    \label{eq:viscosity}
+    \eta = - \frac{2}{9} \, \biggl(1 - \frac{\rho}{\rho_b} \biggr) \, g \, \frac{\rho_b}{v} \, r^2
+\end{equation}
+
 
 
