@@ -1,1 +1,50 @@
-\section{Resultados}\label{sec:resultados}
+\section{Procedimiento}\label{sec:resultados}
+
+\subsection{Primer experimento: Determinación del radio de la gota de agua}
+
+
+\begin{table}[h!]
+    \caption{Radio $r_i$ de las gotas de agua producidas por el cuentagotas}
+    \label{tab:radio}
+    \begin{centering}
+        \begin{tabular}{|P{64px}|P{64px}|P{64px}|}
+            \hline
+            nº de gotas & volumen (cm$^3$) & $r_i\,$(mm)                           \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/radio.csv}{}% use head of csv as column names
+            {\csvcoli   & \csvcolii        & \csvcoliv    }% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+
+\FloatBarrier
+
+\subsection{Segundo experimento: Determinación de la densidad del aceite}
+
+\begin{table}[h!]
+    \caption{Volumen de aceite frente a volumen del agua que equilibra la balanza}
+    \label{tab:densidad}
+    \begin{centering}
+        \begin{tabular}{|P{64px}|P{64px}|P{64px}|}
+            \hline
+            $V\,(\text{cm}^3)$ & $V_T\,(\text{cm}^3)$ & $(\rho/\rho_b)_i$                     \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/densidad.csv}{}% use head of csv as column names
+            {\csvcoli          & \csvcolii            & \csvcoliv    }% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\subsection{Tercer experimento: Determinación de la velocidad de caída de la gota de agua}
+
+\subsection{Cálculo de la viscosidad del aceite}
+
+\begin{align*}
+    \epsilon_{\eta} = & \biggl| \frac{2}{9} \, \frac{g\,r^2}{v} \biggr|  \, \epsilon_{\rho_b}  \, + \\
+    & \biggl|  \frac{2}{9} \, (1 - \frac{\rho}{\rho_b}) \, g \, \frac{\rho_b}{v^2} \, r^2 \biggr|  \, \epsilon_v \, + \\
+    & \biggl| \frac{4}{9}\, (1 - \frac{\rho}{\rho_b}) \, g \, \frac{\rho_b}{v} \, r \biggr|  \, \epsilon_r
+\end{align*}
+
