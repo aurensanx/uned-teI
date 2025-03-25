@@ -2,11 +2,11 @@
 
 \subsection{Primer experimento: Determinación del radio de la gota de agua}\label{subsec:primer}
 
-La tabla~\ref{tab:radio} muestra 5 mediciones del volumen para un número de gotas determinado.
-El radio $r_i$ se calcula a partir del volumen y dividiendo por el número de gotas.
+La tabla~\ref{tab:radio} muestra 5 mediciones del volumen total para un número de gotas determinado.
+El radio $r_i$ de una gota se calcula a partir del volumen total y dividiendo por el número de gotas.
 
 \begin{table}[h!]
-    \caption{Radio $r_i$ de las gotas de agua producidas por el cuentagotas}
+    \caption{Radio $r_i$ de las gotas de agua producidas por el cuentagotas.}
     \label{tab:radio}
     \begin{centering}
         \begin{tabular}{|P{60px}|P{68px}|P{64px}|}
@@ -25,7 +25,7 @@ El radio medio de una gota con el error debido a la dispersión observada es:
     r = (1.91 \pm 0.02)\, \text{mm}
 \end{equation*}
 
-La dispersión aleatoria del valor medio de $r$ se ha calculado como:
+La dispersión del valor medio del radio $r$ se ha calculado como:
 \begin{equation*}
     \sigma_r = \sqrt{\frac{\sum (r -r_i)^2}{n(n-1)}}
 \end{equation*}
@@ -44,19 +44,20 @@ El valor del volumen $V$ es:
 
 \FloatBarrier
 
-\subsection{Segundo experimento: Determinación de la densidad del aceite}
+\subsection{Segundo experimento: Determinación de la densidad del aceite}\label{subsec:segundo}
 
-En este experimento llenamos un vaso de plástico con $V = 10\,$cm$^3$ de aceite.
+En este experimento, llenamos un vaso de plástico con $V = 10\,$cm$^3$ de aceite.
 A continuación, llenamos el otro vaso de plástico con un volumen $V_a$ de agua y añadimos $n$ gotas hasta que se equilibra la balanza.
 Utilizamos el valor del volumen de una gota de agua calculado en el apartado~\ref{subsec:primer} para determinar el volumen
 total de agua $V_T$ a partir de $n$.
-Por último, la relación entre el volumen del aceite $V$ y el volumen del agua $V_T$ nos permite hallar la relación entre
-las densidades del aceite y del agua $\rho / \rho_b$.
+
+Por último, la relación entre el volumen de aceite $V$ y el volumen de agua $V_T$ nos permite hallar la relación entre
+sus densidades $\rho / \rho_b$.
 
 La tabla~\ref{tab:densidad} muestra las medidas y resultados.
 
 \begin{table}[h!]
-    \caption{Volumen de aceite frente a volumen del agua que equilibra la balanza}
+    \caption{Volumen de aceite frente a volumen de agua que equilibra la balanza y relación de sus densidades.}
     \label{tab:densidad}
     \begin{centering}
         \begin{tabular}{|P{36px}|P{36px}|P{24px}|P{36px}|P{36px}|}
@@ -84,7 +85,7 @@ obtenemos el siguiente resultado para la densidad del aceite:
     \rho = (986 \pm 6)\, \text{kg/m$^3$}
 \end{equation*}
 
-\subsection{Tercer experimento: Determinación de la velocidad de caída de la gota de agua}
+\subsection{Tercer experimento: Determinación de la velocidad de caída de la gota de agua}\label{subsec:tercero}
 
 En este experimento, se dejan caer 50 gotas de agua en una botella de aceite y se mide el tiempo $t$
 que tardan en recorrer la distancia entre dos marcas, $d = 10.1\,$cm.
@@ -106,20 +107,21 @@ La tabla~\ref{tab:velocidad} muestra las medidas del tiempo $t$ y la velocidad $
     \end{centering}
 \end{table}
 
-El valor medio de $v$ con su error calculado como en las secciones anteriores es:
+El valor medio de $v$ con su error calculado como en las secciones~\ref{subsec:primer} y~\ref{subsec:segundo} es:
 \begin{equation*}
-    v = (0.71 \pm 0.02)\,\text{cm/s}
+    v = -(0.71 \pm 0.02)\,\text{cm/s}
 \end{equation*}
 
 \subsection{Cálculo de la viscosidad del aceite}
 
 Ya estamos en disposición de utilizar la ecuación~\ref{eq:viscosity} para calcular el valor de la viscosidad $\eta$.
 
-Sustituimos en esta ecuación los valores medios de $r$, $\rho_b$ y $v$ calculados en las secciones anteriores.
+Sustituimos en esta ecuación los valores medios de $r$, $\rho$ y $v$ calculados en las
+secciones~\ref{subsec:primer},~\ref{subsec:segundo} y~\ref{subsec:tercero}.
 A su vez, obtenemos una expresión del error asociado de la viscosidad $\epsilon_{\eta}$ como medida indirecta
 a partir de las derivadas parciales de la ecuación~\ref{eq:viscosity} y de los errores asociados a cada variable:
 \begin{align*}
-    \epsilon_{\eta} = & \biggl| \frac{2}{9} \, \frac{g\,r^2}{v} \biggr|  \, \epsilon_{\rho_b}  \, + \\
+    \epsilon_{\eta} = & \biggl| \frac{2}{9} \, \frac{g\,r^2}{v} \biggr|  \, \epsilon_{\rho}  \, + \\
     & \biggl|  \frac{2}{9} \, (1 - \frac{\rho}{\rho_b}) \, g \, \frac{\rho_b}{v^2} \, r^2 \biggr|  \, \epsilon_v \, + \\
     & \biggl| \frac{4}{9}\, (1 - \frac{\rho}{\rho_b}) \, g \, \frac{\rho_b}{v} \, r \biggr|  \, \epsilon_r
 \end{align*}
