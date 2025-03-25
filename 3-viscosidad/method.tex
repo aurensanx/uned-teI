@@ -1,1 +1,80 @@
 \section{Dispositivo experimental}
+
+Esta práctica está dividida en 3 experimentos distintos.
+
+En el primero, determinamos el radio de una gota de agua utilizando un cuentagotas y dejando caer un número elevado de gotas ($\approx 100$)
+en una jeringa aforada para determinar su volumen total.
+Conocido el número de gotas, se calcula el volumen y radio de una sola gota.
+
+En el segundo experimento, montamos una balanza de construcción casera a partir de una regla, un soporte y dos vasos de plástico iguales,
+como indica la figura~\ref{fig:balanza}.
+
+
+\colorlet{mydarkblue}{blue!50!black}
+\colorlet{watercol}{blue!80!cyan!10!white}
+\colorlet{darkwatercol}{blue!80!cyan!20!white}
+\tikzstyle{water}=[draw=mydarkblue,top color=watercol!90,bottom color=watercol!90!black,shading angle=5]
+\tikzstyle{vertical water}=[water,
+top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=watercol!80,shading angle=90]
+
+\colorlet{mydarkyellow}{olive!50!black}
+\colorlet{oilcol}{olive!10!yellow!90!white}
+\colorlet{darkoilcol}{olive!20!yellow!80!white}
+\tikzstyle{oil}=[draw=mydarkyellow,top color=oilcol!90,bottom color=oilcol!90!black,shading angle=5]
+\tikzstyle{vertical oil}=[oil,
+top color=oilcol!90!black!90,bottom color=oilcol!90!black!90,middle color=oilcol!80,shading angle=90]
+
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{tikzpicture}[black!75]
+
+            % Supporting structure
+            \fill [pattern = north west lines] (0,0)coordinate(origin) rectangle ++(3,-0.2);
+            \draw[thick] (origin) -- ++(3,0);
+
+            \draw[] (1.5,0.2) circle (0.2);
+            \draw[] (0,0.4) -- ++(3,0);
+
+            \begin{scope}[shift={(2.6,0.4)}, scale=0.5]
+                \def\H{0.9}      % tank horizontal radius
+                \def\L{0.8}      % tank vertical radius
+%
+%                % WATER
+                \draw[vertical water]
+                (0,0) -- (0,\H)  -- (\L, \H) -- (\L,0) -- (0,0);
+                \draw[]
+                (\L, \H) -- (\L, 1.2)  -- (0, 1.2) -- (0, \H);
+            \end{scope}
+
+            \begin{scope}[shift={(0,0.4)}, scale=0.5]
+                \def\H{1}      % tank horizontal radius
+                \def\L{0.75}      % tank vertical radius
+%
+%                % WATER
+                \draw[vertical oil]
+                (0,0) -- (0,\H)  -- (\L, \H) -- (\L,0) -- (0,0);
+                \draw[]
+                (\L, \H) -- (\L, 1.2)  -- (0, 1.2) -- (0, \H);
+            \end{scope}
+
+
+        \end{tikzpicture}
+        \caption{Balanza de construcción casera}
+        \label{fig:balanza}
+    \end{center}
+\end{figure}
+
+El procedimiento consiste en llenar el primer vaso de un volumen conocido de aceite, y el segundo vaso de un volumen también conocido de agua
+pero inferior al que haría que los pesos fuesen iguales.
+Entonces se añaden gotas de agua al segundo vaso hasta equilibrar la balanza.
+Conocido el volumen de una gota de agua, se puede calcular la relación entre los volúmenes y, de allí,
+la relación entre las densidades de los líquidos.
+
+El tercer experimento consiste en dejar caer una gota de agua en una botella llena de aceite y medir el tiempo
+que tarda en recorrer dos puntos marcados en la botella.
+El punto superior debe estar un poco alejado de la superficie de separación aire-aceite, para que el movimiento
+sea lo más uniforme posible.
+Del tiempo calculado, conocida la distancia entre los dos puntos, determinamos la velocidad de la caída de la gota de agua en el aceite.
+
+
+
