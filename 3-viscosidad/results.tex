@@ -2,12 +2,14 @@
 
 \subsection{Primer experimento: Determinación del radio de la gota de agua}
 
+La tabla~\ref{tab:radio} muestra 5 mediciones del volumen para un número de gotas determinado.
+El radio $r_i$ se calcula a partir del volumen y dividiendo por el número de gotas.
 
 \begin{table}[h!]
     \caption{Radio $r_i$ de las gotas de agua producidas por el cuentagotas}
     \label{tab:radio}
     \begin{centering}
-        \begin{tabular}{|P{64px}|P{64px}|P{64px}|}
+        \begin{tabular}{|P{60px}|P{68px}|P{64px}|}
             \hline
             nº de gotas & volumen (cm$^3$) & $r_i\,$(mm)                           \\
             \hline
@@ -17,6 +19,29 @@
         \end{tabular}
     \end{centering}
 \end{table}
+
+El radio medio de una gota con el error debido a la dispersión observada es:
+\begin{equation*}
+    r = (1.91 \pm 0.02)\, \text{mm}
+\end{equation*}
+
+La dispersión aleatoria del valor medio de $r$ se ha calculado como:
+\begin{equation*}
+    \sigma_r = \sqrt{\frac{\sum (r -r_i)^2}{n(n-1)}}
+\end{equation*}
+
+Con este dato, determinamos el volumen de una gota de agua con su error asociado mediante las expresiones:
+\begin{equation*}
+    V = \frac{4}{3}\pi r^3 \hspace{10px}; \hspace{10px}
+    \epsilon_V = 4\pi r^2 \epsilon_r
+\end{equation*}
+
+El resultado es:
+\begin{equation*}
+    V = (29 \pm 2)\, \text{mm}^3
+\end{equation*}
+
+
 
 
 \FloatBarrier
