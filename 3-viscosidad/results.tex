@@ -86,11 +86,46 @@ obtenemos el siguiente resultado para la densidad del aceite:
 
 \subsection{Tercer experimento: Determinación de la velocidad de caída de la gota de agua}
 
+En este experimento, se dejan caer 50 gotas de agua en una botella de aceite y se mide el tiempo $t$
+que tardan en recorrer la distancia entre dos marcas, $d = 10.1\,$cm.
+La tabla~\ref{tab:velocidad} muestra las medidas del tiempo $t$ y la velocidad $v$ correspondiente.
+
+\begin{table}[h!]
+    \scriptsize
+    \caption{Velocidad $v$ de una gota de agua}
+    \label{tab:velocidad}
+    \begin{centering}
+        \begin{tabular}{|P{101px}|P{102px}|}
+            \hline
+            $t\,$(s)  & $v\,$ (cm/s)                           \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/velocidad.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcoliv }% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+El valor medio de $v$ con su error calculado como en las secciones anteriores es:
+\begin{equation*}
+    v = (0.71 \pm 0.02)\,\text{cm/s}
+\end{equation*}
+
 \subsection{Cálculo de la viscosidad del aceite}
 
+Ya estamos en disposición de utilizar la ecuación~\ref{eq:viscosity} para calcular el valor de la viscosidad $\eta$.
+
+Sustituimos en esta ecuación los valores medios de $r$, $\rho_b$ y $v$ calculados en las secciones anteriores.
+A su vez, obtenemos una expresión del error asociado de la viscosidad $\epsilon_{\eta}$ como medida indirecta
+a partir de las derivadas parciales de la ecuación~\ref{eq:viscosity} y de los errores asociados a cada variable:
 \begin{align*}
     \epsilon_{\eta} = & \biggl| \frac{2}{9} \, \frac{g\,r^2}{v} \biggr|  \, \epsilon_{\rho_b}  \, + \\
     & \biggl|  \frac{2}{9} \, (1 - \frac{\rho}{\rho_b}) \, g \, \frac{\rho_b}{v^2} \, r^2 \biggr|  \, \epsilon_v \, + \\
     & \biggl| \frac{4}{9}\, (1 - \frac{\rho}{\rho_b}) \, g \, \frac{\rho_b}{v} \, r \biggr|  \, \epsilon_r
 \end{align*}
+
+Con todo ello, el valor de la viscosidad obtenido es:
+\begin{equation*}
+    \eta = (0.015 \pm 0.009)\,\text{kg/m$\cdot$s}
+\end{equation*}
 
