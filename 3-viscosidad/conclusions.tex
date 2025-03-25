@@ -2,6 +2,42 @@
 
 \subsection{}
 
+Debemos calcular $\Delta t$ para el que:
+\begin{equation*}
+    v_{\infty} - v(\Delta t) < 0.005 \, v_{\infty}
+\end{equation*}
+
+Tenemos:
+\begin{equation*}
+    v(t) = - \alpha\, \beta \, (1 - e^{-\alpha t}) \; \rightarrow \; v_{\infty} = - \alpha\, \beta
+\end{equation*}
+
+Sustituyendo:
+\begin{equation*}
+    - \alpha\, \beta  + \alpha\, \beta \, (1 - e^{-\alpha \Delta t}) < - 0.005\, \alpha \, \beta
+\end{equation*}
+
+Esta desigualdad se simplifica a:
+\begin{equation*}
+    e^{-\alpha \Delta t} > 0.005
+\end{equation*}
+
+Tomando logaritmos:
+\begin{equation*}
+    -\alpha \, \Delta t > \ln{0.005} \; \rightarrow \; \Delta t > \frac{1}{\alpha} \, \ln{200}
+\end{equation*}
+
+Sustituyendo el valor de $\alpha$:
+\begin{equation*}
+    \Delta t > \frac{2 \, r^2 \, \rho_b}{9\, \eta} \, \ln{200}
+\end{equation*}
+
+Evaluando con valores $r = 2.42\times 10^{-3}\,$m, $\rho_b = 920\, \text{kg/m$^3$}$ y $\eta = 0.084\,\text{kg/m$\cdot$s}$,
+obtenemos:
+\begin{equation*}
+    \Delta t > 0.076\,\text{s}
+\end{equation*}
+
 \subsection{}
 
 \subsection{}
