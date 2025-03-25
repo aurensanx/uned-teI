@@ -1,6 +1,6 @@
 \section{Procedimiento}\label{sec:resultados}
 
-\subsection{Primer experimento: Determinación del radio de la gota de agua}
+\subsection{Primer experimento: Determinación del radio de la gota de agua}\label{subsec:primer}
 
 La tabla~\ref{tab:radio} muestra 5 mediciones del volumen para un número de gotas determinado.
 El radio $r_i$ se calcula a partir del volumen y dividiendo por el número de gotas.
@@ -36,32 +36,53 @@ Con este dato, determinamos el volumen de una gota de agua con su error asociado
     \epsilon_V = 4\pi r^2 \epsilon_r
 \end{equation*}
 
-El resultado es:
+El valor del volumen $V$ es:
 \begin{equation*}
     V = (29 \pm 2)\, \text{mm}^3
 \end{equation*}
-
-
 
 
 \FloatBarrier
 
 \subsection{Segundo experimento: Determinación de la densidad del aceite}
 
+En este experimento llenamos un vaso de plástico con $V = 10\,$cm$^3$ de aceite.
+A continuación, llenamos el otro vaso de plástico con un volumen $V_a$ de agua y añadimos $n$ gotas hasta que se equilibra la balanza.
+Utilizamos el valor del volumen de una gota de agua calculado en el apartado~\ref{subsec:primer} para determinar el volumen
+total de agua $V_T$ a partir de $n$.
+Por último, la relación entre el volumen del aceite $V$ y el volumen del agua $V_T$ nos permite hallar la relación entre
+las densidades del aceite y del agua $\rho / \rho_b$.
+
+La tabla~\ref{tab:densidad} muestra las medidas y resultados.
+
 \begin{table}[h!]
     \caption{Volumen de aceite frente a volumen del agua que equilibra la balanza}
     \label{tab:densidad}
     \begin{centering}
-        \begin{tabular}{|P{64px}|P{64px}|P{64px}|}
+        \begin{tabular}{|P{36px}|P{36px}|P{24px}|P{36px}|P{36px}|}
             \hline
-            $V\,(\text{cm}^3)$ & $V_T\,(\text{cm}^3)$ & $(\rho/\rho_b)_i$                     \\
+            $V\,(\text{cm}^3)$ & $V_a\,(\text{cm}^3)$ & $n$        & $V_T\,(\text{cm}^3)$ & $(\rho/\rho_b)_i$                     \\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/densidad.csv}{}% use head of csv as column names
-            {\csvcoli          & \csvcolii            & \csvcoliv    }% specify your columns here
+            {\csvcoli          & \csvcolii            & \csvcoliii & \csvcoliv            & \csvcolvi  }% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
+
+Utilizando la misma expresión de la dispersión que en la sección~\ref{subsec:primer}
+para determinar el error asociado al valor medio de la relación entre densidades, obtenemos un
+resultado de:
+\begin{equation*}
+    \frac{\rho}{\rho_b} = 0.986 \pm 0.006
+\end{equation*}
+
+Recordando que el valor de la densidad del agua en el Sistema Internacional de unidades es $\rho_b = 1000\, \text{kg/m}^3$,
+obtenemos el siguiente resultado para la densidad del aceite:
+
+\begin{equation*}
+    \rho = (986 \pm 6)\, \text{kg/m$^3$}
+\end{equation*}
 
 \subsection{Tercer experimento: Determinación de la velocidad de caída de la gota de agua}
 
