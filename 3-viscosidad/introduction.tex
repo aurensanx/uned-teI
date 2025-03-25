@@ -1,29 +1,33 @@
 \section{Introducción}
 
-El método de Stokes consiste en
-
+El movimiento de caída en un líquido de una esfera más densa que dicho líquido viene dado por la ecuación:
 \begin{equation}
     \label{eq:newton}
     m_b\,\frac{d^2 z}{dt^2} = - m_b\, g + m\,g - 6\,\pi\,\eta\,r\,\frac{dz}{dt}
 \end{equation}
+donde los términos del segundo miembro de la ecuación son respectivamente: el peso de la esfera, el empuje debido al volumen de líquido
+desalojado y la fuerza de viscosidad que se opone al movimiento.
 
-
+La solución a esta ecuación diferencial viene dado por las expresiones:
 \begin{align}
     \label{eq:solution}
     z(t) &= z_0 + \beta \, (1 - e^{-\alpha t} -\alpha \,t) \\
     v(t) &= - \alpha \, \beta \, (1 - e^{-\alpha t})
 \end{align}
+con constantes:
+\begin{equation*}
+    \alpha = \frac{9}{2} \, \frac{\eta}{r^2\,\rho_b} \hspace{10px};  \hspace{10px}
+    \beta = \biggl(  1 - \frac{\rho}{\rho_b} \biggr)\, \frac{g}{\alpha^2}
+\end{equation*}
 
-\begin{align*}
-    \alpha &= \frac{9}{2} \, \frac{\eta}{r^2\,\rho_b} \\
-    \beta &= \biggl(  1 - \frac{\rho}{\rho_b} \biggr)\, \frac{g}{\alpha^2}  \\
-\end{align*}
-
+Si $\alpha$ es grande (viscosidad elevada o radio muy pequeño), el término exponencial de las ecuaciones de movimiento
+disminuye muy rápidamente y el movimiento se aproxima a un movimiento uniforme, con velocidad:
 \begin{equation}
     \label{eq:velocity}
     v = - \alpha \, \beta = - \frac{2}{9} \, \biggl(1 - \frac{\rho}{\rho_b} \biggr) \, g \, \frac{\rho_b}{\eta} \, r^2
 \end{equation}
 
+A partir de la velocidad $v$ podemos determinar la viscosidad como:
 \begin{equation}
     \label{eq:viscosity}
     \eta = - \frac{2}{9} \, \biggl(1 - \frac{\rho}{\rho_b} \biggr) \, g \, \frac{\rho_b}{v} \, r^2
