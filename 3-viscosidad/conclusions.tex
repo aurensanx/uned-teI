@@ -1,6 +1,6 @@
 \section{Cuestiones}
 
-\subsection{}
+\subsection{\label{subsec:c1}}
 
 Debemos calcular $\Delta t$ para el que:
 \begin{equation*}
@@ -32,10 +32,10 @@ Sustituyendo el valor de $\alpha$:
     \Delta t > \frac{2 \, r^2 \, \rho_b}{9\, \eta} \, \ln{200}
 \end{equation*}
 
-Evaluando con valores $r = 2.42\times 10^{-3}\,$m, $\rho_b = 920\, \text{kg/m$^3$}$ y $\eta = 0.084\,\text{kg/m$\cdot$s}$,
+Evaluando con valores $r = 2.42\times 10^{-3}\,$m, $\rho_b = 1000\, \text{kg/m$^3$}$ y $\eta = 0.084\,\text{kg/m$\cdot$s}$,
 obtenemos:
 \begin{equation*}
-    \Delta t > 0.076\,\text{s}
+    \Delta t > 0.082\,\text{s}
 \end{equation*}
 
 \subsection{\label{subsec:c2}}
@@ -48,6 +48,25 @@ la esfera de acero en caer $20\,$cm en el aceite.
 El resultado obtenido es $0.3012\,$s.
 
 \subsection{}
+
+Las ecuaciones que describen este movimiento ascendente son las mismas que hemos usado en la práctica,~\ref{eq:newton} y~\ref{eq:solution}.
+
+La única diferencia es que en este caso tendríamos que $\rho$ es igual a la densidad del agua y $\rho_b$ a la densidad de la gota de aceite.
+Esto implica:
+\begin{equation*}
+    \frac{\rho}{\rho_b} > 1 \; \rightarrow \; \beta < 0,
+\end{equation*}
+y, por tanto, $z(t)$ es siempre creciente.
+
+El régimen de velocidad constante se alcanzaría en el infinito, pero procediendo de la misma manera que en la sección~\ref{subsec:c1},
+con valores de la densidad de la gota de aceite $\rho_b = 920\, \text{kg/m$^3$}$ y viscosidad del agua
+$\eta = 0.001\,\text{kg/m$\cdot$s}$, obtenemos un valor de $\Delta t = 6.4\,$s.
+
+Este valor de $\Delta t$ es mucho mayor que el obtenido para la gota de agua en aceite, y es debido a que $\alpha$ es mucho más pequeño
+y el término exponencial adquiere más importancia en la ecuación de movimiento.
+
+Utilizando el mismo script que en la sección~\ref{subsec:c2}, con los valores de $\rho$, $\rho_b$ y $\eta$ actualizados,
+el tiempo $t$ que tardaría una gota de aceite del mismo radio $r$ en subir $20\,$cm en el agua sería $20.8\,$s.
 
 \subsection{}
 
