@@ -1,1 +1,69 @@
 \section{Resultados}\label{sec:resultados}
+
+\subsection{Primer experimento: Comprobación de que los tres rayos
+involucrados y la normal están en el mismo plano}\label{subsec:primero}
+
+\subsection{Segundo experimento: Medida de los ángulos de reflexión y refracción}\label{subsec:segundo}
+
+\begin{table}[h!]
+    \center
+    \caption{Ángulos de incidencia $\theta_i$, de reflexión $\theta_r$ y de refracción $\theta_t$.}
+    \label{tab:radio}
+    \begin{centering}
+        \begin{tabular}{|P{40px}|P{40px}|P{40px}|}
+            \hline
+            $\theta_i\,$(\textdegree) & $\theta_r\,$(\textdegree) & $\theta_t\,$(\textdegree)              \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/segundo_es.csv}{}% use head of csv as column names
+            {\csvcoli                 & \csvcolii                 & \csvcoliii    }% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+
+\begin{figure}[tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/reflexion}
+    \end{center}
+    \caption{Ángulo de reflexión $\theta_r$ frente al ángulo de incidencia $\theta_i$.}
+    \label{fig:reflexion}
+\end{figure}
+
+\begin{figure}[tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/refraccion}
+    \end{center}
+    \caption{Seno del ángulo de refracción $\theta_t$ frente al seno del ángulo de incidencia $\theta_i$.}
+    \label{fig:refraccion}
+\end{figure}
+
+
+\begin{figure}[tbh]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/aproximacion}
+    \end{center}
+    \caption{Ángulo de refracción $\theta_t$ frente al ángulo de incidencia $\theta_i$.}
+    \label{fig:aproximacion}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Tercer experimento: Ángulo límite}\label{subsec:tercero}
+
+
+\begin{table}[h!]
+    \center
+    \caption{Ángulos de incidencia $\theta_i$ desde el agua en torno al ángulo límite.}
+    \label{tab:limite}
+    \begin{centering}
+        \begin{tabular}{|P{40px}|P{60px}|P{60px}|}
+            \hline
+            $\theta_i\,$(\textdegree) & Transmisión & No transmisión                         \\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/limite.csv}{}% use head of csv as column names
+            {\csvcoli                 & \csvcolii   & \csvcoliii    }% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
