@@ -2,7 +2,7 @@ clear;
 clc;
 close all;
 
-t = readtable('data/0.32 mm^2 - 2m.csv')
+t = readtable('data/1.5 mm^2 - 1m.csv')
 x = t.Var1;
 y = t.Var2;
 
