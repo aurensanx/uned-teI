@@ -11,7 +11,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S1L1}
+        \includegraphics[width=0.75\columnwidth]{files/images/S1L1}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 1.5\,$mm$^2$ y $L = 1\,$m.}
     \label{fig:S1L1}
@@ -19,7 +19,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S1L2}
+        \includegraphics[width=0.75\columnwidth]{files/images/S1L2}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 1.5\,$mm$^2$ y $L = 1.5\,$m.}
     \label{fig:S1L2}
@@ -27,7 +27,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S1L3}
+        \includegraphics[width=0.75\columnwidth]{files/images/S1L3}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 1.5\,$mm$^2$ y $L = 2\,$m.}
     \label{fig:S1L3}
@@ -35,7 +35,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S2L1}
+        \includegraphics[width=0.75\columnwidth]{files/images/S2L1}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 0.5\,$mm$^2$ y $L = 1\,$m.}
     \label{fig:S2L1}
@@ -43,7 +43,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S2L2}
+        \includegraphics[width=0.75\columnwidth]{files/images/S2L2}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 0.5\,$mm$^2$ y $L = 1.5\,$m.}
     \label{fig:S2L2}
@@ -51,7 +51,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S2L3}
+        \includegraphics[width=0.75\columnwidth]{files/images/S2L3}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 0.5\,$mm$^2$ y $L = 2\,$m.}
     \label{fig:S2L3}
@@ -59,7 +59,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S3L1}
+        \includegraphics[width=0.75\columnwidth]{files/images/S3L1}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 0.325\,$mm$^2$ y $L = 1\,$m.}
     \label{fig:S3L1}
@@ -67,7 +67,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S3L2}
+        \includegraphics[width=0.75\columnwidth]{files/images/S3L2}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 0.32\,$mm$^2$ y $L = 1.5\,$m.}
     \label{fig:S3L2}
@@ -75,7 +75,7 @@ al tercero.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/S3L3}
+        \includegraphics[width=0.75\columnwidth]{files/images/S3L3}
     \end{center}
     \caption{$\Delta V$ frente a $I$, cable $S = 0.32\,$mm$^2$ y $L = 2\,$m.}
     \label{fig:S3L3}
@@ -91,9 +91,9 @@ El que no lo sea indica que en nuestras mediciones experimentales hemos
 introducido un error.
 
 Además, la pendiente de las rectas es distinta en cada caso
-porque la resistencia de cada cable varía con la longitud $L$ y también con la sección $S$, según la expresión~\ref{eq:ressitividad}.
+porque la resistencia de cada cable varía con la longitud $L$ y también con la sección $S$, según la expresión~\ref{eq:resistividad}.
 
-\subsection{}
+\subsection{\label{subsec:analisis2}}
 
 La tabla~\ref{tab:R2} recoge los valores de la resistencia $R$ (en m$\Omega$) de cada serie en función de la longitud $L$ y la sección $S$ de cada cable.
 
@@ -120,14 +120,20 @@ Estos valores son la pendiente de las rectas de las gráficas de la sección~\ref{
 
 El error mostrado es el error estándar de la regresión lineal.
 
-\subsection{\label{subsec:RL}}
+Esperaríamos que los valores de $R$ aumentasen conforme aumenta $L$ y disminuye $S$.
+Esto se cumple en casi la totalidad de los casos, excepto en las medidas para $L = 2\,$m de los cables
+de sección $S = 0.5\,$mm$^2$ y $S = 0.32\,$mm$^2$.
 
-Las figuras~\ref{fig:RL1},~\ref{fig:RL2} y~\ref{fig:RL3} muestran la representación de $R$ frente a $L$
+Tendremos este hecho en cuenta a la hora de analizar algunos resultados en secciones posteriores.
+
+\subsection{\label{subsec:analisis3}}
+
+Las figuras~\ref{fig:RL1},~\ref{fig:RL2} y~\ref{fig:RL3} representan $R$ frente a $L$
 para cada cable.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RL1}
+        \includegraphics[width=0.75\columnwidth]{files/images/RL1}
     \end{center}
     \caption{$R$ frente a $L$, cable $S = 1.5\,$mm$^2$.}
     \label{fig:RL1}
@@ -143,7 +149,7 @@ La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la fig
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RL2}
+        \includegraphics[width=0.75\columnwidth]{files/images/RL2}
     \end{center}
     \caption{$R$ frente a $L$, cable $S = 0.5\,$mm$^2$.}
     \label{fig:RL2}
@@ -159,7 +165,7 @@ La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la fig
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RL3}
+        \includegraphics[width=0.75\columnwidth]{files/images/RL3}
     \end{center}
     \caption{$R$ frente a $L$, cable $S = 0.32\,$mm$^2$.}
     \label{fig:RL3}
@@ -174,17 +180,22 @@ La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la fig
 
 La pendiente de cada recta es la resistencia $R$ del cable por unidad de longitud.
 También puede entenderse como la resistividad $\rho$ por unidad de área de la sección transversal.
+
 Existen 3 rectas porque existen 3 cables con sección transversal distinta.
 
-\subsection{\label{subsec:RS}}
+Se esperaría que la pendiente $m$ aumentase conforme disminuye $S$.
+Esto no se cumple entre los cables con secciones $S = 0.5\,$mm$^2$ y $S = 0.32\,$mm$^2$.
+Pero notamos, además, los valores grandes de error que acompañan a las medidas.
+
+\subsection{\label{subsec:analisis4}}
 
 
-Las figuras~\ref{fig:RS1},~\ref{fig:RS2} y~\ref{fig:RS3} muestran la representación de $R$ frente a $1/S$
+Las figuras~\ref{fig:RS1},~\ref{fig:RS2} y~\ref{fig:RS3} representan $R$ frente a $1/S$
 para cada longitud $L$.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RS1}
+        \includegraphics[width=0.75\columnwidth]{files/images/RS1}
     \end{center}
     \caption{$R$ frente a $1/S$, $L = 1\,$m.}
     \label{fig:RS1}
@@ -200,7 +211,7 @@ La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la fig
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RS2}
+        \includegraphics[width=0.75\columnwidth]{files/images/RS2}
     \end{center}
     \caption{$R$ frente a $1/S$, $L = 1.5\,$m.}
     \label{fig:RS2}
@@ -216,7 +227,7 @@ La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la fig
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RS3}
+        \includegraphics[width=0.75\columnwidth]{files/images/RS3}
     \end{center}
     \caption{$R$ frente a $1/S$, $L = 2\,$m.}
     \label{fig:RS3}
@@ -237,20 +248,17 @@ También puede entenderse como el valor de la resistividad $\rho$ multiplicada po
 Existen 3 rectas porque hemos tomado mediciones para 3 longitudes $L$.
 El valor de $m$ debería aumentar conforme aumenta $L$, como así sucede.
 
-\subsection{\label{subsec:RLS}}
+\subsection{\label{subsec:analisis5}}
 
-
-La figura~\ref{fig:RLS} muestra la representación de $R$ frente a $L/S$.
+La figura~\ref{fig:RLS} representan $R$ frente a $L/S$.
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=0.8\columnwidth]{files/images/RLS}
+        \includegraphics[width=0.75\columnwidth]{files/images/RLS}
     \end{center}
     \caption{$R$ frente a $L/S$.}
     \label{fig:RLS}
 \end{figure}
-
-\FloatBarrier
 
 La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la figura~\ref{fig:RLS} son:
 \begin{align*}
@@ -274,21 +282,22 @@ gráficas~\ref{fig:RL1},~\ref{fig:RL2},~\ref{fig:RL3},~\ref{fig:RS1},~\ref{fig:RS
     \rho & = (2.0 \pm 1.0) \times 10^{-8} \,\Omega \cdot \text{m}
 \end{align*}
 
-Observamos una dispersión grande de los resultados, y en la mayoría de los casos errores absolutos también grandes.
+Observamos una dispersión grande de los resultados y, en la mayoría de los casos, errores absolutos también grandes.
 
 El método de esta sección es el que mejor resultados proporciona porque tiene
 en cuenta la dependencia de $R$ tanto con $L$ como con $S$.
 
-En la sección~\ref{subsec:RL} solo se tiene en cuenta la dependencia de $R$ con $L$, en la sección~\ref{subsec:RS}
+En la sección~\ref{subsec:analisis3} solo se tiene en cuenta la dependencia de $R$ con $L$, en la sección~\ref{subsec:analisis4}
 la dependencia de $R$ con $S$.
 
-Además, con este método se tienen más medidas para poder hacer el ajuste y eso minimiza el error.
+Además, con este método se tienen más medidas para poder hacer el ajuste y así minimizar el error.
 
 \subsection{}
 
 Consultando la referencia~\cite{1}, observamos que el valor de la resistividad $\rho$ obtenido
-en la sección~\ref{subsec:RLS} podría corresponder a 2 elementos, cobre y oro, al ser los dos únicos
-elementos que aparecen dentro del rango de valores posibles.
+en la sección~\ref{subsec:analisis5} podría corresponder a dos elementos, cobre y oro, al ser los dos únicos
+que aparecen dentro del rango de valores posibles.
 
 Sería sorprendente que los cables usados en la práctica estuviesen hechos de oro, así que deducimos
 que el material del que está fabricado el hilo tiene que ser cobre.
+De hecho, así se especifica en el guion de la práctica.
