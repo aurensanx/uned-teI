@@ -1,2 +1,19 @@
 \section{Dispositivo experimental}
 
+
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{circuitikz}
+            \draw
+            (0,2) to[battery]  (0,0)
+            (0,2) to[R=$R$] (2,2)
+            (4,2) -- (4.5,2) -- (4.5,0)
+            (2,2) -- (2,1)
+            to[voltmeter]  (4,1) -- (4,2)
+            (0,0) to[ammeter]  (4.5,0)
+            \draw[black, pattern={Lines[angle=45, line width=1pt]}, pattern color=orange] (2,2-0.075) rectangle ++(2,0.15)
+        \end{circuitikz}
+        \caption{Diagrama del circuito.}
+        \label{fig:circuito}
+    \end{center}
+\end{figure}
