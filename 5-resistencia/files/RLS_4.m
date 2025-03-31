@@ -2,15 +2,15 @@ clear;
 clc;
 close all;
 
-t = readtable('data/RS.csv')
-x = 1./t.Var1;
+t = readtable('data/RLS.csv')
+x = t.Var3;
 y = t.Var4;
 scatter(x, y, 50, "filled", "black");
 
 set(gca,'fontsize', 14);
 
 lab1 = ylabel('$R$\,(m$\Omega$)'); 
-lab2 = xlabel('$1/S\,$(mm$^{-2}$)');
+lab2 = xlabel('$L/S\,$(Mm$^{-1}$)');
 set(lab1,'Interpreter','latex', 'FontSize', 20);
 set(lab2,'Interpreter','latex', 'FontSize', 20);
 

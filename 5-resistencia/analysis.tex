@@ -176,7 +176,7 @@ La pendiente de cada recta es la resistencia $R$ del cable por unidad de longitu
 También puede entenderse como la resistividad $\rho$ por unidad de área de la sección transversal.
 Existen 3 rectas porque existen 3 cables con sección transversal distinta.
 
-\subsection{}
+\subsection{\label{subsec:RL}}
 
 
 Las figuras~\ref{fig:RS1},~\ref{fig:RS2} y~\ref{fig:RS3} muestran la representación de $R$ frente a $1/S$
@@ -232,6 +232,54 @@ La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la fig
 
 La pendiente de cada recta es la resistencia $R$ multiplicada por la sección $S$.
 Se trata, pues, de una medida de la resistencia $R$ que elimina la dependencia con la sección $S$.
+También puede entenderse como el valor de la resistividad $\rho$ multiplicada por la longitud $L$.
 
 Existen 3 rectas porque hemos tomado mediciones para 3 longitudes $L$.
 El valor de $m$ debería aumentar conforme aumenta $L$, como así sucede.
+
+\subsection{\label{subsec:RS}}
+
+
+La figura~\ref{fig:RLS} muestra la representación de $R$ frente a $L/S$.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/RLS}
+    \end{center}
+    \caption{$R$ frente a $L/S$.}
+    \label{fig:RLS}
+\end{figure}
+
+\FloatBarrier
+
+La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la figura~\ref{fig:RLS} son:
+\begin{align*}
+    m & = (21 \pm 4)\,\text{m}\Omega \cdot \text{Mm} & = (2.1 \pm 0.4) \times 10^{-8} \,\Omega \cdot \text{m}\\
+    b & = (16 \pm 13)\,\text{m}\Omega \cdot \text{Mm}&  = (1.6 \pm 1.3) \times 10^{-8} \,\Omega \cdot \text{m}
+\end{align*}
+
+Por tanto, la resistividad $\rho$ del material es:
+\begin{equation*}
+    \rho = (2.1 \pm 0.4) \times 10^{-8} \,\Omega \cdot \text{m}
+\end{equation*}
+
+Los valores de la resistividad $\rho$ que se pueden obtener de las
+gráficas~\ref{fig:RL1},~\ref{fig:RL2},~\ref{fig:RL3},~\ref{fig:RS1},~\ref{fig:RS2} y~\ref{fig:RS3} son, respectivamente:
+\begin{align*}
+    \rho & = (1.5 \pm 0.5) \times 10^{-8} \,\Omega \cdot \text{m}\\
+    \rho & = (4.2 \pm 1.0) \times 10^{-8} \,\Omega \cdot \text{m}\\
+    \rho & = (1.9 \pm 1.0) \times 10^{-8} \,\Omega \cdot \text{m}\\
+    \rho & = (1.48 \pm 0.11) \times 10^{-8} \,\Omega \cdot \text{m}\\
+    \rho & = (2.3 \pm 0.9) \times 10^{-8} \,\Omega \cdot \text{m}\\
+    \rho & = (2.0 \pm 1.0) \times 10^{-8} \,\Omega \cdot \text{m}
+\end{align*}
+
+Observamos una dispersión grande de los resultados, y en la mayoría de los casos errores absolutos también grandes.
+
+El método de esta sección es el que mejor resultados proporciona porque tiene
+en cuenta la dependencia de $R$ tanto con $L$ como con $S$.
+
+En la sección~\ref{subsec:RL} solo se tiene en cuenta la dependencia de $R$ con $L$, en la sección~\ref{subsec:RS}
+la dependencia de $R$ con $S$.
+
+Además, con este método se tienen más medidas para poder hacer el ajuste y eso minimiza el error.
