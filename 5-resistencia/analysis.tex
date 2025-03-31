@@ -1,6 +1,6 @@
 \section{Análisis}\label{sec:analysis}
 
-\subsection{}
+\subsection{\label{subsec:analisis1}}
 
 Las figuras~\ref{fig:S1L1},~\ref{fig:S1L2} y~\ref{fig:S1L3} representan la relación $\Delta V$ frente a $I$ para el primer cable
 para las 3 longitudes.
@@ -95,5 +95,28 @@ porque la resistencia de cada cable varía con la longitud $L$ y también con la s
 
 \subsection{}
 
-\FloatBarrier
+La tabla~\ref{tab:R2} recoge los valores de la resistencia $R$ (en m$\Omega$) de cada serie en función de la longitud $L$ y la sección $S$ de cada cable.
+
+Estos valores son la pendiente de las rectas de las gráficas de la sección~\ref{subsec:analisis1}.
+
+El error mostrado es el error estándar de la regresión lineal.
+
+\begin{table}[h!]
+    \caption{Resistencia de cada conductor según su longitud $L$ y sección $S$.}
+    \label{tab:R2}
+    \begin{centering}
+        \small
+        \begin{tabular}{|P{18px}|P{52px}|P{52px}|P{56px}|}
+            \hline
+            & $S = 1.5\,$mm$^2$     & $S = 0.5\,$mm$^2$     & $S = 0.32\,$mm$^2$    \\
+            \hline
+            $L\,$(m) & $R\,(\text{m}\Omega)$ & $R\,(\text{m}\Omega)$ & $R\,(\text{m}\Omega)$ \\
+            \hline
+            $1$      & $27.0 \pm 0.7$        & $49.0 \pm 0.2$        & $63.3 \pm 0.6$        \\
+            $1.5$    & $34.5 \pm 0.5$        & $111.1 \pm 0.8$       & $120 \pm 4$           \\
+            $2$      & $36.8 \pm 0.2$        & $133.8 \pm 1.3$       & $127.5 \pm 1.3$       \\
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
 
