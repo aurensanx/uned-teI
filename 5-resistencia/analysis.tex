@@ -97,10 +97,6 @@ porque la resistencia de cada cable varía con la longitud $L$ y también con la s
 
 La tabla~\ref{tab:R2} recoge los valores de la resistencia $R$ (en m$\Omega$) de cada serie en función de la longitud $L$ y la sección $S$ de cada cable.
 
-Estos valores son la pendiente de las rectas de las gráficas de la sección~\ref{subsec:analisis1}.
-
-El error mostrado es el error estándar de la regresión lineal.
-
 \begin{table}[h!]
     \caption{Resistencia de cada conductor según su longitud $L$ y sección $S$.}
     \label{tab:R2}
@@ -119,4 +115,67 @@ El error mostrado es el error estándar de la regresión lineal.
         \end{tabular}
     \end{centering}
 \end{table}
+
+Estos valores son la pendiente de las rectas de las gráficas de la sección~\ref{subsec:analisis1}.
+
+El error mostrado es el error estándar de la regresión lineal.
+
+\subsection{}
+
+Las figuras~\ref{fig:RL1},~\ref{fig:RL2} y~\ref{fig:RL3} muestran la representación de $R$ frente a $L$
+para cada cable.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/RL1}
+    \end{center}
+    \caption{$R$ frente a $L$, cable $S = 1.5\,$mm$^2$.}
+    \label{fig:RL1}
+\end{figure}
+
+\FloatBarrier
+
+La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la figura~\ref{fig:RL1} son:
+\begin{align*}
+    m & = (10 \pm 3)\,\Omega / \text{m}\\
+    b & = (18 \pm 5)\,\Omega / \text{m}
+\end{align*}
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/RL2}
+    \end{center}
+    \caption{$R$ frente a $L$, cable $S = 0.5\,$mm$^2$.}
+    \label{fig:RL2}
+\end{figure}
+
+\FloatBarrier
+
+La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la figura~\ref{fig:RL2} son:
+\begin{align*}
+    m & = (84 \pm 20)\,\Omega / \text{m}\\
+    b & = (-30 \pm 40)\,\Omega / \text{m}
+\end{align*}
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth]{files/images/RL3}
+    \end{center}
+    \caption{$R$ frente a $L$, cable $S = 0.32\,$mm$^2$.}
+    \label{fig:RL3}
+\end{figure}
+
+\FloatBarrier
+La pendiente $m$ y la ordenada en el origen $b$ de la regresión lineal de la figura~\ref{fig:RL3} son:
+\begin{align*}
+    m & = (60 \pm 30)\,\Omega / \text{m}\\
+    b & = (10 \pm 40)\,\Omega / \text{m}
+\end{align*}
+
+La pendiente de cada recta es la resistencia $R$ del cable por unidad de longitud $L$.
+Existen 3 rectas porque existen 3 cables con sección transversal distinta.
+
+
+
+
 
