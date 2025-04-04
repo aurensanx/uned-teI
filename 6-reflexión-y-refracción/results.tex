@@ -11,43 +11,98 @@ mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
 \tikzstyle reverse directed=[postaction={decorate,decoration={markings,
 mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
 
-\begin{tikzpicture}
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{tikzpicture}
 
-    % define coordinates
-    \coordinate (O) at (0,0);
-    \coordinate (A) at (0,4);
-    \coordinate (B) at (0,-4);
-    \coordinate (TL) at (-4,4);
-    \coordinate (TR) at (4,4);
-    \coordinate (BL) at (-4,-4);
-    \coordinate (BR) at (4,-4);
+            % define coordinates
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (0,4);
+            \coordinate (B) at (0,-3);
+            \coordinate (TL) at (-4,4);
+            \coordinate (TR) at (4,4);
+            \coordinate (BL) at (-4,-3);
+            \coordinate (BR) at (4,-3);
 
-    \draw[thick] (-3,0) -- (3,0) arc(0:180:3) --cycle;
-    \begin{scope}
-        \clip (-3,0) rectangle (3,3);
-        \fill[blue!60!,opacity=.3] (0,0) circle(3);
-    \end{scope}
+            \draw[thick] (-3,0) -- (3,0) arc(0:180:3) --cycle;
+            \begin{scope}
+                \clip (-3,0) rectangle (3,3);
+                \fill[blue!60!,opacity=.3] (0,0) circle(3);
+            \end{scope}
 
-    % media
-    \fill[blue!25!,opacity=.3] (TL) rectangle (BR);
+            % media
+            \fill[blue!25!,opacity=.3] (TL) rectangle (BR);
 
-    \node[right] at (0.5,1.5) {Vidrio};
-    \node[left] at (-2,-1) {Aire};
+            \node[right] at (1,0.5) {Vidrio};
+            \node[left] at (-2.5,2.5) {Aire};
 
-    % axis
-    \draw[dash pattern=on5pt off3pt] (A) -- (B);
+            % axis
+            \draw[dash pattern=on5pt off3pt] (A) -- (B);
 
-    % rays
-    \draw[red,ultra thick,reverse directed] (O) -- (130:-5.2);
-    \draw[blue,directed,ultra thick] (O) -- (-70:-4.24);
-    \draw[magenta,directed,ultra thick] (O) -- (-130:5.2);
+            % rays
+            \draw[red,ultra thick,reverse directed] (O) -- (130:-3.9);
+            \draw[blue,directed,ultra thick] (O) -- (-70:-4.24);
+            \draw[green,directed,ultra thick] (O) -- (-130:3.9);
 
-    % angles
-    \draw (0,1) arc (90:110:1);
-    \draw (0,-1.4) arc (270:310:1.4);
-    \node[] at (290:1.8)  {$\theta_{i}$};
-    \node[] at (100:1.4)  {$\theta_{t}$};
-\end{tikzpicture}
+            % angles
+            \draw (0,1) arc (90:110:1);
+            \draw (0,-1) arc (270:310:1);
+            \draw (0,-1) arc (270:230:1);
+            \node[] at (290:1.4)  {$\theta_{i}$};
+            \node[] at (250:1.4)  {$\theta_{r}$};
+            \node[] at (100:1.4)  {$\theta_{t}$};
+        \end{tikzpicture}
+        \caption{Configuración 1 del dispositivo.}
+        \label{fig:dispositivo1}
+    \end{center}
+\end{figure}
+
+
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{tikzpicture}
+
+            % define coordinates
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (0,4);
+            \coordinate (B) at (0,-2);
+            \coordinate (TL) at (-4,4);
+            \coordinate (TR) at (4,4);
+            \coordinate (BL) at (-4,-2);
+            \coordinate (BR) at (4,-2);
+
+            \draw[thick] (-3,0) -- (3,0) arc(0:180:3) --cycle;
+            \begin{scope}
+                \clip (-3,0) rectangle (3,3);
+                \fill[blue!60!,opacity=.3] (0,0) circle(3);
+            \end{scope}
+
+            % media
+            \fill[blue!25!,opacity=.3] (TL) rectangle (BR);
+
+            \node[right] at (1,0.5) {Vidrio};
+            \node[left] at (-2.5,2.5) {Aire};
+
+            % axis
+            \draw[dash pattern=on5pt off3pt] (A) -- (B);
+
+            % rays
+            \draw[red,ultra thick,reverse directed] (O) -- (-130:-5.2);
+            \draw[blue,directed,ultra thick] (O) -- (20:-4.24);
+            \draw[green,directed,ultra thick] (O) -- (130:5.2);
+
+            % angles
+            \draw (0,1) arc (90:50:1);
+            \draw (0,1) arc (90:130:1);
+            \draw (0,-1) arc (270:200:1);
+            \node[] at (70:1.4)  {$\theta_{i}$};
+            \node[] at (235:1.4)  {$\theta_{t}$};
+            \node[] at (110:1.4)  {$\theta_{r}$};
+        \end{tikzpicture}
+        \caption{Configuración 2 del dispositivo.}
+        \label{fig:dispositivo2}
+    \end{center}
+\end{figure}
 
 \subsection{Segundo experimento: Medida de los ángulos de reflexión y refracción}\label{subsec:segundo}
 
