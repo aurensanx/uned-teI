@@ -4,24 +4,50 @@
 
 La pendiente de la recta de la figura~\ref{fig:reflexion} es igual a la unidad, con una indeterminación del $0.12\%$.
 
+Como se ha comentado en la sección~\ref{subsubsec:ley-de-la-reflexion}, este resultado corrobora la validez de la ley de la reflexión.
+
 \subsection{Ley de la refracción}\label{subsec:ley-de-la-refraccion}
 
 La pendiente de la recta de la figura~\ref{fig:refraccion} es igual a $0.676 \pm 0.004$.
-De aquí se deduce el siguiente valor para el índice de refracción del vidrio:
+
+De acuerdo a la ecuación~\ref{eq:refraccion}, se deduce el siguiente valor para el índice de refracción del vidrio:
 \begin{equation*}
     n = 1.479 \pm 0.009
 \end{equation*}
 
+No sabemos exactamente de qué tipo de vidrio está fabricada la rodaja de nuestro dispositivo experimental, pero este
+valor se encuentra dentro del rango de valores típicos encontrados en la referencia~\cite{glass}.
+
 \subsection{Aproximación paraxial o de Gauss}
 
 La pendiente de la recta de la figura~\ref{fig:aproximacion} es igual a $0.639 \pm 0.010$.
-Esto corresponde a un índice de refracción para el vidrio de:
+
+Por tanto, si utilizamos la aproximación paraxial o de Gauss, el índice de refracción que obtenemos para el vidrio es:
 \begin{equation*}
     n = 1.56 \pm 0.02
 \end{equation*}
 
+Este resultado es ligeramente mayor al encontrado en el apartado~\ref{subsec:ley-de-la-refraccion}.
+
+Si realizamos ahora el ajuste lineal para ángulos de incidencia $\theta_i$ menores que $30\text{\textdegree}$, el nuevo índice
+de refracción del vidrio es:
+\begin{equation*}
+    n = 1.54 \pm 0.07
+\end{equation*}
+
+Este valor se acerca más al esperado.
+Este hecho se explica porque estamos trabajando con ángulos más pequeños, y la validez de la aproximación paraxial o de Gauss aumenta.
+Notamos también que aumenta el error de la medida, debido a disponer de menos datos sobre los que realizar el ajuste lineal.
+
 \subsection{Reflexión total y ángulo límite}
 
+Como se ha explicado en la sección~\ref{subsec:tercero}, el ángulo límite $\theta_l$ se produce cuando el ángulo de refracción $\theta_t$ tiende a 90\textdegree.
+
+De la ecuación~\ref{eq:refraccion}, obtenemos un valor del índice de refracción para el vidrio de:
 \begin{equation*}
-    n = \frac{1}{\sen{\theta_t}} = 1.486 \pm 0.014
+    n = \frac{1}{\sen{\theta_l}} = 1.486 \pm 0.014
 \end{equation*}
+
+Este valor se encuentra dentro del rango obtenido en la sección~\ref{subsec:ley-de-la-refraccion} y también dentro del rango descrito en la referencia~\cite{glass}.
+
+En resumen, los resultados mostrados corroboran la validez del experimento para estudiar las leyes elementales de la Óptica.
