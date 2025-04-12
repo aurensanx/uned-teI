@@ -4,6 +4,48 @@
 
 \subsubsection{Medida de resistencias}\label{subsubsec:medidas-de-resistencias}
 
+La primera medida a realizar con el polímetro consiste en obtener los valores experimentales de varias resistencias suministradas.
+
+Primero, determinamos el valor nominal $R_{nom}$ a partir del código de colores.
+A continuación, seleccionando el modo para medir resistencias del polímetro, se obtienen los valores experimentales $R_{exp}$.
+
+La tabla~\ref{tab:resistencias} recoge los valores obtenidos.
+
+
+\newcommand\stripe[2]{\draw[fill=#2,#2] ++(#1,0) +(-0.05,-0.11) rectangle +(0.05,0.11);}
+
+\newcommand\resistor[4]{
+    \begin{tikzpicture}
+    \stripe{0}{#1}
+    \stripe{0.2}{#2}
+    \stripe{0.4}{#3}
+    \stripe{0.8}{#4}
+    \end{tikzpicture}
+}
+
+\definecolor{gold}{RGB}{255,215,0}
+
+\begin{table}[h!]
+    \center
+    \caption{Valores nominales $R_{nom}$ y experimentales $R_{exp}$ de las resistencias.}
+    \label{tab:resistencias}
+    \begin{centering}
+        \begin{tabular}{|P{40px}|P{60px}|P{50px}|}
+            \hline
+            & $R_{nom}$                  & $R_{exp}$        \\
+            \hline
+            \resistor{yellow}{violet}{brown}{gold}  & $470\,$\Omega$\,\pm\, 5\%$ & $0.469\,$k\Omega \\
+            \resistor{red}{red}{black}{gold}        & $22\,$\Omega$\,\pm\, 5\%$  & $22.5\,$\Omega   \\
+            \resistor{orange}{orange}{orange}{gold} & $33\,$k\Omega$\,\pm\, 5\%$ & $33.06\,$k\Omega \\
+            \resistor{green}{brown}{brown}{red}     & $510\,$\Omega$\,\pm\, 2\%$ & $0.510\,$k\Omega \\
+            \resistor{brown}{black}{brown}{gold}    & $100\,$\Omega$\,\pm\, 5\%$ & $98.9\,$\Omega   \\
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+Observamos que los valores experimentales $R_{exp}$ se encuentran dentro de la tolerancia de los valores nominales $R_{nom}$.
+
 \subsubsection{Medida de voltaje en c.c.}\label{subsubsec:medida-de-voltaje-en-c.c.}
 
 \subsubsection{Medida de corrientes en c.c.}
