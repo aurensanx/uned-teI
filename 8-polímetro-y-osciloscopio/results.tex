@@ -82,6 +82,47 @@ La precisión de la fuente de alimentación es $0.1\,$V.
 
 \subsubsection{Medida de corrientes en c.c.}
 
+En esta sección, utilizamos el polímetro para tomar medidas de corriente continua.
+
+Para ello, conectamos el polímetro en serie a las resistencias medidas en el apartado~\ref{subsubsec:medidas-de-resistencias} y a la fuente de alimentación,
+como se indica en la figura~\ref{fig:circuito}.
+
+\begin{figure}[tbh]
+    \begin{center}
+        \begin{circuitikz}
+            \draw
+            (0,0) to[battery] (0,2)
+            to[R=$R$] (4,2) -- (4,0)
+            (0,0) to[ammeter] (4,0)
+        \end{circuitikz}
+        \caption{Diagrama del circuito para medir corriente continua.}
+        \label{fig:circuito}
+    \end{center}
+\end{figure}
+
+Los valores de corriente teóricos $i_{teor}$ y experimentales $i_{exp}$ se recogen en la tabla~\ref{tab:corriente-cc}.
+
+\begin{table}[h!]
+    \center
+    \caption{Corriente teórica $i_{teor}$ y experimental $i_{exp}$ con distintas resistencias $R$.}
+    \label{tab:corriente-cc}
+    \begin{centering}
+        \begin{tabular}{|P{60px}|P{60px}|P{60px}|}
+            \hline
+            \multicolumn{3}{|c|}{$V = 5\,$V} \\
+            \hline
+            $R$              & $i_{teor} = V / R$ & $i_{exp}$     \\
+            \hline
+            $0.469\,$k\Omega & $10.66\,$mA        & $10.43\,$mA   \\
+            $22.5\,$\Omega   & $222.2\,$mA        & $171.1\,$mA   \\
+            $33.06\,$k\Omega & $151.2\,\mu$A      & $148.6\,\mu$A \\
+            $0.510\,$k\Omega & $9.80\,$mA         & $9.53\,$mA    \\
+            $98.9\,$\Omega   & $50.6\,$mA         & $46.6\,$mA    \\
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
 \subsubsection{Medida de voltajes en c.a}
 
 \subsection{Medidas con el osciloscopio}\label{subsec:medidas-con-el-osciloscopio}
