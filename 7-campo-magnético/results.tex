@@ -1,1 +1,23 @@
 \section{Resultados}\label{sec:resultados}
+
+Con lo explicado en el apartado~\ref{sec:dispositivo-experimental}, medimos el ángulo de desviación $\alpha$ de la brújula
+para distintas intensidades $I$ circulando por el cable conductor y con distintas distancias $d$ entre la brújula y el cable.
+
+La tabla~\ref{tab:angulo} recoge las medidas tomadas.
+
+\begin{table}[tbh!]
+    \caption{Tabla de desviaciones de la aguja para diferentes intensidades. Cada serie corresponde a una distancia $d_i$ entre la aguja y el cable.}
+    \label{tab:angulo}
+    \begin{centering}
+        \begin{tabular}{|P{24px}|P{26px}|P{26px}|P{26px}|P{26px}|P{26px}|}
+            \hline
+            & 5\,cm                   & 10\,cm                  & 15\,cm                  & 20\,cm                  & 25\,cm                                \\
+            \hline
+            $I$\,(A)  & $\alpha$\,(\textdegree) & $\alpha$\,(\textdegree) & $\alpha$\,(\textdegree)  & $\alpha$\,(\textdegree) & $\alpha$\,(\textdegree)\\
+            \hline
+            \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/angulo_es.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii               & \csvcoliii              & \csvcoliv               & \csvcolv                & \csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
