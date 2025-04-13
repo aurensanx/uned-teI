@@ -32,7 +32,7 @@ La tabla~\ref{tab:resistencias} recoge los valores obtenidos.
     \begin{centering}
         \begin{tabular}{|P{40px}|P{60px}|P{50px}|}
             \hline
-            & $R_{nom}$                  & $R_{exp}$        \\
+            Código                                  & $R_{nom}$                  & $R_{exp}$        \\
             \hline
             \resistor{yellow}{violet}{brown}{gold}  & $470\,$\Omega$\,\pm\, 5\%$ & $0.469\,$k\Omega \\
             \resistor{red}{red}{black}{gold}        & $22\,$\Omega$\,\pm\, 5\%$  & $22.5\,$\Omega   \\
@@ -133,4 +133,103 @@ No obstante, esperaríamos un valor de voltaje de unos $220\,$V, ya que esta es l
 
 \subsection{Medidas con el osciloscopio}\label{subsec:medidas-con-el-osciloscopio}
 
-\subsubsection{Medida de voltajes}
+\subsubsection{Medida de voltaje}
+
+En esta sección, vamos a realizar medidas de voltaje con el osciloscopio y el polímetro para una misma señal.
+
+Conectamos el generador de funciones a un canal de entrada del osciloscopio y medimos la amplitud
+de una señal sinusoidal a una frecuencia $f$.
+A continuación, cambiamos la conexión y medimos la misma señal en el polímetro.
+Repetimos estas medidas para otras dos frecuencias.
+
+Por último, repetimos todo el proceso para una señal rectangular.
+
+La tabla~\ref{tab:voltaje-osciloscopio} recoge los valores observados.
+
+\begin{table}[h!]
+    \center
+    \small
+    \caption{Voltaje en el osciloscopio $V_o$ y en el polímetro $V_{p}$ a distintas frecuencias $f$.}
+    \label{tab:voltaje-osciloscopio}
+    \begin{centering}
+        \begin{tabular}{|P{20px}|P{41px}|P{22px}|P{23px}|P{22px}|P{25px}|}
+            \hline
+            Señal              & $f$           & $V_o\,$(V) & $V_{p}\,$(V) & $V_e\,$(V) & $V_m\,$(V) \\
+            \hline
+            \multirow{3}{*}{
+                \begin{tikzpicture}
+                    \draw[x=0.15cm,y=0.2cm]
+                    (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
+                \end{tikzpicture}} & $105.3\,$Hz   & $25$       & $17.53$      & $17.68$    & $15.92$    \\
+            & $10.83\,$kHz  & $25$       & $15.62$      & $17.68$    & $15.92$    \\
+            & $109.73\,$kHz & $25$       & $9.97$       & $17.68$    & $15.92$    \\
+            \hline
+            \multirow{3}{*}{
+                \begin{tikzpicture}
+                    \draw[x=0.2cm,y=0.25cm]
+                    (0,0) -- ++(1,0) -- ++(0,1) -- ++(1,0) -- ++(0,-1) -- ++(1,0)
+                \end{tikzpicture}} & $105.3\,$Hz   & $25$       & $24.90$      & 25         & 25         \\
+            & $10.83\,$kHz  & $25$       & $21.15$      & 25         & 25         \\
+            & $109.73\,$kHz & $25$       & $13.75$      & 25         & 25         \\
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+Para analizar los resultados de la tabla~\ref{tab:voltaje-osciloscopio} debemos conocer previamente los términos valor medio $f_m$
+y valor eficaz $f_e$ de una señal periódica $f(t)$.
+\begin{equation*}
+    \langle f \rangle = f_m = \frac{2}{T}\int_0^{T/2} f(t)\, dt \\
+\end{equation*}
+\begin{equation*}
+    f_e = \Biggl( \frac{2}{T} \int_0^{T/2} f(t)^2\, dt \Biggr) ^{1/2}
+\end{equation*}\\
+
+Las señales sinusoidal y rectangular vienen dadas por:
+\begin{equation*}
+    V(t) = V_o \, \sin{wt}
+\end{equation*}
+\begin{equation*}
+    V(t) =
+    \begin{cases}
+        V_o & \text{para $0 \leq t < T/2$}\\
+        -V_o & \text{para $T/2 \leq t < T$}
+    \end{cases}
+\end{equation*}\\
+
+Calculamos el valor medio $V_m$ y el valor eficaz $V_e$ para estas dos señales en la tabla~\ref{tab:voltaje-calculos}.
+
+\begin{table}[h!]
+    \center
+    \small
+    \caption{Voltaje medio $V_m$ y eficaz $V_e$ para las señales sinusoidal y rectangular.}
+    \label{tab:voltaje-calculos}
+    \begin{centering}
+        \begin{tabular}{|P{40px}|P{40px}|P{40px}|}
+            \hline
+            Señal             & $V_m$        & $V_e$            \\
+            \hline
+            \begin{tikzpicture}
+                \draw[x=0.15cm,y=0.1cm]
+                (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
+            \end{tikzpicture} & $2V_o / \pi$ & $V_o / \sqrt{2}$ \\
+            \begin{tikzpicture}
+                \draw[x=0.2cm,y=0.2cm]
+                (0,0) -- ++(1,0) -- ++(0,1) -- ++(1,0) -- ++(0,-1) -- ++(1,0)
+            \end{tikzpicture} & $V_o$        & $V_o$            \\
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+Nos fijamos de nuevo en la tabla~\ref{tab:voltaje-osciloscopio}.
+Observando los valores para la frecuencia más baja, $105.3$Hz, notamos que el polímetro
+muestra como medida el valor eficaz $V_e$ de las señales.
+
+No obstante, cuando aumenta la frecuencia, el polímetro muestra un valor más bajo del esperado.
+Este hecho se explica por el límite de la velocidad a la que puede trabajar la electrónica interna del polímetro.
+
+Para calcular el valor a mostrar, el polímetro muestrea la señal de entrada.
+Si la señal tiene una frecuencia muy alta, no es posible para el polímetro coger suficientes
+valores dentro de un periodo para poder representar fielmente la señal.
+
