@@ -5,7 +5,7 @@ close all;
 t = readtable('data/angulo.csv');
 
 x = t.I;
-y = tand(t.alpha_d5_);
+y = tand(t.alpha_d1_);
 
 scatter(x, y, 50, "filled", "black");
 set(gca,'fontsize', 14);

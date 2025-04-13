@@ -53,9 +53,10 @@ para las distintas distancias $d$.
 
 
 Según la ecuación~\ref{eq:tangente}, la pendiente de las rectas es:
-\begin{equation*}
+\begin{equation}
+    \label{eq:a}
     a = \frac{\mu_0}{2\pi d H}
-\end{equation*}
+\end{equation}
 
 Se puede calcular el valor de la componente horizontal del campo magnético terrestre despejando $H$ en la ecuación anterior.
 
@@ -85,3 +86,39 @@ El error en las medidas de $H$ en la tabla~\ref{tab:a} se ha determinado mediant
 \FloatBarrier
 
 \subsection{}\label{subsec:analisis-2}
+
+La tabla~\ref{tab:k} muestra el valor constante $k = a \, d$.
+
+\begin{table}[h!]
+    \center
+    \caption{Valor constante $a\, d$.}
+    \label{tab:k}
+    \begin{centering}
+        \begin{tabular}{|P{70px}|}
+            \hline
+            $k = a \, d\,$(m/A)                 \\
+            \hline
+            \csvreader[no head,late after line= \\, /csv/separator=semicolon ]{./files/data/a_H.csv}{}% use head of csv as column names
+            {\csvcolvi}% specify your columns here
+            \hline
+        \end{tabular}
+    \end{centering}
+\end{table}
+
+\FloatBarrier
+
+Según la ecuación~\ref{eq:a}, podemos calcular la componente horizontal del campo magnético terrestre $H$ a partir de la constante $k$.
+El error de $H$ lo proporciona la dispersión de los datos de $k$.
+
+El valor de $H$ obtenido por este método es:
+\begin{equation*}
+    H = (50 \pm 30)\,\mu\text{T}
+\end{equation*}
+
+\subsection{}\label{subsec:analisis-3}
+
+Consultando la referencia~\cite{1}, en la localidad de Calatayud, donde se llevó a cabo esta práctica, el valor de la componente horizontal
+del campo magnético terrestre es:
+\begin{equation*}
+    H = 25.2\,\mu\text{T}
+\end{equation*}
