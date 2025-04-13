@@ -5,8 +5,9 @@
 Las figuras~\ref{fig:d1},~\ref{fig:d2},~\ref{fig:d3},~\ref{fig:d4} y~\ref{fig:d5} representan las rectas $\tan{\alpha}$ frente a la intensidad $I$
 para las distintas distancias $d$.
 
+\FloatBarrier
 
-\begin{figure}[t!]
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d1}
     \end{center}
@@ -14,7 +15,9 @@ para las distintas distancias $d$.
     \label{fig:d1}
 \end{figure}
 
-\begin{figure}[t!]
+\FloatBarrier
+
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d2}
     \end{center}
@@ -22,7 +25,7 @@ para las distintas distancias $d$.
     \label{fig:d2}
 \end{figure}
 
-\begin{figure}[t!]
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d3}
     \end{center}
@@ -30,7 +33,9 @@ para las distintas distancias $d$.
     \label{fig:d3}
 \end{figure}
 
-\begin{figure}[t!]
+\FloatBarrier
+
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d4}
     \end{center}
@@ -38,7 +43,7 @@ para las distintas distancias $d$.
     \label{fig:d4}
 \end{figure}
 
-\begin{figure}[t!]
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d5}
     \end{center}
@@ -46,57 +51,37 @@ para las distintas distancias $d$.
     \label{fig:d5}
 \end{figure}
 
-\FloatBarrier
 
 Según la ecuación~\ref{eq:tangente}, la pendiente de las rectas es:
 \begin{equation*}
     a = \frac{\mu_0}{2\pi d H}
 \end{equation*}
 
-La tabla~\ref{tab:a} muestra los valores de la pendiente $a$ de las rectas para cada $d$.
+Se puede calcular el valor de la componente horizontal del campo magnético terrestre despejando $H$ en la ecuación anterior.
 
-\begin{table}[tbh]
+Los valores se recogen en la tabla~\ref{tab:a}.
+
+\begin{table}[h!]
     \center
-    \caption{Rectas $\tan{\alpha}$ frente a $I$ con pendiente $a$ para diferentes distancias $d$.}
+    \caption{Componente horizontal del campo magnético terrestre $H$ calculada para diferentes distancias $d$.}
     \label{tab:a}
     \begin{centering}
-        \begin{tabular}{|P{30px}|P{70px}|}
+        \begin{tabular}{|P{30px}|P{82px}|P{50px}|}
             \hline
-            $d\,$(cm) & $a$                 \\
+            $d\,$(cm) & $a$       & $H\,$(\mu T)                         \\
             \hline
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
+            \csvreader[no head,late after line= \\, /csv/separator=semicolon ]{./files/data/a_H.csv}{}% use head of csv as column names
+            {\csvcoli & \csvcolii & \csvcolv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
 \end{table}
 
-A partir de los valores de~\ref{tab:a}, obtenemos los distintos valores calculados de $H$, que se muestran en la tabla~\ref{tab:H}.
-
-\begin{table}[tbh!]
-    \center
-    \caption{Componente horizontal del campo magnético terrestre $H$ calculado para distintas distancias $d$.}
-    \label{tab:H}
-    \begin{centering}
-        \begin{tabular}{|P{30px}|P{70px}|}
-            \hline
-            $d\,$(cm) & $H$                 \\
-            \hline
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            $0.05$    & $0.0912 \pm 0.0002$ \\
-            \hline
-        \end{tabular}
-    \end{centering}
-\end{table}
-
-
-El error en las medidas de $H$ se ha determinado mediante la expresión:
+El error en las medidas de $H$ en la tabla~\ref{tab:a} se ha determinado mediante la expresión:
 \begin{equation*}
     \epsilon_H = \frac{\mu_0}{2 \pi a d} \Bigl( \frac{\epsilon_d }{d} + \frac{\epsilon_a}{a}   \Bigr)
 \end{equation*}
+
+\FloatBarrier
+
+\subsection{}\label{subsec:analisis-2}
