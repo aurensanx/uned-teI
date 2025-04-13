@@ -11,6 +11,33 @@ El campo magnético $B$ en el punto $P$ tiene dirección tangente a las líneas de 
 
 En la ecuación anterior, $\mu_0$ representa la permeabilidad magnética del vacío y tiene como valor $4\pi \times 10^{-7}\,$T$\cdot$m/A.
 
+Por otro lado, el campo magnético terrestre es aproximadamente igual al campo generado por un dipolo magnético situado en el centro de la Tierra.
 
+En un punto de latitud geográfica $\phi$, se puede descomponer en una componente horizontal \textbf{H} dirigida al Norte
+y en una componente vertical \textbf{V} que en el hemisferio norte está dirigida hacia el centro de la Tierra, como se muestra en la figura~\ref{fig:earth}.
+
+\begin{figure}[tbh!]
+    \begin{center}
+        \begin{tikzpicture}
+
+            \draw (0,0) circle (2);
+            \draw[dashed] (-2,0) arc (250:290:5.85);
+            \draw[dashed] (0,0) -- (2,0);
+            \draw[dashed] (0,0) -- ({2*cos(45)},{2*cos(45)});
+            \draw (0.5,0) arc (0:45:0.5);
+            \node[] at (22.5:0.75)  {$\phi$};
+
+            \draw[ultra thick,black,-stealth]({2*cos(45)},{2*cos(45)}) -- ++(-1,-0.5) node[anchor=east]{$\textbf{B}_T$};
+            \draw[dashed] ({2*cos(45)-1},{2*cos(45)-0.5}) -- ++(0.745,0.745);
+            \draw[dashed] ({2*cos(45)-1},{2*cos(45)-0.5}) -- ++(0.25,-0.25);
+
+            \draw[thick,black,-stealth]({2*cos(45)},{2*cos(45)}) -- ++(-0.25,0.25) node[anchor=south west]{\textbf{H}};
+            \draw[thick,black,-stealth]({2*cos(45)},{2*cos(45)}) -- ++(-0.75,-0.75) node[anchor=west]{\textbf{V}};
+
+        \end{tikzpicture}
+        \caption{Componentes horizontal \textbf{H} y vertical \textbf{V} en las que se puede descomponer el campo magnético terrestre $\textbf{B}_T$.}
+        \label{fig:earth}
+    \end{center}
+\end{figure}
 
 
