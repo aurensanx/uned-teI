@@ -11,12 +11,12 @@ La tabla~\ref{tab:angulo} recoge las medidas tomadas.
     \begin{centering}
         \begin{tabular}{|P{24px}|P{26px}|P{26px}|P{26px}|P{26px}|P{26px}|}
             \hline
-            & 5\,cm                   & 10\,cm                  & 15\,cm                  & 20\,cm                  & 25\,cm                                \\
+            & 13\,mm                  & 18\,mm                  & 23\,mm                  & 28\,mm                  & 33\,mm                                  \\
             \hline
             $I$\,(A)  & $\alpha$\,(\textdegree) & $\alpha$\,(\textdegree) & $\alpha$\,(\textdegree)  & $\alpha$\,(\textdegree) & $\alpha$\,(\textdegree)\\
             \hline
             \csvreader[late after line= \\, /csv/separator=semicolon ]{./files/data/angulo_es.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii               & \csvcoliii              & \csvcoliv               & \csvcolv                & \csvcolvi}% specify your columns here
+            {\csvcoli & \csvcoliv               & \csvcolv                & \csvcolvi               & \csvcolvii              & \csvcolviii}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}

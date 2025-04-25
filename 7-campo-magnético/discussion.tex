@@ -12,7 +12,7 @@ para las distintas distancias $d$\footnote{En las figuras se emplea la notación 
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d1}
     \end{center}
-    \caption{$\tan{\alpha}$ frente a $I$ para $d = 5\,$cm.}
+    \caption{$\tan{\alpha}$ frente a $I$ para $d = 13\,$mm.}
     \label{fig:d1}
 \end{figure}
 
@@ -22,7 +22,7 @@ para las distintas distancias $d$\footnote{En las figuras se emplea la notación 
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d2}
     \end{center}
-    \caption{$\tan{\alpha}$ frente a $I$ para $d = 10\,$cm.}
+    \caption{$\tan{\alpha}$ frente a $I$ para $d = 18\,$mm.}
     \label{fig:d2}
 \end{figure}
 
@@ -30,7 +30,7 @@ para las distintas distancias $d$\footnote{En las figuras se emplea la notación 
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d3}
     \end{center}
-    \caption{$\tan{\alpha}$ frente a $I$ para $d = 15\,$cm.}
+    \caption{$\tan{\alpha}$ frente a $I$ para $d = 23\,$mm.}
     \label{fig:d3}
 \end{figure}
 
@@ -40,7 +40,7 @@ para las distintas distancias $d$\footnote{En las figuras se emplea la notación 
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d4}
     \end{center}
-    \caption{$\tan{\alpha}$ frente a $I$ para $d = 20\,$cm.}
+    \caption{$\tan{\alpha}$ frente a $I$ para $d = 28\,$mm.}
     \label{fig:d4}
 \end{figure}
 
@@ -48,7 +48,7 @@ para las distintas distancias $d$\footnote{En las figuras se emplea la notación 
     \begin{center}
         \includegraphics[width=0.8\columnwidth]{files/images/d5}
     \end{center}
-    \caption{$\tan{\alpha}$ frente a $I$ para $d = 25\,$cm.}
+    \caption{$\tan{\alpha}$ frente a $I$ para $d = 33\,$mm.}
     \label{fig:d5}
 \end{figure}
 
@@ -68,12 +68,12 @@ Los valores se recogen en la tabla~\ref{tab:a}.
     \caption{Componente horizontal del campo magnético terrestre $H$ calculada para diferentes distancias $d$.}
     \label{tab:a}
     \begin{centering}
-        \begin{tabular}{|P{30px}|P{82px}|P{50px}|}
+        \begin{tabular}{|P{40px}|P{82px}|P{50px}|}
             \hline
-            $d\,$(cm) & $a$       & $H\,$(\mu T)                         \\
+            $d\,$(mm) & $a\,$(A$^{-1}$) & $H\,$(\mu T)                         \\
             \hline
             \csvreader[no head,late after line= \\, /csv/separator=semicolon ]{./files/data/a_H.csv}{}% use head of csv as column names
-            {\csvcoli & \csvcolii & \csvcolv}% specify your columns here
+            {\csvcoli & \csvcolii       & \csvcolv}% specify your columns here
             \hline
         \end{tabular}
     \end{centering}
@@ -113,7 +113,7 @@ El error de $H$ lo proporciona la dispersión de los datos de $k$.
 
 El valor de $H$ obtenido por este método es:
 \begin{equation*}
-    H = (50 \pm 30)\,\mu\text{T}
+    H = (69 \pm 6)\,\mu\text{T}
 \end{equation*}
 
 \subsection{}\label{subsec:analisis-3}
